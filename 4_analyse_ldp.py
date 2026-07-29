@@ -12,7 +12,7 @@ try:
     import tomllib
 except ModuleNotFoundError:
     import tomli as tomllib
-import sys, re
+import sys, re, json
 import numpy as np
 import pandas as pd
 import geopandas as gpd
@@ -313,15 +313,16 @@ class LDP_Design:
             LDP_DEF_ = re.sub(r'\+lat_0=[^\s]+', f'+lat_0={lat_dm}', LDP_DEF)
             LDP_DEF_ = re.sub(r'\+lat_1=[^\s]+', f'+lat_1={lat_dm}', LDP_DEF_)
             LDP_DEF_ = re.sub(r'\+lon_0=[^\s]+', f'+lon_0={lon_dm}', LDP_DEF_)
-        
-        def PrintTwoLine( P4STR ):
-            LEN = P4STR.find('+x_0='); 
-            print(f'{P4STR[:LEN]}', end=""); print(f'{P4STR[LEN:]}' )
             
-        # Shorthand for centering text with formatting
-        print(f"{' LDP Defintion ':=^80}")
-        PrintTwoLine( LDP_DEF)
-        PrintTwoLine( LDP_DEF_)
+        # Transform 2 lines of definition into a single JSONL object
+        ldp_json = {
+            "meta": "LDP_Definition",
+            "PROJ_String_Decimal": LDP_DEF,
+            "PROJ_String_DMS": LDP_DEF_
+        }
+        # ensure_ascii=False ensures correct printing of ° and ′
+        print(json.dumps(ldp_json, ensure_ascii=False))
+        
         WKT = self.DATA.LDP_CRS.to_wkt( pretty=True )
         
         # Save WKT locally inside province output directory
@@ -554,22 +555,22 @@ class LDP_Design:
         else:
             csf_min = csf_mean = csf_max = 0.0
         
-        df_report = pd.DataFrame([{
-            'Province': self.PROV_CODE,
-            'Total_Pts': self.INITIAL_POINTS,
-            'Valid_Pts': valid_points,
-            'Pt_Coverage(%)': pt_pct,
-            'Total_POP': self.INITIAL_POP,
-            'Valid_POP': valid_pop,
-            'POP_Coverage(%)': pop_pct,
-            'CSF_Min_ppm': csf_min,
-            'CSF_Mean_ppm': csf_mean,
-            'CSF_Max_ppm': csf_max
-        }])
-        
-        print(f"\n{' LDP Population Coverage Analysis ':=^84}")
-        print(df_report.to_markdown(index=False, floatfmt=[None, '.0f', '.0f', '.2f', ',.0f', ',.0f', '.2f', '+.1f', '+.1f', '+.1f']))
-        print("=" * 84)
+        # Transform Population Coverage Analysis table into JSONL dictionary
+        cov_dict = {
+            "meta": "Coverage_Analysis",
+            "Province": self.PROV_CODE,
+            "Total_Pts": int(self.INITIAL_POINTS),
+            "Valid_Pts": int(valid_points),
+            "Pt_Coverage(%)": round(float(pt_pct), 2),
+            "Total_POP": float(self.INITIAL_POP),
+            "Valid_POP": float(valid_pop),
+            "POP_Coverage(%)": round(float(pop_pct), 2),
+            "CSF_Min_ppm": round(float(csf_min), 1),
+            "CSF_Mean_ppm": round(float(csf_mean), 1),
+            "CSF_Max_ppm": round(float(csf_max), 1)
+        }
+        # ensure_ascii=False ensures correct printing
+        print(json.dumps(cov_dict, ensure_ascii=False))
 
 
 ###########################################################################

@@ -2,6 +2,8 @@
 import os
 import argparse
 import io
+import json
+import textwrap
 import numpy as np
 import rasterio
 import matplotlib
@@ -56,7 +58,8 @@ class ProvinceReport:
             "pop": self.fig.add_subplot(gs[0, 1]),
             "svg_pp": self.fig.add_subplot(gs[1, 0]),
             "svg_ldp": self.fig.add_subplot(gs[1, 1]),
-            "log": self.fig.add_subplot(gs[2, :]) 
+            "log_summary": self.fig.add_subplot(gs[2, 0]), # Bottom Left (TM + LDP Def)
+            "log_json": self.fig.add_subplot(gs[2, 1])     # Bottom Right (Coverage Analysis)
         }
 
     def _render_dem(self):
@@ -130,8 +133,9 @@ class ProvinceReport:
         ax.set_title(title, fontsize=10)
 
     def _render_log_text(self):
-        """Scans pipeline logs and extracts LDP TM/LCC blocks, Definition lines, and wraps +x_0="""
-        extracted = []
+        """Scans pipeline logs, extracting the LDP TM block and safely wrapping JSONL outputs into subplots."""
+        summary_extracted = []
+        json_extracted = []
         
         try:
             with open(self.paths["log"], 'r', encoding='utf-8') as f:
@@ -141,43 +145,81 @@ class ProvinceReport:
             while i < len(lines):
                 raw_line = lines[i].rstrip('\n')
                 
-                # 1) Scan for LDP TM or LDP LCC blocks (header + next 10 lines)
-                if "= LDP TM =" in raw_line or "= LDP LCC =" in raw_line:
-                    extracted.append(raw_line)
-                    for j in range(1, 11):
-                        if i + j < len(lines):
-                            extracted.append(lines[i + j].rstrip('\n'))
-                    i += 10
+                # Scan for LDP TM or LDP LCC blocks (using space padding to catch exactly)
+                if " LDP TM " in raw_line or " LDP LCC " in raw_line:
+                    summary_extracted.append(raw_line)
+                    lines_read = 0
+                    
+                    # Read ahead until we hit the row containing "| diff" or max 12 lines
+                    while i + 1 < len(lines) and lines_read < 12:
+                        i += 1
+                        lines_read += 1
+                        nxt_line = lines[i].rstrip('\n')
+                        summary_extracted.append(nxt_line)
+                        if "diff" in nxt_line:
+                            break
                             
-                # 2) Scan for LDP Definition header and read the next 2 lines exactly, breaking at +x_0=
-                elif "================================ LDP Defintion =================================" in raw_line:
-                    extracted.append(raw_line)
-                    for j in range(1, 3):
-                        if i + j < len(lines):
-                            line_content = lines[i + j].rstrip('\n')
-                            if "+x_0=" in line_content:
-                                line_content = line_content.replace("+x_0=", "\n+x_0=")
-                            extracted.append(line_content)
-                    i += 2
+                    summary_extracted.append("") # Spacer
+                    i += 1
+                    continue
+                            
+                # Scan for JSONL containing LDP_Definition and put it in the LEFT column (summary_extracted)
+                elif raw_line.startswith('{"meta": "LDP_Definition"'):
+                    try:
+                        json_data = json.loads(raw_line)
+                        pretty_json = json.dumps(json_data, indent=2, ensure_ascii=False)
+                        
+                        summary_extracted.append("================ LDP Definition ================")
+                        # Wrap long JSON lines (like PROJ Strings) at 65 characters so they don't bleed
+                        for line in pretty_json.split('\n'):
+                            summary_extracted.append(textwrap.fill(line, width=65, subsequent_indent='    '))
+                        summary_extracted.append("")
+                    except json.JSONDecodeError:
+                        summary_extracted.append(textwrap.fill(raw_line, width=65))
+                        
+                # Scan for JSONL containing Coverage_Analysis and put it in the RIGHT column (json_extracted)
+                elif raw_line.startswith('{"meta": "Coverage_Analysis"'):
+                    try:
+                        json_data = json.loads(raw_line)
+                        pretty_json = json.dumps(json_data, indent=2, ensure_ascii=False)
+                        
+                        json_extracted.append("========= LDP Population Coverage Analysis =========")
+                        for line in pretty_json.split('\n'):
+                            json_extracted.append(textwrap.fill(line, width=65, subsequent_indent='    '))
+                        json_extracted.append("")
+                    except json.JSONDecodeError:
+                        json_extracted.append(textwrap.fill(raw_line, width=65))
+                        
                 i += 1
                             
         except FileNotFoundError:
-            extracted.append(f"Log file not found: {self.paths['log']}")
+            summary_extracted.append(f"Log file not found: {self.paths['log']}")
+            json_extracted.append(f"Log file not found: {self.paths['log']}")
 
-        log_text = "\n".join(extracted)
-
-        ax = self.axes["log"]
-        ax.axis('off')
-        
-        # Render the extracted text block onto the plot
-        ax.text(
+        # Render Summary text block (Bottom Left)
+        ax_sum = self.axes["log_summary"]
+        ax_sum.axis('off')
+        ax_sum.text(
             x=0.0, y=1.0, 
-            s=log_text, 
+            s="\n".join(summary_extracted), 
             fontsize=7, 
             family='monospace', 
             verticalalignment='top', 
             horizontalalignment='left',
-            transform=ax.transAxes 
+            transform=ax_sum.transAxes 
+        )
+
+        # Render JSON config text block (Bottom Right)
+        ax_json = self.axes["log_json"]
+        ax_json.axis('off')
+        ax_json.text(
+            x=0.0, y=1.0, 
+            s="\n".join(json_extracted), 
+            fontsize=7, 
+            family='monospace', 
+            verticalalignment='top', 
+            horizontalalignment='left',
+            transform=ax_json.transAxes 
         )
 
     def generate(self):
