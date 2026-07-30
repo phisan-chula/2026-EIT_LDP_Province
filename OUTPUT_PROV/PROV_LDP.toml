@@ -166,12 +166,19 @@ PP_MSL = "AUTO"      #  255
 #POPU_PLOT = [ max_msl, min_msl, msl_interval ]
 GPKG = ["OUTPUT_SAMPL/TH_LN/TH_LN_SAMPL.gpkg", "samples"]
 
-["TH.MD"]
-LDP = ["LCC", "16:34"]
+["TH.MD_N"]
+LDP = ["TM", "104:21"]
 FALSE_EN = "AUTO"    # [-10000, +2000000]
 PP_MSL = "AUTO"      #  255
 #POPU_PLOT = [ max_msl, min_msl, msl_interval ]
-GPKG = ["OUTPUT_SAMPL/TH_MD/TH_MD_SAMPL.gpkg", "samples"]
+GPKG = ["OUTPUT_SAMPL/TH_MD_N/TH_MD_N_SAMPL.gpkg", "samples"]
+
+["TH.MD_S"]
+LDP = ["TM", "104:40"]
+FALSE_EN = "AUTO"    # [-10000, +2000000]
+PP_MSL = "AUTO"      #  255
+#POPU_PLOT = [ max_msl, min_msl, msl_interval ]
+GPKG = ["OUTPUT_SAMPL/TH_MD_S/TH_MD_S_SAMPL.gpkg", "samples"]
 
 ["TH.MH"]
 LDP = ["TM", "98:02"]
