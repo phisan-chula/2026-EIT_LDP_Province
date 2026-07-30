@@ -238,6 +238,7 @@ class ProvinceSimplifier:
                 f.write(f'LDP = ["{ldp}", "{cm_cp}"]\n')
                 f.write(f'FALSE_EN = "AUTO"    # [-10000, +2000000]\n')
                 f.write(f'PP_MSL = "AUTO"      #  255\n')
+                f.write(f'#POPU_PLOT = [ max_msl, min_msl, msl_interval ]\n')
                 f.write(f'GPKG = ["OUTPUT_SAMPL/{file_code}/{file_code}_SAMPL.gpkg", "samples"]\n\n')
 
     def print_report(self):
