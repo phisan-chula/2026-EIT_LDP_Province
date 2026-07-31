@@ -163,172 +163,195 @@ GPKG = ["OUTPUT_SAMPL/TH_MD_N/TH_MD_N_SAMPL.gpkg", "samples"]
 LDP = ["TM", "104:40"]
 FALSE_EN  = [50000, -1680000]
 PP_MSL = +180
-#POPU_PLOT = [ max_msl, min_msl, msl_interval ]
 GPKG = ["OUTPUT_SAMPL/TH_MD_S/TH_MD_S_SAMPL.gpkg", "samples"]
 
 ##########################################################
 
-["TH.MH"]
-LDP = ["TM", "98:02"]
+["TH.MH_N"]
+LDP = ["TM", "98:09"]
 FALSE_EN = "AUTO"    # [-10000, +2000000]
-PP_MSL = "AUTO"      #  255
-GPKG = ["OUTPUT_SAMPL/TH_MH/TH_MH_SAMPL.gpkg", "samples"]
+PP_MSL = 300
+POPU_PLOT = [ +850, +150, +20 ]
+GPKG = ["OUTPUT_SAMPL/TH_MH_N/TH_MH_N_SAMPL.gpkg", "samples"]
+
+["TH.MH_S"]
+LDP = ["TM", "97:53"]
+FALSE_EN = [260000, -1250000]
+PP_MSL = +280
+POPU_PLOT = [ 650, 100, 20 ]
+GPKG = ["OUTPUT_SAMPL/TH_MH_S/TH_MH_S_SAMPL.gpkg", "samples"]
+
+##########################################################
 
 ["TH.MS"]
 LDP = ["TM", "103:10"]
-FALSE_EN = "AUTO"    # [-10000, +2000000]
-PP_MSL = "AUTO"      #  255
+FALSE_EN = [50000, -1270000]
+PP_MSL = 120
 GPKG = ["OUTPUT_SAMPL/TH_MS/TH_MS_SAMPL.gpkg", "samples"]
 
 ["TH.NA"]
 LDP = ["TM", "100:50"]
-FALSE_EN = "AUTO"    # [-10000, +2000000]
-PP_MSL = "AUTO"      #  255
+FALSE_EN = [250000, -1330000] 
+PP_MSL = 300
+POPU_PLOT = [ 600, 200, 20 ]
 GPKG = ["OUTPUT_SAMPL/TH_NA/TH_NA_SAMPL.gpkg", "samples"]
 
 ["TH.NB"]
 LDP = ["TM", "102:18"]
-FALSE_EN = "AUTO"    # [-10000, +2000000]
-PP_MSL = "AUTO"      #  255
+FALSE_EN = [50000, -1410000]
+PP_MSL = 220
 GPKG = ["OUTPUT_SAMPL/TH_NB/TH_NB_SAMPL.gpkg", "samples"]
 
 ["TH.NF"]
 LDP = ["TM", "104:26"]
-FALSE_EN = "AUTO"    # [-10000, +2000000]
-PP_MSL = "AUTO"      #  255
+FALSE_EN = "AUTO"    # OK
+PP_MSL = +100
 GPKG = ["OUTPUT_SAMPL/TH_NF/TH_NF_SAMPL.gpkg", "samples"]
 
 ["TH.NK"]
 LDP = ["LCC", "17:56"]
-FALSE_EN = "AUTO"    # [-10000, +2000000]
-PP_MSL = "AUTO"      #  255
+FALSE_EN = "AUTO"    # OK
+PP_MSL = +150
 GPKG = ["OUTPUT_SAMPL/TH_NK/TH_NK_SAMPL.gpkg", "samples"]
 
 ["TH.NN"]
 LDP = ["TM", "101:10"]
-FALSE_EN = "AUTO"    # [-10000, +2000000]
-PP_MSL = "AUTO"      #  255
+FALSE_EN = [50000, -1420000]
+PP_MSL = +50
 GPKG = ["OUTPUT_SAMPL/TH_NN/TH_NN_SAMPL.gpkg", "samples"]
 
 ["TH.NP"]
 LDP = ["TM", "100:06"]
-FALSE_EN = "AUTO"    # [-10000, +2000000]
-PP_MSL = "AUTO"      #  255
+FALSE_EN = [50000, -1390000]
+PP_MSL = -15
 GPKG = ["OUTPUT_SAMPL/TH_NP/TH_NP_SAMPL.gpkg", "samples"]
 
 ["TH.NR_N"]
 LDP = ["TM", "102:30"]
-FALSE_EN = "AUTO"    # [-10000, +2000000]
-PP_MSL = "AUTO"      #  255
+FALSE_EN = [250000, -950000]
+PP_MSL = +110
 GPKG = ["OUTPUT_SAMPL/TH_NR_N/TH_NR_N_SAMPL.gpkg", "samples"]
 
 ["TH.NR_S"]
 LDP = ["TM", "101:55"]
-FALSE_EN = "AUTO"    # [-10000, +2000000]
-PP_MSL = "AUTO"      #  255
+FALSE_EN = [250000, -890000]
+PP_MSL = +150
+POPU_PLOT = [ +350, 0, +20 ]
 GPKG = ["OUTPUT_SAMPL/TH_NR_S/TH_NR_S_SAMPL.gpkg", "samples"]
 
 ["TH.NS"]
 LDP = ["LCC", "15:41"]
-FALSE_EN = "AUTO"    # [-10000, +2000000]
-PP_MSL = "AUTO"      #  255
+FALSE_EN = [280000, 750000]
+PP_MSL = +20
 GPKG = ["OUTPUT_SAMPL/TH_NS/TH_NS_SAMPL.gpkg", "samples"]
 
 ["TH.NT"]
 LDP = ["TM", "99:47"]
-FALSE_EN = "AUTO"    # [-10000, +2000000]
-PP_MSL = "AUTO"      #  255
+FALSE_EN = [250000, -190000]
+PP_MSL = -60
+POPU_PLOT = [ +250, -100, +20 ]
 GPKG = ["OUTPUT_SAMPL/TH_NT/TH_NT_SAMPL.gpkg", "samples"]
 
 ["TH.NW"]
 LDP = ["TM", "101:43"]
-FALSE_EN = "AUTO"    # [-10000, +2000000]
-PP_MSL = "AUTO"      #  255
+FALSE_EN = [50000, -530000]
+PP_MSL = 0
 GPKG = ["OUTPUT_SAMPL/TH_NW/TH_NW_SAMPL.gpkg", "samples"]
 
 ["TH.PA"]
 LDP = ["TM", "100:32"]
-FALSE_EN = "AUTO"    # [-10000, +2000000]
-PP_MSL = "AUTO"      #  255
+FALSE_EN = [50000, -1440000]
+PP_MSL = -40
 GPKG = ["OUTPUT_SAMPL/TH_PA/TH_PA_SAMPL.gpkg", "samples"]
 
 ["TH.PB"]
 LDP = ["TM", "101:39"]
-FALSE_EN = "AUTO"    # [-10000, +2000000]
-PP_MSL = "AUTO"      #  255
+FALSE_EN = [250000, -800000]
+PP_MSL =  -50
+POPU_PLOT = [ +200, -150, +20 ]
 GPKG = ["OUTPUT_SAMPL/TH_PB/TH_PB_SAMPL.gpkg", "samples"]
 
 ["TH.PC"]
 LDP = ["TM", "100:21"]
-FALSE_EN = "AUTO"    # [-10000, +2000000]
-PP_MSL = "AUTO"      #  255
+FALSE_EN = [50000, -1650000]
+PP_MSL = -20
 GPKG = ["OUTPUT_SAMPL/TH_PC/TH_PC_SAMPL.gpkg", "samples"]
 
 ["TH.PE"]
 LDP = ["LCC", "12:57"]
-FALSE_EN = "AUTO"    # [-10000, +2000000]
-PP_MSL = "AUTO"      #  255
+FALSE_EN = [250000, 750000]
+PP_MSL = -20
+POPU_PLOT = [ +300, -100, +20 ]
 GPKG = ["OUTPUT_SAMPL/TH_PE/TH_PE_SAMPL.gpkg", "samples"]
 
 ["TH.PG"]
 LDP = ["TM", "98:25"]
-FALSE_EN = "AUTO"    # [-10000, +2000000]
-PP_MSL = "AUTO"      #  255
+FALSE_EN = [50000, -450000]
+PP_MSL = +50
 GPKG = ["OUTPUT_SAMPL/TH_PG/TH_PG_SAMPL.gpkg", "samples"]
 
 ["TH.PH"]
 LDP = ["TM", "101:09"]
-FALSE_EN = "AUTO"    # [-10000, +2000000]
-PP_MSL = "AUTO"      #  255
+FALSE_EN = [250000, -1050000]
+PP_MSL = +100
+POPU_PLOT = [ +350, 0, +20 ]
 GPKG = ["OUTPUT_SAMPL/TH_PH/TH_PH_SAMPL.gpkg", "samples"]
 
 ["TH.PI"]
 LDP = ["LCC", "6:44"]
-FALSE_EN = "AUTO"    # [-10000, +2000000]
-PP_MSL = "AUTO"      #  255
+FALSE_EN = [150000, 50000]
+PP_MSL = 0
 GPKG = ["OUTPUT_SAMPL/TH_PI/TH_PI_SAMPL.gpkg", "samples"]
 
 ["TH.PK"]
 LDP = ["TM", "99:38"]
 FALSE_EN = "AUTO"    # [-10000, +2000000]
-PP_MSL = "AUTO"      #  255
+PP_MSL = +15
+POPU_PLOT = [ +250, -100, +20 ]
 GPKG = ["OUTPUT_SAMPL/TH_PK/TH_PK_SAMPL.gpkg", "samples"]
 
 ["TH.PL"]
 LDP = ["TM", "100:04"]
-FALSE_EN = "AUTO"    # [-10000, +2000000]
-PP_MSL = "AUTO"      #  255
+FALSE_EN = [50000, -680000]
+PP_MSL = 0 
 GPKG = ["OUTPUT_SAMPL/TH_PL/TH_PL_SAMPL.gpkg", "samples"]
 
 ["TH.PR"]
 LDP = ["TM", "100:04"]
-FALSE_EN = "AUTO"    # [-10000, +2000000]
-PP_MSL = "AUTO"      #  255
+FALSE_EN = [250000, -1270000]
+PP_MSL = +110
+POPU_PLOT = [ +400, +0, +20 ]
 GPKG = ["OUTPUT_SAMPL/TH_PR/TH_PR_SAMPL.gpkg", "samples"]
 
 ["TH.PS"]
 LDP = ["TM", "100:33"]
-FALSE_EN = "AUTO"    # [-10000, +2000000]
-PP_MSL = "AUTO"      #  255
+FALSE_EN = [250000, -1130000]
+PP_MSL = +20
+POPU_PLOT = [ +350, -100, +20 ]
 GPKG = ["OUTPUT_SAMPL/TH_PS/TH_PS_SAMPL.gpkg", "samples"]
 
 ["TH.PT"]
 LDP = ["LCC", "14:04"]
-FALSE_EN = "AUTO"    # [-10000, +2000000]
-PP_MSL = "AUTO"      #  255
+FALSE_EN = [60000, 150000]
+PP_MSL = -20
 GPKG = ["OUTPUT_SAMPL/TH_PT/TH_PT_SAMPL.gpkg", "samples"]
 
 ["TH.PU"]
 LDP = ["TM", "98:21"]
-FALSE_EN = "AUTO"    # [-10000, +2000000]
-PP_MSL = "AUTO"      #  255
+FALSE_EN = [50000, -730000]
+PP_MSL = +60
 GPKG = ["OUTPUT_SAMPL/TH_PU/TH_PU_SAMPL.gpkg", "samples"]
 
 ["TH.PY"]
 LDP = ["TM", "100:11"]
-FALSE_EN = "AUTO"    # [-10000, +2000000]
-PP_MSL = "AUTO"      #  255
+FALSE_EN = [250000, -1380000]
+PP_MSL = +370
+POPU_PLOT = [ +600, +250, +20 ]
 GPKG = ["OUTPUT_SAMPL/TH_PY/TH_PY_SAMPL.gpkg", "samples"]
+
+#########################################################
+#########################################################
+#########################################################
 
 ["TH.RE"]
 LDP = ["TM", "103:49"]
