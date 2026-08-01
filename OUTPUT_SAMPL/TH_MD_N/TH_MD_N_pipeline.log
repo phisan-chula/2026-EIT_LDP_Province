@@ -1,0 +1,119 @@
+======================================================================
+Processing province: TH.MD_N
+Started: 2026-08-01T11:24:38+07:00
+======================================================================
+--> [TH.MD_N] Step 1: 1_fabdem_province.py
+[1/5] Read GADM and select HASC_1=TH.MD_N
+[2/5] Save province and clip FABDEM
+[3/5] Generate contours every 100 m with GDAL 3.10.3
+[4/5] Calculate statistics and write PDF
+[5/5] Write DataFrame summaries
+
+Completed successfully.
+ HASC_1         NAME_1  contours                                                                                        PDF
+TH.MD_N Mukdahan North       666 /mnt/nvme1/Project/2026-EIT_LDP_Province/OUTPUT_FABDEM/TH_MD_N/TH_MD_N_fabdem_contours.pdf
+--> [TH.MD_N] Step 2: 2_popu2025_grid.py
+[1/4] Select GADM province HASC_1=TH.MD_N
+[2/4] Save boundary and cut population grid
+[3/4] Calculate population-grid statistics
+[4/4] Write population-grid PDF and summaries
+
+Completed successfully.
+ HASC_1         NAME_1  population_sum                                                                                             grid
+TH.MD_N Mukdahan North   115243.095017 /mnt/nvme1/Project/2026-EIT_LDP_Province/OUTPUT_POP2025/TH_MD_N/TH_MD_N_population_2025_100m.tif
+--> [TH.MD_N] Step 3: 3_generate_sample.py
+[1/4] Select GADM province HASC_1=TH.MD_N
+ -> [READ] Loading Vector Dataset: OUTPUT_PROV/gadm41_THA.gpkg (Layer: 'ADM_ADM_1')
+[2/4] Generate 1000.0m grid points
+ -> Auto-detected EPSG:32648 for province.
+ -> Generated 4,355 bounding box points.
+ -> Clipping points to province boundary...
+ -> Computing 7-digit Geohashes...
+[3/4] Extracting Raster Values (FABDEM MSL & POP2025)...
+ -> [READ] Opening Raster File: OUTPUT_FABDEM/TH_MD_N/TH_MD_N_fabdem.tif
+ -> [READ] Opening Raster File for Area Sum: OUTPUT_POP2025/TH_MD_N/TH_MD_N_population_2025_100m.tif
+ -> Converting geometries to Lng/Lat (EPSG:4326)...
+[4/4] Save GeoPackage Data...
+ -> [WRITE] Saving Vector File: /mnt/nvme1/Project/2026-EIT_LDP_Province/OUTPUT_SAMPL/TH_MD_N/TH_MD_N_SAMPL.gpkg (Layer: 'samples')
+
+[5/5] Comparing POP2025 with DOPA Registration Population...
+
+Completed successfully.
+ HASC_1  Grid (m)       CRS  Samples             Output POP2025 DOPA_Pop     Diff
+TH.MD_N    1000.0 EPSG:4326     1927 TH_MD_N_SAMPL.gpkg 114,430  349,618 -235,188
+--> [TH.MD_N] Step 4: 4_analyse_ldp.py
+LDP                                               [TM, 104:21]
+FALSE_EN                                     [50000, -1690000]
+PP_MSL                                                     215
+GPKG         [OUTPUT_SAMPL/TH_MD_N/TH_MD_N_SAMPL.gpkg, samp...
+OFFSET_PP         [0.0, default hPP from average topo or pnts]
+dtype: object
+ -> OUTLIER FILTER: Dropped 39 points.
+ -> Dropped MSL values: [269, 238, 290, 196, 395, 196, 202, 196, 196, 446, 523, 440, 448, 447, 277, 285, 265, 231, 255, 238, 520, 206, 353, 203, 164, 483, 333, 503, 383, 197, 599, 240, 237, 233, 248, 269, 212, 233, 219]
+ -> THINNING: Snapping points to 2 decimal grid...
+ -> THINNING: Points reduced from 1888 to 1615.
+ -> Using user-defined PP_MSL: 215.000m
+==================================== LDP TM ====================================
+@ Centroid @     <lng=104°21′>    <lat=16°41′>
+Offset Projection Plane = +0.0 m. <default hPP from average topo or pnts>
+Designed Project Plane : hPP=+190.59 m. / MSL=+215.00 m. tied to k0 = 1.000030
+Points CSF min/mean/max [ppm] : -60.0 / -7.6 / +21.5
+Points MSL min/mean/max [m.]  : +157.0 / +275.4 / +597.0
+|      |      LDP_E |       LDP_N |
+|:-----|-----------:|------------:|
+| min  | 21,244.459 | 115,663.895 |
+| max  | 82,280.059 | 177,712.853 |
+| diff | 61,035.600 |  62,048.958 |
+{"meta": "LDP_Definition", "PROJ_String_Decimal": "+proj=tmerc +lat_0=0.0 +lon_0=104.35000000 +k_0=1.000030 +x_0=50000 +y_0=-1690000 +ellps=WGS84 +units=m +no_defs +type=crs", "PROJ_String_DMS": "+proj=tmerc +lat_0=0.0 +lon_0=104°21′ +k_0=1.000030 +x_0=50000 +y_0=-1690000 +ellps=WGS84 +units=m +no_defs +type=crs"}
+Writing definition GPKG : OUTPUT_LDP/TH_MD_N/TH_MD_N_LDP.gpkg ...
+Writing definition plot : OUTPUT_LDP/TH_MD_N/TH_MD_N_LDP.svg...
+{"meta": "Coverage_Analysis", "Province": "TH.MD_N", "Total_Pts": 1927, "Valid_Pts": 1290, "Pt_Coverage(%)": 66.94, "Total_POP": 114430.1214, "Valid_POP": 91484.8523, "POP_Coverage(%)": 79.95, "CSF_Min_ppm": -20.0, "CSF_Mean_ppm": -2.1, "CSF_Max_ppm": 19.5}
+--> [TH.MD_N] Step 5: 5_plot_PP_PctPopu.py
+[TH.MD_N] Starting ProcessPoolExecutor with 16 offsets to compute (Mean MSL: 275.36 m)...
+[TH.MD_N] OFFSET_PP [-200.00] computed successfully.
+[TH.MD_N] OFFSET_PP [-180.00] computed successfully.
+[TH.MD_N] OFFSET_PP [-160.00] computed successfully.
+[TH.MD_N] OFFSET_PP [-140.00] computed successfully.
+[TH.MD_N] OFFSET_PP [-120.00] computed successfully.
+[TH.MD_N] OFFSET_PP [-100.00] computed successfully.
+[TH.MD_N] OFFSET_PP [-80.00] computed successfully.
+[TH.MD_N] OFFSET_PP [-60.00] computed successfully.
+[TH.MD_N] OFFSET_PP [-40.00] computed successfully.
+[TH.MD_N] OFFSET_PP [-20.00] computed successfully.
+[TH.MD_N] OFFSET_PP [0.00] computed successfully.
+[TH.MD_N] OFFSET_PP [20.00] computed successfully.
+[TH.MD_N] OFFSET_PP [40.00] computed successfully.
+[TH.MD_N] OFFSET_PP [60.00] computed successfully.
+[TH.MD_N] OFFSET_PP [80.00] computed successfully.
+[TH.MD_N] OFFSET_PP [100.00] computed successfully.
+
+==================================== LDP Population Coverage Analysis: TH.MD_N ====================================
+|   MSL_PP |   HAE_PP | Province   |   Total_Pts |   Valid_Pts |   Pt_Coverage(%) |   Total_POP |   Valid_POP |   POP_Coverage(%) |   CSF_Min_ppm |   CSF_Mean_ppm |   CSF_Max_ppm |
+|---------:|---------:|:-----------|------------:|------------:|-----------------:|------------:|------------:|------------------:|--------------:|---------------:|--------------:|
+|   +75.36 |   +50.95 | TH.MD_N    |        1927 |         501 |            26.00 |     114,430 |      69,556 |             60.78 |         -20.0 |          -14.3 |          -0.5 |
+|   +95.36 |   +70.95 | TH.MD_N    |        1927 |         635 |            32.95 |     114,430 |      76,971 |             67.26 |         -20.0 |          -12.8 |          +2.5 |
+|  +115.36 |   +90.95 | TH.MD_N    |        1927 |         752 |            39.02 |     114,430 |      79,822 |             69.76 |         -20.0 |          -11.2 |          +5.5 |
+|  +135.36 |  +110.95 | TH.MD_N    |        1927 |         864 |            44.84 |     114,430 |      84,582 |             73.92 |         -19.9 |           -9.5 |          +8.5 |
+|  +155.36 |  +130.95 | TH.MD_N    |        1927 |        1028 |            53.35 |     114,430 |      88,042 |             76.94 |         -20.0 |           -7.5 |         +12.5 |
+|  +175.36 |  +150.95 | TH.MD_N    |        1927 |        1122 |            58.23 |     114,430 |      90,952 |             79.48 |         -19.9 |           -5.7 |         +15.5 |
+|  +195.36 |  +170.95 | TH.MD_N    |        1927 |        1203 |            62.43 |     114,430 |      91,432 |             79.90 |         -19.9 |           -3.7 |         +18.5 |
+|  +215.36 |  +190.95 | TH.MD_N    |        1927 |        1290 |            66.94 |     114,430 |      91,485 |             79.95 |         -20.0 |           -2.1 |         +19.5 |
+|  +235.36 |  +210.95 | TH.MD_N    |        1927 |        1346 |            69.85 |     114,430 |      89,774 |             78.45 |         -20.0 |           -0.2 |         +19.9 |
+|  +255.36 |  +230.95 | TH.MD_N    |        1927 |        1384 |            71.82 |     114,430 |      85,918 |             75.08 |         -19.9 |           +1.5 |         +19.9 |
+|  +275.36 |  +250.95 | TH.MD_N    |        1927 |        1362 |            70.68 |     114,430 |      76,194 |             66.59 |         -19.9 |           +3.1 |         +20.0 |
+|  +295.36 |  +270.95 | TH.MD_N    |        1927 |        1269 |            65.85 |     114,430 |      55,393 |             48.41 |         -20.0 |           +4.3 |         +20.0 |
+|  +315.36 |  +290.95 | TH.MD_N    |        1927 |        1153 |            59.83 |     114,430 |      35,547 |             31.06 |         -19.9 |           +4.9 |         +20.0 |
+|  +335.36 |  +310.95 | TH.MD_N    |        1927 |        1015 |            52.67 |     114,430 |      19,248 |             16.82 |         -19.9 |           +5.3 |         +20.0 |
+|  +355.36 |  +330.95 | TH.MD_N    |        1927 |         911 |            47.28 |     114,430 |      14,394 |             12.58 |         -19.9 |           +6.2 |         +20.0 |
+|  +375.36 |  +350.95 | TH.MD_N    |        1927 |         808 |            41.93 |     114,430 |      11,476 |             10.03 |         -19.5 |           +6.9 |         +20.0 |
+==========================================================================================================================
+
+ -> Plot saved successfully to: OUTPUT_LDP/TH_MD_N/TH_MD_N_Plot_PP_Popu.svg
+
+--> [TH.MD_N] Step 6: 6_LDP_OnePage.py
+Processing province: TH_MD_N
+[+] TH_MD_N: One-Page Report generated successfully.
+======================================================================
+Completed province: TH.MD_N
+Finished: 2026-08-01T11:27:56+07:00
+======================================================================

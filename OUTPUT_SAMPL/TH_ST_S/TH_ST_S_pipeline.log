@@ -1,0 +1,120 @@
+======================================================================
+Processing province: TH.ST_S
+Started: 2026-08-01T11:39:52+07:00
+======================================================================
+--> [TH.ST_S] Step 1: 1_fabdem_province.py
+[1/5] Read GADM and select HASC_1=TH.ST_S
+[2/5] Save province and clip FABDEM
+[3/5] Generate contours every 100 m with GDAL 3.10.3
+[4/5] Calculate statistics and write PDF
+[5/5] Write DataFrame summaries
+
+Completed successfully.
+ HASC_1            NAME_1  contours                                                                                        PDF
+TH.ST_S Surat Thani South      1913 /mnt/nvme1/Project/2026-EIT_LDP_Province/OUTPUT_FABDEM/TH_ST_S/TH_ST_S_fabdem_contours.pdf
+--> [TH.ST_S] Step 2: 2_popu2025_grid.py
+[1/4] Select GADM province HASC_1=TH.ST_S
+[2/4] Save boundary and cut population grid
+[3/4] Calculate population-grid statistics
+[4/4] Write population-grid PDF and summaries
+
+Completed successfully.
+ HASC_1            NAME_1  population_sum                                                                                             grid
+TH.ST_S Surat Thani South   720367.302606 /mnt/nvme1/Project/2026-EIT_LDP_Province/OUTPUT_POP2025/TH_ST_S/TH_ST_S_population_2025_100m.tif
+--> [TH.ST_S] Step 3: 3_generate_sample.py
+[1/4] Select GADM province HASC_1=TH.ST_S
+ -> [READ] Loading Vector Dataset: OUTPUT_PROV/gadm41_THA.gpkg (Layer: 'ADM_ADM_1')
+[2/4] Generate 1000.0m grid points
+ -> Auto-detected EPSG:32647 for province.
+ -> Generated 12,051 bounding box points.
+ -> Clipping points to province boundary...
+ -> Computing 7-digit Geohashes...
+[3/4] Extracting Raster Values (FABDEM MSL & POP2025)...
+ -> [READ] Opening Raster File: OUTPUT_FABDEM/TH_ST_S/TH_ST_S_fabdem.tif
+ -> [READ] Opening Raster File for Area Sum: OUTPUT_POP2025/TH_ST_S/TH_ST_S_population_2025_100m.tif
+ -> Converting geometries to Lng/Lat (EPSG:4326)...
+[4/4] Save GeoPackage Data...
+ -> [WRITE] Saving Vector File: /mnt/nvme1/Project/2026-EIT_LDP_Province/OUTPUT_SAMPL/TH_ST_S/TH_ST_S_SAMPL.gpkg (Layer: 'samples')
+
+[5/5] Comparing POP2025 with DOPA Registration Population...
+
+Completed successfully.
+ HASC_1  Grid (m)       CRS  Samples             Output POP2025  DOPA_Pop     Diff
+TH.ST_S    1000.0 EPSG:4326     6053 TH_ST_S_SAMPL.gpkg 714,826 1,075,977 -361,151
+--> [TH.ST_S] Step 4: 4_analyse_ldp.py
+LDP                                                [TM, 99:18]
+FALSE_EN                                                  AUTO
+PP_MSL                                                     -30
+GPKG         [OUTPUT_SAMPL/TH_ST_S/TH_ST_S_SAMPL.gpkg, samp...
+OFFSET_PP         [0.0, default hPP from average topo or pnts]
+dtype: object
+ -> OUTLIER FILTER: Dropped 124 points.
+ -> Dropped MSL values: [-9999, -9999, -9999, 87, 122, 510, 120, 541, 81, 86, 91, 121, 114, 135, 127, 143, 177, 125, 143, 115, 225, 101, 182, 148, 147, 182, 119, 190, 191, 194, 387, 373, 324, 117, 127, 108, 95, 93, 124, 94, 165, 137, 83, 80, 49, 177, 91, 132, 190, 71, 37, 73, 108, 61, 108, 65, 74, 99, 97, 86, 242, 85, 79, 123, 46, 162, 124, 44, -2, 0, 1244, 1248, 1222, 1269, 1250, 1217, 1115, 77, 78, 70, 85, 726, 786, 846, 722, 901, 1058, 1064, 960, 862, 747, 712, 90, 33, 55, 51, 45, 71, 29, 60, 42, 48, 66, 95, 69, 53, 31, 31, 91, 77, 106, 65, 109, 64, 312, 494, 445, 349, 293, 85, 3, 172, 179, 140]
+ -> THINNING: Snapping points to 2 decimal grid...
+ -> THINNING: Points reduced from 5929 to 4920.
+ -> Using user-defined PP_MSL: -30.000m
+ -> AUTO detected FALSE_EN: E: 50000, N: -500000
+==================================== LDP TM ====================================
+@ Centroid @     <lng=99°18′>    <lat=08°51′>
+Offset Projection Plane = +0.0 m. <default hPP from average topo or pnts>
+Designed Project Plane : hPP=-53.05 m. / MSL=-30.00 m. tied to k0 = 0.999992
+Points CSF min/mean/max [ppm] : -176.8 / -9.6 / +23.0
+Points MSL min/mean/max [m.]  : +0.0 / +75.7 / +1141.0
+|      |      LDP_E |       LDP_N |
+|:-----|-----------:|------------:|
+| min  |  1,973.763 | 418,349.043 |
+| max  | 99,070.826 | 532,354.973 |
+| diff | 97,097.063 | 114,005.931 |
+{"meta": "LDP_Definition", "PROJ_String_Decimal": "+proj=tmerc +lat_0=0.0 +lon_0=99.30000000 +k_0=0.999992 +x_0=50000 +y_0=-500000 +ellps=WGS84 +units=m +no_defs +type=crs", "PROJ_String_DMS": "+proj=tmerc +lat_0=0.0 +lon_0=99°18′ +k_0=0.999992 +x_0=50000 +y_0=-500000 +ellps=WGS84 +units=m +no_defs +type=crs"}
+Writing definition GPKG : OUTPUT_LDP/TH_ST_S/TH_ST_S_LDP.gpkg ...
+Writing definition plot : OUTPUT_LDP/TH_ST_S/TH_ST_S_LDP.svg...
+{"meta": "Coverage_Analysis", "Province": "TH.ST_S", "Total_Pts": 6053, "Valid_Pts": 4455, "Pt_Coverage(%)": 73.6, "Total_POP": 714825.7545, "Valid_POP": 584785.5976999999, "POP_Coverage(%)": 81.81, "CSF_Min_ppm": -19.9, "CSF_Mean_ppm": -4.0, "CSF_Max_ppm": 20.0}
+--> [TH.ST_S] Step 5: 5_plot_PP_PctPopu.py
+[TH.ST_S] Starting ProcessPoolExecutor with 16 offsets to compute (Mean MSL: 75.71 m)...
+[TH.ST_S] OFFSET_PP [-200.00] computed successfully.
+[TH.ST_S] OFFSET_PP [-180.00] computed successfully.
+[TH.ST_S] OFFSET_PP [-160.00] computed successfully.
+[TH.ST_S] OFFSET_PP [-140.00] computed successfully.
+[TH.ST_S] OFFSET_PP [-120.00] computed successfully.
+[TH.ST_S] OFFSET_PP [-100.00] computed successfully.
+[TH.ST_S] OFFSET_PP [-80.00] computed successfully.
+[TH.ST_S] OFFSET_PP [-60.00] computed successfully.
+[TH.ST_S] OFFSET_PP [-40.00] computed successfully.
+[TH.ST_S] OFFSET_PP [-20.00] computed successfully.
+[TH.ST_S] OFFSET_PP [0.00] computed successfully.
+[TH.ST_S] OFFSET_PP [20.00] computed successfully.
+[TH.ST_S] OFFSET_PP [40.00] computed successfully.
+[TH.ST_S] OFFSET_PP [60.00] computed successfully.
+[TH.ST_S] OFFSET_PP [80.00] computed successfully.
+[TH.ST_S] OFFSET_PP [100.00] computed successfully.
+
+==================================== LDP Population Coverage Analysis: TH.ST_S ====================================
+|   MSL_PP |   HAE_PP | Province   |   Total_Pts |   Valid_Pts |   Pt_Coverage(%) |   Total_POP |   Valid_POP |   POP_Coverage(%) |   CSF_Min_ppm |   CSF_Mean_ppm |   CSF_Max_ppm |
+|---------:|---------:|:-----------|------------:|------------:|-----------------:|------------:|------------:|------------------:|--------------:|---------------:|--------------:|
+|  -124.29 |  -147.35 | TH.ST_S    |        6053 |        2313 |            38.21 |     714,826 |     355,522 |             49.74 |         -20.0 |          -14.4 |          +8.0 |
+|  -104.29 |  -127.35 | TH.ST_S    |        6053 |        3362 |            55.54 |     714,826 |     468,287 |             65.51 |         -20.0 |          -13.6 |         +11.0 |
+|   -84.29 |  -107.35 | TH.ST_S    |        6053 |        4054 |            66.98 |     714,826 |     562,607 |             78.71 |         -20.0 |          -11.9 |         +14.0 |
+|   -64.29 |   -87.35 | TH.ST_S    |        6053 |        4318 |            71.34 |     714,826 |     581,009 |             81.28 |         -20.0 |           -9.5 |         +17.0 |
+|   -44.29 |   -67.35 | TH.ST_S    |        6053 |        4411 |            72.87 |     714,826 |     584,958 |             81.83 |         -20.0 |           -6.8 |         +20.0 |
+|   -24.29 |   -47.35 | TH.ST_S    |        6053 |        4452 |            73.55 |     714,826 |     583,284 |             81.60 |         -19.9 |           -3.1 |         +19.9 |
+|    -4.29 |   -27.35 | TH.ST_S    |        6053 |        4437 |            73.30 |     714,826 |     573,694 |             80.26 |         -19.9 |           -0.4 |         +19.9 |
+|   +15.71 |    -7.35 | TH.ST_S    |        6053 |        4376 |            72.29 |     714,826 |     565,892 |             79.17 |         -19.9 |           +2.1 |         +20.0 |
+|   +35.71 |   +12.65 | TH.ST_S    |        6053 |        4327 |            71.49 |     714,826 |     559,500 |             78.27 |         -19.9 |           +4.7 |         +20.0 |
+|   +55.71 |   +32.65 | TH.ST_S    |        6053 |        4206 |            69.49 |     714,826 |     542,844 |             75.94 |         -20.0 |           +7.2 |         +19.9 |
+|   +75.71 |   +52.65 | TH.ST_S    |        6053 |        4091 |            67.59 |     714,826 |     533,654 |             74.66 |         -20.0 |           +9.7 |         +20.0 |
+|   +95.71 |   +72.65 | TH.ST_S    |        6053 |        3866 |            63.87 |     714,826 |     512,639 |             71.72 |         -20.0 |          +12.0 |         +20.0 |
+|  +115.71 |   +92.65 | TH.ST_S    |        6053 |        3103 |            51.26 |     714,826 |     425,491 |             59.52 |         -19.7 |          +14.4 |         +20.0 |
+|  +135.71 |  +112.65 | TH.ST_S    |        6053 |        2016 |            33.31 |     714,826 |     205,865 |             28.80 |         -19.9 |          +14.8 |         +20.0 |
+|  +155.71 |  +132.65 | TH.ST_S    |        6053 |         989 |            16.34 |     714,826 |      78,694 |             11.01 |         -19.8 |          +13.2 |         +20.0 |
+|  +175.71 |  +152.65 | TH.ST_S    |        6053 |         505 |             8.34 |     714,826 |      18,148 |              2.54 |         -19.7 |           +9.5 |         +20.0 |
+==========================================================================================================================
+
+ -> Plot saved successfully to: OUTPUT_LDP/TH_ST_S/TH_ST_S_Plot_PP_Popu.svg
+
+--> [TH.ST_S] Step 6: 6_LDP_OnePage.py
+Processing province: TH_ST_S
+[+] TH_ST_S: One-Page Report generated successfully.
+======================================================================
+Completed province: TH.ST_S
+Finished: 2026-08-01T11:43:51+07:00
+======================================================================

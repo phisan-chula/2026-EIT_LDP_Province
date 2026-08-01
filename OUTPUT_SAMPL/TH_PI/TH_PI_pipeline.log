@@ -1,0 +1,119 @@
+======================================================================
+Processing province: TH.PI
+Started: 2026-08-01T11:33:14+07:00
+======================================================================
+--> [TH.PI] Step 1: 1_fabdem_province.py
+[1/5] Read GADM and select HASC_1=TH.PI
+[2/5] Save province and clip FABDEM
+[3/5] Generate contours every 100 m with GDAL 3.10.3
+[4/5] Calculate statistics and write PDF
+[5/5] Write DataFrame summaries
+
+Completed successfully.
+HASC_1  NAME_1  contours                                                                                    PDF
+ TH.PI Pattani       857 /mnt/nvme1/Project/2026-EIT_LDP_Province/OUTPUT_FABDEM/TH_PI/TH_PI_fabdem_contours.pdf
+--> [TH.PI] Step 2: 2_popu2025_grid.py
+[1/4] Select GADM province HASC_1=TH.PI
+[2/4] Save boundary and cut population grid
+[3/4] Calculate population-grid statistics
+[4/4] Write population-grid PDF and summaries
+
+Completed successfully.
+HASC_1  NAME_1  population_sum                                                                                         grid
+ TH.PI Pattani   580740.622162 /mnt/nvme1/Project/2026-EIT_LDP_Province/OUTPUT_POP2025/TH_PI/TH_PI_population_2025_100m.tif
+--> [TH.PI] Step 3: 3_generate_sample.py
+[1/4] Select GADM province HASC_1=TH.PI
+ -> [READ] Loading Vector Dataset: OUTPUT_PROV/gadm41_THA.gpkg (Layer: 'ADM_ADM_1')
+[2/4] Generate 1000.0m grid points
+ -> Auto-detected EPSG:32647 for province.
+ -> Generated 3,760 bounding box points.
+ -> Clipping points to province boundary...
+ -> Computing 7-digit Geohashes...
+[3/4] Extracting Raster Values (FABDEM MSL & POP2025)...
+ -> [READ] Opening Raster File: OUTPUT_FABDEM/TH_PI/TH_PI_fabdem.tif
+ -> [READ] Opening Raster File for Area Sum: OUTPUT_POP2025/TH_PI/TH_PI_population_2025_100m.tif
+ -> Converting geometries to Lng/Lat (EPSG:4326)...
+[4/4] Save GeoPackage Data...
+ -> [WRITE] Saving Vector File: /mnt/nvme1/Project/2026-EIT_LDP_Province/OUTPUT_SAMPL/TH_PI/TH_PI_SAMPL.gpkg (Layer: 'samples')
+
+[5/5] Comparing POP2025 with DOPA Registration Population...
+
+Completed successfully.
+HASC_1  Grid (m)       CRS  Samples           Output POP2025 DOPA_Pop     Diff
+ TH.PI    1000.0 EPSG:4326     1943 TH_PI_SAMPL.gpkg 569,891  744,971 -175,080
+--> [TH.PI] Step 4: 4_analyse_ldp.py
+LDP                                             [LCC, 6:44]
+FALSE_EN                                    [150000, 50000]
+PP_MSL                                                    0
+GPKG         [OUTPUT_SAMPL/TH_PI/TH_PI_SAMPL.gpkg, samples]
+OFFSET_PP      [0.0, default hPP from average topo or pnts]
+dtype: object
+ -> OUTLIER FILTER: Dropped 43 points.
+ -> Dropped MSL values: [-9999, -9999, -9999, -9999, 94, 958, 149, 131, 146, 125, 125, 105, 95, 35, 97, 37, 48, 437, 356, 41, 59, 38, 44, 103, 134, 176, 445, 69, 426, 80, 148, 427, 77, 115, 447, 43, 2, 2, 4, 3, 3, 4, 0]
+ -> THINNING: Snapping points to 2 decimal grid...
+ -> THINNING: Points reduced from 1900 to 1573.
+ -> Using user-defined PP_MSL: 0.000m
+=================================== LDP LCC ====================================
+@ Centroid @     <lng=101°21′>    <lat=06°44′>
+Offset Projection Plane = +0.0 m. <default hPP from average topo or pnts>
+Designed Project Plane : hPP=-11.13 m. / MSL=+0.00 m. tied to k0 = 0.999998
+Points CSF min/mean/max [ppm] : -115.0 / -3.1 / +4.5
+Points MSL min/mean/max [m.]  : +0.0 / +24.7 / +739.0
+|      |       LDP_E |      LDP_N |
+|:-----|------------:|-----------:|
+| min  | 114,232.036 | 30,000.783 |
+| max  | 191,119.794 | 70,104.929 |
+| diff |  76,887.758 | 40,104.146 |
+{"meta": "LDP_Definition", "PROJ_String_Decimal": "+proj=lcc +lat_1=6.73333333 +lat_0=6.73333333 +lon_0=101.35000000 +k_0=0.999998 +x_0=150000 +y_0=50000 +ellps=WGS84 +units=m +no_defs +type=crs", "PROJ_String_DMS": "+proj=lcc +lat_1=06°44′ +lat_0=06°44′ +lon_0=101°21′ +k_0=0.999998 +x_0=150000 +y_0=50000 +ellps=WGS84 +units=m +no_defs +type=crs"}
+Writing definition GPKG : OUTPUT_LDP/TH_PI/TH_PI_LDP.gpkg ...
+Writing definition plot : OUTPUT_LDP/TH_PI/TH_PI_LDP.svg...
+{"meta": "Coverage_Analysis", "Province": "TH.PI", "Total_Pts": 1943, "Valid_Pts": 1506, "Pt_Coverage(%)": 77.51, "Total_POP": 569891.0705, "Valid_POP": 476429.2423, "POP_Coverage(%)": 83.6, "CSF_Min_ppm": -19.6, "CSF_Mean_ppm": -1.4, "CSF_Max_ppm": 4.5}
+--> [TH.PI] Step 5: 5_plot_PP_PctPopu.py
+[TH.PI] Starting ProcessPoolExecutor with 16 offsets to compute (Mean MSL: 24.68 m)...
+[TH.PI] OFFSET_PP [-200.00] computed successfully.
+[TH.PI] OFFSET_PP [-180.00] computed successfully.
+[TH.PI] OFFSET_PP [-160.00] computed successfully.
+[TH.PI] OFFSET_PP [-140.00] computed successfully.
+[TH.PI] OFFSET_PP [-120.00] computed successfully.
+[TH.PI] OFFSET_PP [-100.00] computed successfully.
+[TH.PI] OFFSET_PP [-80.00] computed successfully.
+[TH.PI] OFFSET_PP [-60.00] computed successfully.
+[TH.PI] OFFSET_PP [-40.00] computed successfully.
+[TH.PI] OFFSET_PP [-20.00] computed successfully.
+[TH.PI] OFFSET_PP [0.00] computed successfully.
+[TH.PI] OFFSET_PP [20.00] computed successfully.
+[TH.PI] OFFSET_PP [40.00] computed successfully.
+[TH.PI] OFFSET_PP [60.00] computed successfully.
+[TH.PI] OFFSET_PP [80.00] computed successfully.
+[TH.PI] OFFSET_PP [100.00] computed successfully.
+
+==================================== LDP Population Coverage Analysis: TH.PI ====================================
+|   MSL_PP |   HAE_PP | Province   |   Total_Pts |   Valid_Pts |   Pt_Coverage(%) |   Total_POP |   Valid_POP |   POP_Coverage(%) |   CSF_Min_ppm |   CSF_Mean_ppm |   CSF_Max_ppm |
+|---------:|---------:|:-----------|------------:|------------:|-----------------:|------------:|------------:|------------------:|--------------:|---------------:|--------------:|
+|  -175.32 |  -186.45 | TH.PI      |        1943 |           0 |             0.00 |     569,891 |           0 |              0.00 |          +0.0 |           +0.0 |          +0.0 |
+|  -155.32 |  -166.45 | TH.PI      |        1943 |           2 |             0.10 |     569,891 |       2,150 |              0.38 |         -20.0 |          -19.7 |         -19.5 |
+|  -135.32 |  -146.45 | TH.PI      |        1943 |         229 |            11.79 |     569,891 |     140,749 |             24.70 |         -20.0 |          -19.1 |         -16.5 |
+|  -115.32 |  -126.45 | TH.PI      |        1943 |        1137 |            58.52 |     569,891 |     405,310 |             71.12 |         -20.0 |          -18.1 |         -13.5 |
+|   -95.32 |  -106.45 | TH.PI      |        1943 |        1363 |            70.15 |     569,891 |     462,227 |             81.11 |         -20.0 |          -15.6 |         -10.5 |
+|   -75.32 |   -86.45 | TH.PI      |        1943 |        1437 |            73.96 |     569,891 |     473,953 |             83.17 |         -20.0 |          -12.9 |          -7.5 |
+|   -55.32 |   -66.45 | TH.PI      |        1943 |        1477 |            76.02 |     569,891 |     475,934 |             83.51 |         -19.9 |           -9.1 |          -3.5 |
+|   -35.32 |   -46.45 | TH.PI      |        1943 |        1490 |            76.69 |     569,891 |     476,134 |             83.55 |         -19.9 |           -6.2 |          -0.5 |
+|   -15.32 |   -26.45 | TH.PI      |        1943 |        1504 |            77.41 |     569,891 |     476,429 |             83.60 |         -19.5 |           -3.4 |          +2.5 |
+|    +4.68 |    -6.45 | TH.PI      |        1943 |        1509 |            77.66 |     569,891 |     476,435 |             83.60 |         -19.7 |           -0.4 |          +5.5 |
+|   +24.68 |   +13.55 | TH.PI      |        1943 |        1519 |            78.18 |     569,891 |     476,524 |             83.62 |         -19.5 |           +2.4 |          +8.5 |
+|   +44.68 |   +33.55 | TH.PI      |        1943 |        1525 |            78.49 |     569,891 |     476,530 |             83.62 |         -19.6 |           +5.3 |         +11.5 |
+|   +64.68 |   +53.55 | TH.PI      |        1943 |        1531 |            78.80 |     569,891 |     476,543 |             83.62 |         -19.9 |           +8.2 |         +14.5 |
+|   +84.68 |   +73.55 | TH.PI      |        1943 |        1537 |            79.10 |     569,891 |     476,570 |             83.62 |         -19.7 |          +12.1 |         +18.5 |
+|  +104.68 |   +93.55 | TH.PI      |        1943 |        1529 |            78.69 |     569,891 |     461,156 |             80.92 |         -19.8 |          +15.0 |         +19.9 |
+|  +124.68 |  +113.55 | TH.PI      |        1943 |        1104 |            56.82 |     569,891 |     286,041 |             50.19 |         -19.9 |          +16.5 |         +20.0 |
+==========================================================================================================================
+
+ -> Plot saved successfully to: OUTPUT_LDP/TH_PI/TH_PI_Plot_PP_Popu.svg
+
+--> [TH.PI] Step 6: 6_LDP_OnePage.py
+Processing province: TH_PI
+[+] TH_PI: One-Page Report generated successfully.
+======================================================================
+Completed province: TH.PI
+Finished: 2026-08-01T11:35:01+07:00
+======================================================================

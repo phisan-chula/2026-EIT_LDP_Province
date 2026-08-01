@@ -208,7 +208,17 @@ class ProvinceReport:
 
         ax_json = self.axes["log_json"]
         ax_json.axis('off')
-        ax_json.text(x=0.0, y=0.5, s="\n".join(json_extracted), fontsize=7, family='monospace', verticalalignment='center', horizontalalignment='left', transform=ax_json.transAxes)
+        ax_json.text(
+            x=0.0,
+            y=0.0,
+            s="\n".join(json_extracted),
+            fontsize=7,
+            family="monospace",
+            verticalalignment="bottom",     # last line at bottom
+            horizontalalignment="left",
+            multialignment="left",          # left-align every line
+            transform=ax_json.transAxes,
+        )
 
     def generate(self):
         """Executes the full rendering pipeline and saves the strictly A4 PDF."""

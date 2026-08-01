@@ -1,0 +1,135 @@
+======================================================================
+Processing province: TH.PS
+Started: 2026-08-01T11:34:51+07:00
+======================================================================
+--> [TH.PS] Step 1: 1_fabdem_province.py
+[1/5] Read GADM and select HASC_1=TH.PS
+[2/5] Save province and clip FABDEM
+[3/5] Generate contours every 100 m with GDAL 3.10.3
+[4/5] Calculate statistics and write PDF
+[5/5] Write DataFrame summaries
+
+Completed successfully.
+HASC_1      NAME_1  contours                                                                                    PDF
+ TH.PS Phitsanulok      3592 /mnt/nvme1/Project/2026-EIT_LDP_Province/OUTPUT_FABDEM/TH_PS/TH_PS_fabdem_contours.pdf
+--> [TH.PS] Step 2: 2_popu2025_grid.py
+[1/4] Select GADM province HASC_1=TH.PS
+[2/4] Save boundary and cut population grid
+[3/4] Calculate population-grid statistics
+[4/4] Write population-grid PDF and summaries
+
+Completed successfully.
+HASC_1      NAME_1  population_sum                                                                                         grid
+ TH.PS Phitsanulok   977376.530989 /mnt/nvme1/Project/2026-EIT_LDP_Province/OUTPUT_POP2025/TH_PS/TH_PS_population_2025_100m.tif
+--> [TH.PS] Step 3: 3_generate_sample.py
+[1/4] Select GADM province HASC_1=TH.PS
+ -> [READ] Loading Vector Dataset: OUTPUT_PROV/gadm41_THA.gpkg (Layer: 'ADM_ADM_1')
+[2/4] Generate 1000.0m grid points
+ -> Auto-detected EPSG:32647 for province.
+ -> Generated 21,735 bounding box points.
+ -> Clipping points to province boundary...
+ -> Computing 7-digit Geohashes...
+[3/4] Extracting Raster Values (FABDEM MSL & POP2025)...
+ -> [READ] Opening Raster File: OUTPUT_FABDEM/TH_PS/TH_PS_fabdem.tif
+ -> [READ] Opening Raster File for Area Sum: OUTPUT_POP2025/TH_PS/TH_PS_population_2025_100m.tif
+ -> Converting geometries to Lng/Lat (EPSG:4326)...
+[4/4] Save GeoPackage Data...
+ -> [WRITE] Saving Vector File: /mnt/nvme1/Project/2026-EIT_LDP_Province/OUTPUT_SAMPL/TH_PS/TH_PS_SAMPL.gpkg (Layer: 'samples')
+
+[5/5] Comparing POP2025 with DOPA Registration Population...
+
+Completed successfully.
+HASC_1  Grid (m)       CRS  Samples           Output POP2025 DOPA_Pop    Diff
+ TH.PS    1000.0 EPSG:4326    10597 TH_PS_SAMPL.gpkg 973,670  835,480 138,190
+--> [TH.PS] Step 4: 4_analyse_ldp.py
+LDP                                            [TM, 100:33]
+FALSE_EN                                 [250000, -1130000]
+PP_MSL                                                   20
+POPU_PLOT                                   [350, -100, 20]
+GPKG         [OUTPUT_SAMPL/TH_PS/TH_PS_SAMPL.gpkg, samples]
+OFFSET_PP      [0.0, default hPP from average topo or pnts]
+dtype: object
+ -> OUTLIER FILTER: Dropped 217 points.
+ -> Dropped MSL values: [-9999, -9999, -9999, -9999, -9999, 129, 403, 488, 500, 109, 112, 168, 515, 577, 498, 151, 120, 120, 121, 349, 79, 91, 582, 560, 187, 274, 251, 227, 1127, 1017, 1154, 338, 304, 381, 1040, 1042, 993, 450, 388, 477, 468, 123, 104, 182, 142, 359, 815, 404, 499, 934, 163, 270, 202, 110, 117, 247, 200, 312, 569, 819, 369, 746, 755, 544, 957, 285, 388, 645, 505, 314, 642, 167, 163, 214, 145, 196, 108, 106, 58, 166, 328, 314, 389, 124, 162, 150, 412, 431, 293, 415, 145, 394, 123, 112, 125, 149, 143, 132, 479, 95, 122, 81, 102, 104, 221, 85, 487, 120, 98, 87, 87, 99, 243, 500, 116, 494, 502, 520, 496, 508, 672, 984, 97, 100, 632, 428, 330, 395, 217, 202, 396, 316, 421, 622, 714, 648, 659, 619, 957, 1682, 369, 530, 595, 244, 249, 391, 259, 545, 281, 248, 313, 708, 268, 850, 521, 575, 245, 1050, 1093, 1042, 1038, 937, 966, 278, 285, 284, 903, 832, 750, 729, 308, 311, 267, 252, 219, 248, 1318, 1208, 203, 782, 746, 249, 1221, 838, 846, 883, 851, 1386, 1404, 1285, 1391, 1292, 1316, 666, 674, 684, 1244, 1261, 1316, 1297, 1264, 1265, 1439, 1272, 1262, 1485, 1528, 1244, 1519, 1817, 1410, 1722, 1567, 1039, 1227, 1471, 1594]
+ -> THINNING: Snapping points to 2 decimal grid...
+ -> THINNING: Points reduced from 10380 to 8870.
+ -> Using user-defined PP_MSL: 20.000m
+==================================== LDP TM ====================================
+@ Centroid @     <lng=100°33′>    <lat=16°59′>
+Offset Projection Plane = +0.0 m. <default hPP from average topo or pnts>
+Designed Project Plane : hPP=-13.65 m. / MSL=+20.00 m. tied to k0 = 0.999998
+Points CSF min/mean/max [ppm] : -221.2 / -31.0 / +62.1
+Points MSL min/mean/max [m.]  : +33.0 / +293.2 / +1638.0
+|      |       LDP_E |       LDP_N |
+|:-----|------------:|------------:|
+| min  | 176,745.899 | 675,024.950 |
+| max  | 309,204.249 | 829,727.415 |
+| diff | 132,458.349 | 154,702.465 |
+{"meta": "LDP_Definition", "PROJ_String_Decimal": "+proj=tmerc +lat_0=0.0 +lon_0=100.55000000 +k_0=0.999998 +x_0=250000 +y_0=-1130000 +ellps=WGS84 +units=m +no_defs +type=crs", "PROJ_String_DMS": "+proj=tmerc +lat_0=0.0 +lon_0=100°33′ +k_0=0.999998 +x_0=250000 +y_0=-1130000 +ellps=WGS84 +units=m +no_defs +type=crs"}
+Writing definition GPKG : OUTPUT_LDP/TH_PS/TH_PS_LDP.gpkg ...
+Writing definition plot : OUTPUT_LDP/TH_PS/TH_PS_LDP.svg...
+{"meta": "Coverage_Analysis", "Province": "TH.PS", "Total_Pts": 10597, "Valid_Pts": 3287, "Pt_Coverage(%)": 31.02, "Total_POP": 973670.0819999999, "Valid_POP": 622625.6017, "POP_Coverage(%)": 63.95, "CSF_Min_ppm": -20.0, "CSF_Mean_ppm": -0.7, "CSF_Max_ppm": 20.0}
+--> [TH.PS] Step 5: 5_plot_PP_PctPopu.py
+[TH.PS] POPU_PLOT found in TOML. Overriding MSL bounds: Upper=350.0, Lower=-100.0, Step=20.0
+[TH.PS] Starting ProcessPoolExecutor with 23 offsets to compute (Mean MSL: 293.20 m)...
+[TH.PS] OFFSET_PP [-393.20] computed successfully.
+[TH.PS] OFFSET_PP [-373.20] computed successfully.
+[TH.PS] OFFSET_PP [-353.20] computed successfully.
+[TH.PS] OFFSET_PP [-333.20] computed successfully.
+[TH.PS] OFFSET_PP [-313.20] computed successfully.
+[TH.PS] OFFSET_PP [-293.20] computed successfully.
+[TH.PS] OFFSET_PP [-273.20] computed successfully.
+[TH.PS] OFFSET_PP [-253.20] computed successfully.
+[TH.PS] OFFSET_PP [-233.20] computed successfully.
+[TH.PS] OFFSET_PP [-213.20] computed successfully.
+[TH.PS] OFFSET_PP [-193.20] computed successfully.
+[TH.PS] OFFSET_PP [-173.20] computed successfully.
+[TH.PS] OFFSET_PP [-153.20] computed successfully.
+[TH.PS] OFFSET_PP [-133.20] computed successfully.
+[TH.PS] OFFSET_PP [-113.20] computed successfully.
+[TH.PS] OFFSET_PP [-93.20] computed successfully.
+[TH.PS] OFFSET_PP [-73.20] computed successfully.
+[TH.PS] OFFSET_PP [-53.20] computed successfully.
+[TH.PS] OFFSET_PP [-33.20] computed successfully.
+[TH.PS] OFFSET_PP [-13.20] computed successfully.
+[TH.PS] OFFSET_PP [6.80] computed successfully.
+[TH.PS] OFFSET_PP [26.80] computed successfully.
+[TH.PS] OFFSET_PP [46.80] computed successfully.
+
+==================================== LDP Population Coverage Analysis: TH.PS ====================================
+|   MSL_PP |   HAE_PP | Province   |   Total_Pts |   Valid_Pts |   Pt_Coverage(%) |   Total_POP |   Valid_POP |   POP_Coverage(%) |   CSF_Min_ppm |   CSF_Mean_ppm |   CSF_Max_ppm |
+|---------:|---------:|:-----------|------------:|------------:|-----------------:|------------:|------------:|------------------:|--------------:|---------------:|--------------:|
+|  -100.00 |  -133.65 | TH.PS      |       10597 |        2364 |            22.31 |     973,670 |     533,003 |             54.74 |         -20.0 |           -4.7 |         +20.0 |
+|   -80.00 |  -113.65 | TH.PS      |       10597 |        2615 |            24.68 |     973,670 |     572,151 |             58.76 |         -20.0 |           -4.6 |         +20.0 |
+|   -60.00 |   -93.65 | TH.PS      |       10597 |        3031 |            28.60 |     973,670 |     610,290 |             62.68 |         -20.0 |           -5.3 |         +20.0 |
+|   -40.00 |   -73.65 | TH.PS      |       10597 |        3081 |            29.07 |     973,670 |     610,390 |             62.69 |         -20.0 |           -3.9 |         +19.7 |
+|   -20.00 |   -53.65 | TH.PS      |       10597 |        3110 |            29.35 |     973,670 |     609,071 |             62.55 |         -20.0 |           -2.0 |         +20.0 |
+|    +0.00 |   -33.65 | TH.PS      |       10597 |        3159 |            29.81 |     973,670 |     607,045 |             62.35 |         -20.0 |           -1.2 |         +20.0 |
+|   +20.00 |   -13.65 | TH.PS      |       10597 |        3287 |            31.02 |     973,670 |     622,626 |             63.95 |         -20.0 |           -0.7 |         +20.0 |
+|   +40.00 |    +6.35 | TH.PS      |       10597 |        3369 |            31.79 |     973,670 |     617,708 |             63.44 |         -20.0 |           -0.0 |         +19.9 |
+|   +60.00 |   +26.35 | TH.PS      |       10597 |        3440 |            32.46 |     973,670 |     595,142 |             61.12 |         -20.0 |           +0.7 |         +20.0 |
+|   +80.00 |   +46.35 | TH.PS      |       10597 |        3535 |            33.36 |     973,670 |     556,761 |             57.18 |         -20.0 |           +0.9 |         +20.0 |
+|  +100.00 |   +66.35 | TH.PS      |       10597 |        3550 |            33.50 |     973,670 |     449,498 |             46.17 |         -20.0 |           +1.0 |         +20.0 |
+|  +120.00 |   +86.35 | TH.PS      |       10597 |        3478 |            32.82 |     973,670 |     314,489 |             32.30 |         -20.0 |           +1.5 |         +20.0 |
+|  +140.00 |  +106.35 | TH.PS      |       10597 |        3314 |            31.27 |     973,670 |     262,533 |             26.96 |         -20.0 |           +2.0 |         +20.0 |
+|  +160.00 |  +126.35 | TH.PS      |       10597 |        3087 |            29.13 |     973,670 |     219,855 |             22.58 |         -20.0 |           +2.2 |         +20.0 |
+|  +180.00 |  +146.35 | TH.PS      |       10597 |        2839 |            26.79 |     973,670 |     175,361 |             18.01 |         -20.0 |           +1.9 |         +20.0 |
+|  +200.00 |  +166.35 | TH.PS      |       10597 |        2550 |            24.06 |     973,670 |     148,837 |             15.29 |         -20.0 |           +0.9 |         +20.0 |
+|  +220.00 |  +186.35 | TH.PS      |       10597 |        2564 |            24.20 |     973,670 |     145,618 |             14.96 |         -20.0 |           +1.8 |         +19.9 |
+|  +240.00 |  +206.35 | TH.PS      |       10597 |        2576 |            24.31 |     973,670 |     139,490 |             14.33 |         -20.0 |           +2.6 |         +20.0 |
+|  +260.00 |  +226.35 | TH.PS      |       10597 |        2475 |            23.36 |     973,670 |     112,662 |             11.57 |         -20.0 |           +3.2 |         +20.0 |
+|  +280.00 |  +246.35 | TH.PS      |       10597 |        2316 |            21.86 |     973,670 |      88,965 |              9.14 |         -20.0 |           +3.2 |         +20.0 |
+|  +300.00 |  +266.35 | TH.PS      |       10597 |        2194 |            20.70 |     973,670 |      76,714 |              7.88 |         -20.0 |           +3.5 |         +20.0 |
+|  +320.00 |  +286.35 | TH.PS      |       10597 |        2053 |            19.37 |     973,670 |      56,417 |              5.79 |         -20.0 |           +3.0 |         +20.0 |
+|  +340.00 |  +306.35 | TH.PS      |       10597 |        1860 |            17.55 |     973,670 |      39,294 |              4.04 |         -20.0 |           +2.3 |         +20.0 |
+==========================================================================================================================
+
+ -> Plot saved successfully to: OUTPUT_LDP/TH_PS/TH_PS_Plot_PP_Popu.svg
+
+--> [TH.PS] Step 6: 6_LDP_OnePage.py
+Processing province: TH_PS
+[+] TH_PS: One-Page Report generated successfully.
+======================================================================
+Completed province: TH.PS
+Finished: 2026-08-01T11:42:55+07:00
+======================================================================

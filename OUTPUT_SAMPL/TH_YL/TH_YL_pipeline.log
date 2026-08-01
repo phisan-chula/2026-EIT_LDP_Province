@@ -1,0 +1,136 @@
+======================================================================
+Processing province: TH.YL
+Started: 2026-08-01T11:42:55+07:00
+======================================================================
+--> [TH.YL] Step 1: 1_fabdem_province.py
+[1/5] Read GADM and select HASC_1=TH.YL
+[2/5] Save province and clip FABDEM
+[3/5] Generate contours every 100 m with GDAL 3.10.3
+[4/5] Calculate statistics and write PDF
+[5/5] Write DataFrame summaries
+
+Completed successfully.
+HASC_1 NAME_1  contours                                                                                    PDF
+ TH.YL   Yala      3654 /mnt/nvme1/Project/2026-EIT_LDP_Province/OUTPUT_FABDEM/TH_YL/TH_YL_fabdem_contours.pdf
+--> [TH.YL] Step 2: 2_popu2025_grid.py
+[1/4] Select GADM province HASC_1=TH.YL
+[2/4] Save boundary and cut population grid
+[3/4] Calculate population-grid statistics
+[4/4] Write population-grid PDF and summaries
+
+Completed successfully.
+HASC_1 NAME_1  population_sum                                                                                         grid
+ TH.YL   Yala   425295.535473 /mnt/nvme1/Project/2026-EIT_LDP_Province/OUTPUT_POP2025/TH_YL/TH_YL_population_2025_100m.tif
+--> [TH.YL] Step 3: 3_generate_sample.py
+[1/4] Select GADM province HASC_1=TH.YL
+ -> [READ] Loading Vector Dataset: OUTPUT_PROV/gadm41_THA.gpkg (Layer: 'ADM_ADM_1')
+[2/4] Generate 1000.0m grid points
+ -> Auto-detected EPSG:32647 for province.
+ -> Generated 10,440 bounding box points.
+ -> Clipping points to province boundary...
+ -> Computing 7-digit Geohashes...
+[3/4] Extracting Raster Values (FABDEM MSL & POP2025)...
+ -> [READ] Opening Raster File: OUTPUT_FABDEM/TH_YL/TH_YL_fabdem.tif
+ -> [READ] Opening Raster File for Area Sum: OUTPUT_POP2025/TH_YL/TH_YL_population_2025_100m.tif
+ -> Converting geometries to Lng/Lat (EPSG:4326)...
+[4/4] Save GeoPackage Data...
+ -> [WRITE] Saving Vector File: /mnt/nvme1/Project/2026-EIT_LDP_Province/OUTPUT_SAMPL/TH_YL/TH_YL_SAMPL.gpkg (Layer: 'samples')
+
+[5/5] Comparing POP2025 with DOPA Registration Population...
+
+Completed successfully.
+HASC_1  Grid (m)       CRS  Samples           Output POP2025 DOPA_Pop     Diff
+ TH.YL    1000.0 EPSG:4326     4426 TH_YL_SAMPL.gpkg 423,613  556,087 -132,474
+--> [TH.YL] Step 4: 4_analyse_ldp.py
+LDP                                            [TM, 101:14]
+FALSE_EN                                               AUTO
+PP_MSL                                                   60
+POPU_PLOT                                   [350, -100, 20]
+GPKG         [OUTPUT_SAMPL/TH_YL/TH_YL_SAMPL.gpkg, samples]
+OFFSET_PP      [0.0, default hPP from average topo or pnts]
+dtype: object
+ -> OUTLIER FILTER: Dropped 89 points.
+ -> Dropped MSL values: [821, 693, 888, 897, 1156, 1052, 995, 1066, 835, 347, 453, 457, 456, 381, 377, 457, 348, 380, 461, 333, 304, 312, 113, 134, 871, 330, 420, 148, 864, 953, 1086, 1149, 1123, 1162, 1142, 1373, 1423, 1457, 1468, 220, 840, 833, 876, 1061, 1081, 1024, 814, 1055, 766, 827, 779, 105, 105, 305, 377, 117, 93, 105, 1195, 55, 39, 19, 394, 355, 318, 68, 336, 182, 139, 655, 655, 99, 166, 99, 135, 161, 104, 315, 305, 109, 83, 92, 112, 85, 94, 120, 92, 592, 747]
+ -> THINNING: Snapping points to 2 decimal grid...
+ -> THINNING: Points reduced from 4337 to 3580.
+ -> Using user-defined PP_MSL: 60.000m
+ -> AUTO detected FALSE_EN: E: 50000, N: -200000
+==================================== LDP TM ====================================
+@ Centroid @     <lng=101°14′>    <lat=06°11′>
+Offset Projection Plane = +0.0 m. <default hPP from average topo or pnts>
+Designed Project Plane : hPP=+50.50 m. / MSL=+60.00 m. tied to k0 = 1.000008
+Points CSF min/mean/max [ppm] : -186.6 / -33.9 / +20.6
+Points MSL min/mean/max [m.]  : +5.0 / +294.6 / +1289.0
+|      |      LDP_E |       LDP_N |
+|:-----|-----------:|------------:|
+| min  |  6,912.595 | 421,820.769 |
+| max  | 90,018.774 | 538,713.727 |
+| diff | 83,106.179 | 116,892.958 |
+{"meta": "LDP_Definition", "PROJ_String_Decimal": "+proj=tmerc +lat_0=0.0 +lon_0=101.23333333 +k_0=1.000008 +x_0=50000 +y_0=-200000 +ellps=WGS84 +units=m +no_defs +type=crs", "PROJ_String_DMS": "+proj=tmerc +lat_0=0.0 +lon_0=101°14′ +k_0=1.000008 +x_0=50000 +y_0=-200000 +ellps=WGS84 +units=m +no_defs +type=crs"}
+Writing definition GPKG : OUTPUT_LDP/TH_YL/TH_YL_LDP.gpkg ...
+Writing definition plot : OUTPUT_LDP/TH_YL/TH_YL_LDP.svg...
+{"meta": "Coverage_Analysis", "Province": "TH.YL", "Total_Pts": 4426, "Valid_Pts": 1583, "Pt_Coverage(%)": 35.77, "Total_POP": 423612.7161, "Valid_POP": 289083.2352, "POP_Coverage(%)": 68.24, "CSF_Min_ppm": -20.0, "CSF_Mean_ppm": -0.3, "CSF_Max_ppm": 20.0}
+--> [TH.YL] Step 5: 5_plot_PP_PctPopu.py
+[TH.YL] POPU_PLOT found in TOML. Overriding MSL bounds: Upper=350.0, Lower=-100.0, Step=20.0
+[TH.YL] Starting ProcessPoolExecutor with 23 offsets to compute (Mean MSL: 294.59 m)...
+[TH.YL] OFFSET_PP [-394.59] computed successfully.
+[TH.YL] OFFSET_PP [-374.59] computed successfully.
+[TH.YL] OFFSET_PP [-354.59] computed successfully.
+[TH.YL] OFFSET_PP [-334.59] computed successfully.
+[TH.YL] OFFSET_PP [-314.59] computed successfully.
+[TH.YL] OFFSET_PP [-294.59] computed successfully.
+[TH.YL] OFFSET_PP [-274.59] computed successfully.
+[TH.YL] OFFSET_PP [-254.59] computed successfully.
+[TH.YL] OFFSET_PP [-234.59] computed successfully.
+[TH.YL] OFFSET_PP [-214.59] computed successfully.
+[TH.YL] OFFSET_PP [-194.59] computed successfully.
+[TH.YL] OFFSET_PP [-174.59] computed successfully.
+[TH.YL] OFFSET_PP [-154.59] computed successfully.
+[TH.YL] OFFSET_PP [-134.59] computed successfully.
+[TH.YL] OFFSET_PP [-114.59] computed successfully.
+[TH.YL] OFFSET_PP [-94.59] computed successfully.
+[TH.YL] OFFSET_PP [-74.59] computed successfully.
+[TH.YL] OFFSET_PP [-54.59] computed successfully.
+[TH.YL] OFFSET_PP [-34.59] computed successfully.
+[TH.YL] OFFSET_PP [-14.59] computed successfully.
+[TH.YL] OFFSET_PP [5.41] computed successfully.
+[TH.YL] OFFSET_PP [25.41] computed successfully.
+[TH.YL] OFFSET_PP [45.41] computed successfully.
+
+==================================== LDP Population Coverage Analysis: TH.YL ====================================
+|   MSL_PP |   HAE_PP | Province   |   Total_Pts |   Valid_Pts |   Pt_Coverage(%) |   Total_POP |   Valid_POP |   POP_Coverage(%) |   CSF_Min_ppm |   CSF_Mean_ppm |   CSF_Max_ppm |
+|---------:|---------:|:-----------|------------:|------------:|-----------------:|------------:|------------:|------------------:|--------------:|---------------:|--------------:|
+|  -100.00 |  -109.50 | TH.YL      |        4426 |         558 |            12.61 |     423,613 |     182,723 |             43.13 |         -20.0 |          -15.2 |          -4.4 |
+|   -80.00 |   -89.50 | TH.YL      |        4426 |         791 |            17.87 |     423,613 |     239,757 |             56.60 |         -20.0 |          -14.0 |          -1.4 |
+|   -60.00 |   -69.50 | TH.YL      |        4426 |         926 |            20.92 |     423,613 |     258,792 |             61.09 |         -20.0 |          -12.1 |          +1.6 |
+|   -40.00 |   -49.50 | TH.YL      |        4426 |        1034 |            23.36 |     423,613 |     267,095 |             63.05 |         -20.0 |          -10.1 |          +4.6 |
+|   -20.00 |   -29.50 | TH.YL      |        4426 |        1132 |            25.58 |     423,613 |     273,345 |             64.53 |         -20.0 |           -8.1 |          +7.6 |
+|    +0.00 |    -9.50 | TH.YL      |        4426 |        1291 |            29.17 |     423,613 |     279,951 |             66.09 |         -19.9 |           -5.8 |         +11.6 |
+|   +20.00 |   +10.50 | TH.YL      |        4426 |        1397 |            31.56 |     423,613 |     284,129 |             67.07 |         -20.0 |           -4.0 |         +14.6 |
+|   +40.00 |   +30.50 | TH.YL      |        4426 |        1490 |            33.66 |     423,613 |     286,633 |             67.66 |         -20.0 |           -2.1 |         +17.6 |
+|   +60.00 |   +50.50 | TH.YL      |        4426 |        1583 |            35.77 |     423,613 |     289,083 |             68.24 |         -20.0 |           -0.3 |         +20.0 |
+|   +80.00 |   +70.50 | TH.YL      |        4426 |        1623 |            36.67 |     423,613 |     285,718 |             67.45 |         -20.0 |           +1.2 |         +20.0 |
+|  +100.00 |   +90.50 | TH.YL      |        4426 |        1668 |            37.69 |     423,613 |     278,975 |             65.86 |         -20.0 |           +2.0 |         +20.0 |
+|  +120.00 |  +110.50 | TH.YL      |        4426 |        1700 |            38.41 |     423,613 |     275,087 |             64.94 |         -19.9 |           +2.8 |         +20.0 |
+|  +140.00 |  +130.50 | TH.YL      |        4426 |        1661 |            37.53 |     423,613 |     204,908 |             48.37 |         -20.0 |           +3.0 |         +20.0 |
+|  +160.00 |  +150.50 | TH.YL      |        4426 |        1491 |            33.69 |     423,613 |     115,386 |             27.24 |         -20.0 |           +1.3 |         +20.0 |
+|  +180.00 |  +170.50 | TH.YL      |        4426 |        1413 |            31.92 |     423,613 |      82,252 |             19.42 |         -19.9 |           +0.0 |         +20.0 |
+|  +200.00 |  +190.50 | TH.YL      |        4426 |        1386 |            31.31 |     423,613 |      70,757 |             16.70 |         -20.0 |           +0.1 |         +20.0 |
+|  +220.00 |  +210.50 | TH.YL      |        4426 |        1362 |            30.77 |     423,613 |      63,651 |             15.03 |         -20.0 |           +0.5 |         +19.9 |
+|  +240.00 |  +230.50 | TH.YL      |        4426 |        1303 |            29.44 |     423,613 |      58,487 |             13.81 |         -20.0 |           +0.4 |         +20.0 |
+|  +260.00 |  +250.50 | TH.YL      |        4426 |        1271 |            28.72 |     423,613 |      55,000 |             12.98 |         -20.0 |           +0.8 |         +20.0 |
+|  +280.00 |  +270.50 | TH.YL      |        4426 |        1229 |            27.77 |     423,613 |      52,084 |             12.30 |         -20.0 |           +1.4 |         +20.0 |
+|  +300.00 |  +290.50 | TH.YL      |        4426 |        1195 |            27.00 |     423,613 |      49,428 |             11.67 |         -20.0 |           +1.6 |         +20.0 |
+|  +320.00 |  +310.50 | TH.YL      |        4426 |        1175 |            26.55 |     423,613 |      48,105 |             11.36 |         -19.9 |           +2.2 |         +20.0 |
+|  +340.00 |  +330.50 | TH.YL      |        4426 |        1130 |            25.53 |     423,613 |      45,834 |             10.82 |         -20.0 |           +2.7 |         +20.0 |
+==========================================================================================================================
+
+ -> Plot saved successfully to: OUTPUT_LDP/TH_YL/TH_YL_Plot_PP_Popu.svg
+
+--> [TH.YL] Step 6: 6_LDP_OnePage.py
+Processing province: TH_YL
+[+] TH_YL: One-Page Report generated successfully.
+======================================================================
+Completed province: TH.YL
+Finished: 2026-08-01T11:45:50+07:00
+======================================================================
