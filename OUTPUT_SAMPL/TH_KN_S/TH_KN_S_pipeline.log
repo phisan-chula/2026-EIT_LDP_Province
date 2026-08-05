@@ -1,6 +1,6 @@
 ======================================================================
 Processing province: TH.KN_S
-Started: 2026-08-01T11:22:52+07:00
+Started: 2026-08-05T16:36:22+07:00
 ======================================================================
 --> [TH.KN_S] Step 1: 1_fabdem_province.py
 [1/5] Read GADM and select HASC_1=TH.KN_S
@@ -44,8 +44,8 @@ TH.KN_S    1000.0 EPSG:4326     7835 TH_KN_S_SAMPL.gpkg 696,404  896,673 -200,26
 --> [TH.KN_S] Step 4: 4_analyse_ldp.py
 LDP                                                [TM, 99:27]
 FALSE_EN                                     [250000, -800000]
-PP_MSL                                                      90
-POPU_PLOT                                         [250, 0, 20]
+PP_MSL                                                       0
+POPU_PLOT                                      [250, -100, 20]
 GPKG         [OUTPUT_SAMPL/TH_KN_S/TH_KN_S_SAMPL.gpkg, samp...
 OFFSET_PP         [0.0, default hPP from average topo or pnts]
 dtype: object
@@ -53,25 +53,30 @@ dtype: object
  -> Dropped MSL values: [-9999, -9999, 657, 634, 890, 767, 905, 718, 773, 624, 334, 637, 886, 79, 131, 70, 97, 102, 97, 254, 97, 638, 785, 834, 105, 84, 401, 381, 770, 783, 867, 251, 763, 45, 192, 173, 271, 175, 201, 1012, 1131, 1009, 772, 763, 738, 197, 129, 107, 83, 231, 187, 132, 148, 129, 197, 123, 98, 153, 123, 99, 138, 148, 109, 86, 99, 85, 418, 47, 81, 140, 67, 94, 97, 75, 75, 91, 97, 408, 406, 429, 401, 126, 121, 146, 110, 115, 113, 183, 151, 93, 93, 75, 39, 70, 53, 384, 184, 170, 113, 346, 199, 97, 134, 168, 210, 157, 93, 108, 203, 135, 186, 228, 266, 230, 237, 145, 179, 154, 102, 142, 55, 43, 63, 189, 125, 101, 76, 91, 147, 183, 109, 98, 102, 303, 461, 540, 504, 541, 245, 265, 197, 148, 104, 156, 318, 309, 256, 128, 199, 221, 191, 158, 125, 97, 257, 287, 251, 438, 411]
  -> THINNING: Snapping points to 2 decimal grid...
  -> THINNING: Points reduced from 7676 to 6478.
- -> Using user-defined PP_MSL: 90.000m
+ -> Using user-defined PP_MSL: 0.000m
 ==================================== LDP TM ====================================
 @ Centroid @     <lng=99°27′>    <lat=14°14′>
 Offset Projection Plane = +0.0 m. <default hPP from average topo or pnts>
-Designed Project Plane : hPP=+56.02 m. / MSL=+90.00 m. tied to k0 = 1.000009
-Points CSF min/mean/max [ppm] : -139.6 / -0.8 / +38.0
+Designed Project Plane : hPP=-33.98 m. / MSL=+0.00 m. tied to k0 = 0.999995
+Points CSF min/mean/max [ppm] : -153.6 / -14.8 / +24.0
 Points MSL min/mean/max [m.]  : +0.0 / +141.3 / +998.0
 |      |       LDP_E |       LDP_N |
 |:-----|------------:|------------:|
-| min  | 189,403.835 | 718,625.448 |
-| max  | 295,410.576 | 841,665.815 |
-| diff | 106,006.741 | 123,040.367 |
-{"meta": "LDP_Definition", "PROJ_String_Decimal": "+proj=tmerc +lat_0=0.0 +lon_0=99.45000000 +k_0=1.000009 +x_0=250000 +y_0=-800000 +ellps=WGS84 +units=m +no_defs +type=crs", "PROJ_String_DMS": "+proj=tmerc +lat_0=0.0 +lon_0=99°27′ +k_0=1.000009 +x_0=250000 +y_0=-800000 +ellps=WGS84 +units=m +no_defs +type=crs"}
+| min  | 189,404.683 | 718,604.188 |
+| max  | 295,409.940 | 841,642.832 |
+| diff | 106,005.257 | 123,038.644 |
+{"meta": "LDP_Definition", "PROJ_String_Decimal": "+proj=tmerc +lat_0=0.0 +lon_0=99.45000000 +k_0=0.999995 +x_0=250000 +y_0=-800000 +ellps=WGS84 +units=m +no_defs +type=crs", "PROJ_String_DMS": "+proj=tmerc +lat_0=0.0 +lon_0=99°27′ +k_0=0.999995 +x_0=250000 +y_0=-800000 +ellps=WGS84 +units=m +no_defs +type=crs"}
 Writing definition GPKG : OUTPUT_LDP/TH_KN_S/TH_KN_S_LDP.gpkg ...
 Writing definition plot : OUTPUT_LDP/TH_KN_S/TH_KN_S_LDP.svg...
-{"meta": "Coverage_Analysis", "Province": "TH.KN_S", "Total_Pts": 7835, "Valid_Pts": 4607, "Pt_Coverage(%)": 58.8, "Total_POP": 696403.9868999999, "Valid_POP": 381692.3466, "POP_Coverage(%)": 54.81, "CSF_Min_ppm": -19.9, "CSF_Mean_ppm": 3.1, "CSF_Max_ppm": 20.0}
+{"meta": "Coverage_Analysis", "Province": "TH.KN_S", "Total_Pts": 7835, "Valid_Pts": 4504, "Pt_Coverage(%)": 57.49, "Total_POP": 696403.9868999999, "Valid_POP": 523668.29720000003, "POP_Coverage(%)": 75.2, "CSF_Min_ppm": -20.0, "CSF_Mean_ppm": -3.4, "CSF_Max_ppm": 19.8}
 --> [TH.KN_S] Step 5: 5_plot_PP_PctPopu.py
-[TH.KN_S] POPU_PLOT found in TOML. Overriding MSL bounds: Upper=250.0, Lower=0.0, Step=20.0
-[TH.KN_S] Starting ProcessPoolExecutor with 13 offsets to compute (Mean MSL: 141.27 m)...
+[TH.KN_S] POPU_PLOT found in TOML. Overriding MSL bounds: Upper=250.0, Lower=-100.0, Step=20.0
+[TH.KN_S] Starting ProcessPoolExecutor with 18 offsets to compute (Mean MSL: 141.27 m)...
+[TH.KN_S] OFFSET_PP [-241.27] computed successfully.
+[TH.KN_S] OFFSET_PP [-221.27] computed successfully.
+[TH.KN_S] OFFSET_PP [-201.27] computed successfully.
+[TH.KN_S] OFFSET_PP [-181.27] computed successfully.
+[TH.KN_S] OFFSET_PP [-161.27] computed successfully.
 [TH.KN_S] OFFSET_PP [-141.27] computed successfully.
 [TH.KN_S] OFFSET_PP [-121.27] computed successfully.
 [TH.KN_S] OFFSET_PP [-101.27] computed successfully.
@@ -89,6 +94,11 @@ Writing definition plot : OUTPUT_LDP/TH_KN_S/TH_KN_S_LDP.svg...
 ==================================== LDP Population Coverage Analysis: TH.KN_S ====================================
 |   MSL_PP |   HAE_PP | Province   |   Total_Pts |   Valid_Pts |   Pt_Coverage(%) |   Total_POP |   Valid_POP |   POP_Coverage(%) |   CSF_Min_ppm |   CSF_Mean_ppm |   CSF_Max_ppm |
 |---------:|---------:|:-----------|------------:|------------:|-----------------:|------------:|------------:|------------------:|--------------:|---------------:|--------------:|
+|  -100.00 |  -133.98 | TH.KN_S    |        7835 |        2140 |            27.31 |     696,404 |     368,210 |             52.87 |         -20.0 |          -11.0 |          +8.0 |
+|   -80.00 |  -113.98 | TH.KN_S    |        7835 |        2823 |            36.03 |     696,404 |     436,419 |             62.67 |         -20.0 |          -10.5 |         +11.0 |
+|   -60.00 |   -93.98 | TH.KN_S    |        7835 |        3348 |            42.73 |     696,404 |     471,589 |             67.72 |         -20.0 |           -9.3 |         +14.0 |
+|   -40.00 |   -73.98 | TH.KN_S    |        7835 |        3816 |            48.70 |     696,404 |     495,581 |             71.16 |         -20.0 |           -7.8 |         +17.0 |
+|   -20.00 |   -53.98 | TH.KN_S    |        7835 |        4252 |            54.27 |     696,404 |     519,739 |             74.63 |         -20.0 |           -5.2 |         +19.8 |
 |    +0.00 |   -33.98 | TH.KN_S    |        7835 |        4504 |            57.49 |     696,404 |     523,668 |             75.20 |         -20.0 |           -3.4 |         +19.8 |
 |   +20.00 |   -13.98 | TH.KN_S    |        7835 |        4731 |            60.38 |     696,404 |     520,890 |             74.80 |         -20.0 |           -1.8 |         +20.0 |
 |   +40.00 |    +6.02 | TH.KN_S    |        7835 |        4823 |            61.56 |     696,404 |     499,670 |             71.75 |         -20.0 |           -0.3 |         +19.9 |
@@ -111,5 +121,5 @@ Processing province: TH_KN_S
 [+] TH_KN_S: One-Page Report generated successfully.
 ======================================================================
 Completed province: TH.KN_S
-Finished: 2026-08-01T11:28:56+07:00
+Finished: 2026-08-05T16:37:09+07:00
 ======================================================================

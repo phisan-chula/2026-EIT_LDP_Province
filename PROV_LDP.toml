@@ -12,7 +12,7 @@ GPKG = ["OUTPUT_SAMPL/TH_AT/TH_AT_SAMPL.gpkg", "samples"]
 
 ["TH.BK"]
 LDP = ["LCC", "18:09"]
-FALSE_EN = [50000,150000]
+FALSE_EN = [150000, 50000]
 PP_MSL = 170     
 GPKG = ["OUTPUT_SAMPL/TH_BK/TH_BK_SAMPL.gpkg", "samples"]
 
@@ -51,7 +51,7 @@ GPKG = ["OUTPUT_SAMPL/TH_CM_S/TH_CM_S_SAMPL.gpkg", "samples"]
 
 ["TH.CN"]
 LDP = ["LCC", "15:08"]
-FALSE_EN = [50000, 150000]
+FALSE_EN = [150000, 50000]
 PP_MSL = +30
 GPKG = ["OUTPUT_SAMPL/TH_CN/TH_CN_SAMPL.gpkg", "samples"]
 
@@ -95,7 +95,7 @@ GPKG = ["OUTPUT_SAMPL/TH_KK/TH_KK_SAMPL.gpkg", "samples"]
 
 ["TH.KL"]
 LDP = ["LCC", "16:38"]
-FALSE_EN = [250000, 750000]
+FALSE_EN = [750000, 250000]
 PP_MSL = 90
 GPKG = ["OUTPUT_SAMPL/TH_KL/TH_KL_SAMPL.gpkg", "samples"]
 
@@ -109,8 +109,8 @@ GPKG = ["OUTPUT_SAMPL/TH_KN_N/TH_KN_N_SAMPL.gpkg", "samples"]
 ["TH.KN_S"]
 LDP = ["TM", "99:27"]
 FALSE_EN = [ 250000, -800000]
-PP_MSL = 90
-POPU_PLOT = [ 250, 0, 20]  # max_msl, min_msl, msl_interval
+PP_MSL = 0
+POPU_PLOT = [ 250, -100, 20]  # max_msl, min_msl, msl_interval
 GPKG = ["OUTPUT_SAMPL/TH_KN_S/TH_KN_S_SAMPL.gpkg", "samples"]
 
 ["TH.KP"]
@@ -279,7 +279,7 @@ GPKG = ["OUTPUT_SAMPL/TH_PC/TH_PC_SAMPL.gpkg", "samples"]
 
 ["TH.PE"]
 LDP = ["LCC", "12:57"]
-FALSE_EN = [250000, 750000]
+FALSE_EN = [750000, 250000]
 PP_MSL = -20
 POPU_PLOT = [ +300, -100, +20 ]
 GPKG = ["OUTPUT_SAMPL/TH_PE/TH_PE_SAMPL.gpkg", "samples"]
@@ -531,7 +531,7 @@ GPKG = ["OUTPUT_SAMPL/TH_YL/TH_YL_SAMPL.gpkg", "samples"]
 
 ["TH.YS"]
 LDP = ["TM", "104:21"]
-FALSE_EN = "AUTO"    # OK
+FALSE_EN = [290000, -1000000]
 PP_MSL = +110
 GPKG = ["OUTPUT_SAMPL/TH_YS/TH_YS_SAMPL.gpkg", "samples"]
 

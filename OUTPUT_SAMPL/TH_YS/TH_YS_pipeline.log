@@ -1,6 +1,6 @@
 ======================================================================
 Processing province: TH.YS
-Started: 2026-08-01T11:43:07+07:00
+Started: 2026-08-05T17:05:23+07:00
 ======================================================================
 --> [TH.YS] Step 1: 1_fabdem_province.py
 [1/5] Read GADM and select HASC_1=TH.YS
@@ -43,7 +43,7 @@ HASC_1  Grid (m)       CRS  Samples           Output POP2025 DOPA_Pop     Diff
  TH.YS    1000.0 EPSG:4326     4097 TH_YS_SAMPL.gpkg 399,504  522,819 -123,315
 --> [TH.YS] Step 4: 4_analyse_ldp.py
 LDP                                            [TM, 104:21]
-FALSE_EN                                               AUTO
+FALSE_EN                                 [290000, -1000000]
 PP_MSL                                                  110
 GPKG         [OUTPUT_SAMPL/TH_YS/TH_YS_SAMPL.gpkg, samples]
 OFFSET_PP      [0.0, default hPP from average topo or pnts]
@@ -53,19 +53,18 @@ dtype: object
  -> THINNING: Snapping points to 2 decimal grid...
  -> THINNING: Points reduced from 4012 to 3395.
  -> Using user-defined PP_MSL: 110.000m
- -> AUTO detected FALSE_EN: E: 40000, N: -1200000
 ==================================== LDP TM ====================================
 @ Centroid @     <lng=104°20′>    <lat=15°54′>
 Offset Projection Plane = +0.0 m. <default hPP from average topo or pnts>
 Designed Project Plane : hPP=+85.43 m. / MSL=+110.00 m. tied to k0 = 1.000013
 Points CSF min/mean/max [ppm] : -33.5 / -3.2 / +20.5
 Points MSL min/mean/max [m.]  : +115.0 / +148.2 / +322.0
-|      |      LDP_E |       LDP_N |
-|:-----|-----------:|------------:|
-| min  |  3,599.684 | 491,608.525 |
-| max  | 90,518.622 | 607,662.636 |
-| diff | 86,918.937 | 116,054.111 |
-{"meta": "LDP_Definition", "PROJ_String_Decimal": "+proj=tmerc +lat_0=0.0 +lon_0=104.35000000 +k_0=1.000013 +x_0=40000 +y_0=-1200000 +ellps=WGS84 +units=m +no_defs +type=crs", "PROJ_String_DMS": "+proj=tmerc +lat_0=0.0 +lon_0=104°21′ +k_0=1.000013 +x_0=40000 +y_0=-1200000 +ellps=WGS84 +units=m +no_defs +type=crs"}
+|      |       LDP_E |       LDP_N |
+|:-----|------------:|------------:|
+| min  | 253,599.684 | 691,608.525 |
+| max  | 340,518.622 | 807,662.636 |
+| diff |  86,918.937 | 116,054.111 |
+{"meta": "LDP_Definition", "PROJ_String_Decimal": "+proj=tmerc +lat_0=0.0 +lon_0=104.35000000 +k_0=1.000013 +x_0=290000 +y_0=-1000000 +ellps=WGS84 +units=m +no_defs +type=crs", "PROJ_String_DMS": "+proj=tmerc +lat_0=0.0 +lon_0=104°21′ +k_0=1.000013 +x_0=290000 +y_0=-1000000 +ellps=WGS84 +units=m +no_defs +type=crs"}
 Writing definition GPKG : OUTPUT_LDP/TH_YS/TH_YS_LDP.gpkg ...
 Writing definition plot : OUTPUT_LDP/TH_YS/TH_YS_LDP.svg...
 {"meta": "Coverage_Analysis", "Province": "TH.YS", "Total_Pts": 4097, "Valid_Pts": 3370, "Pt_Coverage(%)": 82.26, "Total_POP": 399504.02650000004, "Valid_POP": 331503.0181, "POP_Coverage(%)": 82.98, "CSF_Min_ppm": -19.9, "CSF_Mean_ppm": -3.0, "CSF_Max_ppm": 19.8}
@@ -116,5 +115,5 @@ Processing province: TH_YS
 [+] TH_YS: One-Page Report generated successfully.
 ======================================================================
 Completed province: TH.YS
-Finished: 2026-08-01T11:45:20+07:00
+Finished: 2026-08-05T17:05:48+07:00
 ======================================================================
