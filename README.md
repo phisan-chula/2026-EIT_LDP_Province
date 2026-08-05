@@ -22,6 +22,7 @@
 | TH-14   | TH.PA    | Phra Nakhon Si Ayutthaya |        2629 |      62 |      62 | TM    | 100:32  | 83.79             |
 | TH-94   | TH.PI    | Pattani                  |        1964 |      77 |      44 | LCC   | 6:44    | 83.6              |
 | TH-93   | TH.PL    | Phatthalung              |        3854 |      76 |      89 | TM    | 100:04  | 83.45             |
+| TH-42   | TH.LE_E  | Loei East                |        7293 |      70 |     162 | TM    | 101:49  | 83.44             |
 | TH-63   | TH.TK_N  | Tak North                |        6415 |     101 |     150 | TM    | 99:00   | 83.27             |
 | TH-999  | TH.GBKK  | GreaterBKK               |        3232 |      75 |      73 | TM    | 100:36  | 83.07             |
 | TH-35   | TH.YS    | Yasothon                 |        4257 |      88 |     117 | TM    | 104:21  | 82.98             |
@@ -52,8 +53,8 @@
 | TH-75   | TH.SM    | Samut Songkhram          |         417 |      24 |      29 | TM    | 99:57   | 80.09             |
 | TH-15   | TH.AT    | Ang Thong                |         982 |      34 |      40 | TM    | 100:21  | 80.07             |
 | TH-92   | TH.TG    | Trang                    |        4812 |      84 |     104 | TM    | 99:36   | 79.99             |
-| TH-34   | TH.UR_S  | Ubon Ratchathani South   |       11199 |     133 |     164 | TM    | 105:03  | 79.95             |
 | TH-49   | TH.MD_N  | Mukdahan North           |        2010 |      63 |      64 | TM    | 104:21  | 79.95             |
+| TH-34   | TH.UR_S  | Ubon Ratchathani South   |       11199 |     133 |     164 | TM    | 105:03  | 79.95             |
 | TH-90   | TH.SG    | Songkhla                 |        7669 |     116 |     182 | TM    | 100:33  | 79.75             |
 | TH-37   | TH.AC    | Amnat Charoen            |        3371 |      68 |      82 | TM    | 104:45  | 79.4              |
 | TH-18   | TH.CN    | Chai Nat                 |        2554 |      68 |      57 | LCC   | 15:08   | 79.38             |
@@ -74,7 +75,6 @@
 | TH-71   | TH.KN_S  | Kanchanaburi South       |        8079 |     107 |     124 | TM    | 99:27   | 75.2              |
 | TH-30   | TH.NR_S  | Nakhon Ratchasima South  |       14178 |     161 |     149 | TM    | 101:55  | 75.12             |
 | TH-47   | TH.SN    | Sakon Nakhon             |        9985 |     125 |     146 | TM    | 103:50  | 75.02             |
-| TH-42   | TH.LE    | Loei                     |       11033 |     139 |     162 | TM    | 101:38  | ❗ 74.55          |
 | TH-71   | TH.KN_N  | Kanchanaburi North       |       11922 |     125 |     169 | TM    | 98:46   | ❗ 72.8           |
 | TH-36   | TH.CY    | Chaiyaphum               |       13177 |     121 |     157 | TM    | 101:49  | ❗ 72.12          |
 | TH-67   | TH.PH    | Phetchabun               |       12907 |     122 |     201 | TM    | 101:09  | ❗ 70.86          |
@@ -85,5 +85,6 @@
 | TH-65   | TH.PS    | Phitsanulok              |       11077 |     133 |     159 | TM    | 100:33  | ❗ 63.95          |
 | TH-58   | TH.MH_S  | Mae Hong Son South       |        5696 |      99 |     115 | TM    | 97:53   | ❗ 58.63          |
 | TH-63   | TH.TK_S  | Tak South                |       11551 |     148 |     298 | TM    | 98:41   | ❗ 44.94          |
+| TH-42   | TH.LE_W  | Loei West                |        3740 |      80 |      97 | TM    | 101:16  | ❗ 41.41          |
 | TH-58   | TH.MH_N  | Mae Hong Son North       |        7702 |     102 |     135 | TM    | 98:09   | ❗ 37.76          |
 | TH-50   | TH.CM_S  | Chiang Mai South         |       10123 |      90 |     209 | TM    | 98:25   | ❗ 35.97          |
