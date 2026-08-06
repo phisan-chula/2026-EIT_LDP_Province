@@ -21,6 +21,7 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | P1 | (15.890179716, 104.742219265) | P2 | (15.899216600, 104.742219265) |
 | MSL | 176.535 | HAE | 153.621 |
+| P1_LDP | (49166.727, 147518.862) | P2_LDP | (49166.764, 148518.878) |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=104.75000000 +k_0=1.000016 +x_0=50000 +y_0=-1610000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -37,6 +38,7 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | P1 | (14.621559377, 100.350174888) | P2 | (14.630597282, 100.350174888) |
 | MSL | 6.360 | HAE | -25.550 |
+| P1_LDP | (50018.842, 147111.466) | P2_LDP | (50018.841, 148111.463) |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=100.35000000 +k_0=0.999997 +x_0=50000 +y_0=-1470000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -53,6 +55,7 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | P1 | (18.145924560, 103.712485370) | P2 | (18.154959444, 103.712485370) |
 | MSL | 173.805 | HAE | 144.132 |
+| P1_LDP | (149557.535, 49548.917) | P2_LDP | (149557.558, 50548.939) |
 
 > **LDP Definition:**
 > `+proj=lcc +lat_1=18.15000000 +lat_0=18.15000000 +lon_0=103.71666667 +k_0=1.000022 +x_0=150000 +y_0=50000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -69,6 +72,7 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | P1 | (14.820262813, 102.958856669) | P2 | (14.829300564, 102.958856669) |
 | MSL | 180.930 | HAE | 155.366 |
+| P1_LDP | (249159.323, 729121.744) | P2_LDP | (249159.358, 730121.756) |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=102.96666667 +k_0=1.000012 +x_0=250000 +y_0=-910000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -85,6 +89,7 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | P1 | (13.194128118, 101.204249270) | P2 | (13.203167079, 101.204249270) |
 | MSL | 80.195 | HAE | 52.683 |
+| P1_LDP | (40460.619, 559183.082) | P2_LDP | (40460.602, 560183.079) |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=101.20000000 +k_0=0.999997 +x_0=40000 +y_0=-900000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -101,6 +106,7 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | P1 | (13.606007246, 101.430288390) | P2 | (13.615045912, 101.430288390) |
 | MSL | 35.845 | HAE | 8.768 |
+| P1_LDP | (499670.492, 50664.615) | P2_LDP | (499670.504, 51664.611) |
 
 > **LDP Definition:**
 > `+proj=lcc +lat_1=13.60000000 +lat_0=13.60000000 +lon_0=101.43333333 +k_0=0.999996 +x_0=500000 +y_0=50000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -117,6 +123,7 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | P1 | (19.247888133, 98.971945516) | P2 | (19.256921956, 98.971945516) |
 | MSL | 410.480 | HAE | 371.918 |
+| P1_LDP | (248055.022, 529222.719) | P2_LDP | (248054.992, 530222.773) |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=98.96666667 +k_0=1.000054 +x_0=247500 +y_0=-1600000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -133,6 +140,7 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | P1 | (18.190609694, 98.410373546) | P2 | (18.199644536, 98.410373546) |
 | MSL | 889.005 | HAE | 850.279 |
+| P1_LDP | (49334.219, 412161.404) | P2_LDP | (49334.254, 413161.445) |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=98.41666667 +k_0=1.000041 +x_0=50000 +y_0=-1600000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -149,6 +157,7 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | P1 | (15.131616955, 100.026115228) | P2 | (15.140654459, 100.026115228) |
 | MSL | 15.990 | HAE | -17.348 |
+| P1_LDP | (149224.167, 49810.096) | P2_LDP | (149224.200, 50810.095) |
 
 > **LDP Definition:**
 > `+proj=lcc +lat_1=15.13333333 +lat_0=15.13333333 +lon_0=100.03333333 +k_0=0.999999 +x_0=150000 +y_0=50000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -165,6 +174,7 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | P1 | (10.345169001, 99.062367669) | P2 | (10.354209765, 99.062367669) |
 | MSL | 42.420 | HAE | 14.645 |
+| P1_LDP | (49529.165, 544037.040) | P2_LDP | (49529.178, 545037.043) |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=99.06666667 +k_0=1.000003 +x_0=50000 +y_0=-600000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -181,6 +191,7 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | P1 | (19.845308816, 99.867526500) | P2 | (19.854342042, 99.867526500) |
 | MSL | 405.895 | HAE | 368.562 |
+| P1_LDP | (250090.071, 745366.555) | P2_LDP | (250090.066, 746366.612) |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=99.86666667 +k_0=1.000057 +x_0=250000 +y_0=-1450000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -197,6 +208,7 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | P1 | (12.883179477, 102.128965688) | P2 | (12.892218654, 102.128965688) |
 | MSL | 273.210 | HAE | 249.617 |
+| P1_LDP | (49525.954, 524795.506) | P2_LDP | (49525.971, 525795.512) |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=102.13333333 +k_0=1.000006 +x_0=50000 +y_0=-900000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -213,6 +225,7 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | P1 | (16.271939947, 101.828357663) | P2 | (16.280976509, 101.828357663) |
 | MSL | 1028.460 | HAE | 998.740 |
+| P1_LDP | (249468.150, 749766.735) | P2_LDP | (249468.174, 750766.752) |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=101.83333333 +k_0=1.000017 +x_0=250000 +y_0=-1050000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -229,6 +242,7 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | P1 | (15.715381430, 101.808493772) | P2 | (15.724418460, 101.808493772) |
 | MSL | 201.675 | HAE | 171.739 |
+| P1_LDP | (499123.967, 49857.794) | P2_LDP | (499124.005, 50857.822) |
 
 > **LDP Definition:**
 > `+proj=lcc +lat_1=15.71666667 +lat_0=15.71666667 +lon_0=101.81666667 +k_0=1.000028 +x_0=500000 +y_0=50000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -245,6 +259,7 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | P1 | (13.749789180, 100.603828560) | P2 | (13.758827742, 100.603828560) |
 | MSL | 2.320 | HAE | -27.914 |
+| P1_LDP | (50414.054, 140646.057) | P2_LDP | (50414.038, 141646.046) |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=100.60000000 +k_0=0.999989 +x_0=50000 +y_0=-1380000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -261,6 +276,7 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | P1 | (16.406994612, 102.580293583) | P2 | (16.416031058, 102.580293583) |
 | MSL | 193.205 | HAE | 163.698 |
+| P1_LDP | (249675.306, 764699.731) | P2_LDP | (249675.321, 765699.741) |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=102.58333333 +k_0=1.000010 +x_0=250000 +y_0=-1050000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -277,6 +293,7 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | P1 | (16.626053342, 103.624018075) | P2 | (16.635089599, 103.624018075) |
 | MSL | 219.610 | HAE | 193.011 |
+| P1_LDP | (750784.364, 251038.803) | P2_LDP | (750784.328, 252038.813) |
 
 > **LDP Definition:**
 > `+proj=lcc +lat_1=16.61666667 +lat_0=16.61666667 +lon_0=103.61666667 +k_0=1.000010 +x_0=750000 +y_0=250000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -293,6 +310,7 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | P1 | (14.824599153, 98.774490364) | P2 | (14.833636900, 98.774490364) |
 | MSL | 679.030 | HAE | 643.557 |
+| P1_LDP | (250842.135, 749603.192) | P2_LDP | (250842.100, 750603.205) |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=98.76666667 +k_0=1.000013 +x_0=250000 +y_0=-890000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -309,6 +327,7 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | P1 | (14.224425136, 99.456863322) | P2 | (14.233463345, 99.456863322) |
 | MSL | 64.915 | HAE | 30.932 |
+| P1_LDP | (250740.743, 773168.259) | P2_LDP | (250740.714, 774168.254) |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=99.45000000 +k_0=0.999995 +x_0=250000 +y_0=-800000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -325,6 +344,7 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | P1 | (16.331107640, 99.534369281) | P2 | (16.340144152, 99.534369281) |
 | MSL | 88.240 | HAE | 52.515 |
+| P1_LDP | (250110.698, 756281.932) | P2_LDP | (250110.693, 757281.931) |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=99.53333333 +k_0=0.999999 +x_0=250000 +y_0=-1050000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -341,6 +361,7 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | P1 | (8.183575969, 99.018035832) | P2 | (8.192617822, 99.018035832) |
 | MSL | 104.655 | HAE | 82.255 |
+| P1_LDP | (50150.873, 504954.531) | P2_LDP | (50150.869, 505954.531) |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=99.01666667 +k_0=1.000000 +x_0=50000 +y_0=-400000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -357,6 +378,7 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | P1 | (15.097825267, 100.900403072) | P2 | (15.106862798, 100.900403072) |
 | MSL | 66.805 | HAE | 35.827 |
+| P1_LDP | (250043.330, 739797.176) | P2_LDP | (250043.329, 740797.166) |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=100.90000000 +k_0=0.999990 +x_0=250000 +y_0=-930000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -373,6 +395,7 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | P1 | (17.423729286, 101.820646674) | P2 | (17.432764835, 101.820646674) |
 | MSL | 271.355 | HAE | 240.117 |
+| P1_LDP | (50422.868, 527282.892) | P2_LDP | (50422.847, 528282.934) |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=101.81666667 +k_0=1.000042 +x_0=50000 +y_0=-1400000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -389,6 +412,7 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | P1 | (17.365006263, 101.271116248) | P2 | (17.374041866, 101.271116248) |
 | MSL | 610.540 | HAE | 578.848 |
+| P1_LDP | (60472.929, 50858.440) | P2_LDP | (60472.905, 51858.521) |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=101.26666667 +k_0=1.000081 +x_0=60000 +y_0=-1870000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -405,6 +429,7 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | P1 | (18.324553972, 99.513487536) | P2 | (18.333588687, 99.513487536) |
 | MSL | 244.450 | HAE | 206.883 |
+| P1_LDP | (249663.924, 746969.162) | P2_LDP | (249663.942, 747969.194) |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=99.51666667 +k_0=1.000032 +x_0=250000 +y_0=-1280000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -421,6 +446,7 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | P1 | (18.118082182, 98.955883318) | P2 | (18.127117092, 98.955883318) |
 | MSL | 641.175 | HAE | 603.114 |
+| P1_LDP | (50622.689, 504155.617) | P2_LDP | (50622.657, 505155.669) |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=98.95000000 +k_0=1.000052 +x_0=50000 +y_0=-1500000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -437,6 +463,7 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | P1 | (16.678897083, 104.348574005) | P2 | (16.687933294, 104.348574005) |
 | MSL | 377.825 | HAE | 353.414 |
+| P1_LDP | (49847.891, 154826.837) | P2_LDP | (49847.898, 155826.867) |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=104.35000000 +k_0=1.000030 +x_0=50000 +y_0=-1690000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -453,6 +480,7 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | P1 | (16.467060857, 104.663469415) | P2 | (16.476097252, 104.663469415) |
 | MSL | 171.165 | HAE | 147.621 |
+| P1_LDP | (49658.581, 141374.242) | P2_LDP | (49658.597, 142374.267) |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=104.66666667 +k_0=1.000025 +x_0=50000 +y_0=-1680000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -469,6 +497,7 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | P1 | (19.234747948, 98.143093621) | P2 | (19.243781785, 98.143093621) |
 | MSL | 965.065 | HAE | 925.567 |
+| P1_LDP | (499273.809, 527740.434) | P2_LDP | (499273.849, 528740.475) |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=98.15000000 +k_0=1.000041 +x_0=500000 +y_0=-1600000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -485,6 +514,7 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | P1 | (18.233949224, 97.883072994) | P2 | (18.242984025, 97.883072994) |
 | MSL | 447.195 | HAE | 407.018 |
+| P1_LDP | (259972.465, 766952.481) | P2_LDP | (259972.466, 767952.519) |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=97.88333333 +k_0=1.000038 +x_0=260000 +y_0=-1250000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -501,6 +531,7 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | P1 | (15.997485067, 103.168168310) | P2 | (16.006521861, 103.168168310) |
 | MSL | 185.140 | HAE | 156.860 |
+| P1_LDP | (50160.731, 499389.706) | P2_LDP | (50160.724, 500389.720) |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=103.16666667 +k_0=1.000014 +x_0=50000 +y_0=-1270000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -517,6 +548,7 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | P1 | (18.845899044, 100.834901065) | P2 | (18.854933260, 100.834901065) |
 | MSL | 264.680 | HAE | 230.215 |
+| P1_LDP | (250165.228, 754698.061) | P2_LDP | (250165.219, 755698.103) |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=100.83333333 +k_0=1.000042 +x_0=250000 +y_0=-1330000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -533,6 +565,7 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | P1 | (17.179313576, 102.303898824) | P2 | (17.188349346, 102.303898824) |
 | MSL | 242.790 | HAE | 212.384 |
+| P1_LDP | (50414.785, 490208.843) | P2_LDP | (50414.765, 491208.873) |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=102.30000000 +k_0=1.000030 +x_0=50000 +y_0=-1410000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -549,6 +582,7 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | P1 | (17.387438926, 104.430579488) | P2 | (17.396474508, 104.430579488) |
 | MSL | 173.110 | HAE | 146.641 |
+| P1_LDP | (49707.361, 523208.637) | P2_LDP | (49707.375, 524208.649) |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=104.43333333 +k_0=1.000012 +x_0=50000 +y_0=-1400000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -565,6 +599,7 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | P1 | (17.937918205, 102.826786113) | P2 | (17.946953282, 102.826786113) |
 | MSL | 160.505 | HAE | 129.382 |
+| P1_LDP | (499306.362, 50507.474) | P2_LDP | (499306.397, 51507.493) |
 
 > **LDP Definition:**
 > `+proj=lcc +lat_1=17.93333333 +lat_0=17.93333333 +lon_0=102.83333333 +k_0=1.000019 +x_0=500000 +y_0=50000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -581,6 +616,7 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | P1 | (14.215533198, 101.171949751) | P2 | (14.224571413, 101.171949751) |
 | MSL | 4.790 | HAE | -23.958 |
+| P1_LDP | (50570.218, 152197.021) | P2_LDP | (50570.195, 153197.024) |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=101.16666667 +k_0=1.000003 +x_0=50000 +y_0=-1420000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -597,6 +633,7 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | P1 | (13.925794445, 100.105691122) | P2 | (13.934832877, 100.105691122) |
 | MSL | 3.730 | HAE | -28.126 |
+| P1_LDP | (50615.027, 150124.846) | P2_LDP | (50615.003, 151124.839) |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=100.10000000 +k_0=0.999993 +x_0=50000 +y_0=-1390000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -613,6 +650,7 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | P1 | (15.339408188, 102.495429233) | P2 | (15.348445525, 102.495429233) |
 | MSL | 151.540 | HAE | 123.054 |
+| P1_LDP | (249509.189, 746567.286) | P2_LDP | (249509.211, 747567.299) |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=102.50000000 +k_0=1.000013 +x_0=250000 +y_0=-950000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -629,6 +667,7 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | P1 | (14.762193146, 101.914083634) | P2 | (14.771230942, 101.914083634) |
 | MSL | 236.530 | HAE | 208.961 |
+| P1_LDP | (249721.883, 742707.867) | P2_LDP | (249721.895, 743707.886) |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=101.91666667 +k_0=1.000019 +x_0=250000 +y_0=-890000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -645,6 +684,7 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | P1 | (15.682480715, 100.152996205) | P2 | (15.691517772, 100.152996205) |
 | MSL | 26.720 | HAE | -6.810 |
+| P1_LDP | (280321.198, 749905.656) | P2_LDP | (280321.184, 750905.654) |
 
 > **LDP Definition:**
 > `+proj=lcc +lat_1=15.68333333 +lat_0=15.68333333 +lon_0=100.15000000 +k_0=0.999998 +x_0=280000 +y_0=750000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -661,6 +701,7 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | P1 | (8.380995254, 99.786812199) | P2 | (8.390037017, 99.786812199) |
 | MSL | 168.380 | HAE | 148.351 |
+| P1_LDP | (250383.152, 736776.529) | P2_LDP | (250383.144, 737776.516) |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=99.78333333 +k_0=0.999987 +x_0=250000 +y_0=-190000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -677,6 +718,7 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | P1 | (6.179233624, 101.719526268) | P2 | (6.188276266, 101.719526268) |
 | MSL | 27.375 | HAE | 19.189 |
+| P1_LDP | (50316.491, 153290.141) | P2_LDP | (50316.486, 154290.140) |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=101.71666667 +k_0=0.999999 +x_0=50000 +y_0=-530000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -693,6 +735,7 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | P1 | (14.344115033, 100.528087574) | P2 | (14.353153151, 100.528087574) |
 | MSL | 3.290 | HAE | -27.827 |
+| P1_LDP | (49434.140, 146401.387) | P2_LDP | (49434.162, 147401.376) |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=100.53333333 +k_0=0.999989 +x_0=50000 +y_0=-1440000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -709,6 +752,7 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | P1 | (14.050430952, 101.649363133) | P2 | (14.059469291, 101.649363133) |
 | MSL | 20.830 | HAE | -6.198 |
+| P1_LDP | (249931.213, 753906.654) | P2_LDP | (249931.215, 754906.642) |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=101.65000000 +k_0=0.999988 +x_0=250000 +y_0=-800000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -725,6 +769,7 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | P1 | (16.258180466, 100.345420779) | P2 | (16.267217039, 100.345420779) |
 | MSL | 32.930 | HAE | -0.890 |
+| P1_LDP | (49510.504, 148199.109) | P2_LDP | (49510.527, 149199.101) |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=100.35000000 +k_0=0.999992 +x_0=50000 +y_0=-1650000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -741,6 +786,7 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | P1 | (12.946544060, 99.619367399) | P2 | (12.955583194, 99.619367399) |
 | MSL | 127.155 | HAE | 95.736 |
+| P1_LDP | (750293.048, 249617.674) | P2_LDP | (750293.038, 250617.666) |
 
 > **LDP Definition:**
 > `+proj=lcc +lat_1=12.95000000 +lat_0=12.95000000 +lon_0=99.61666667 +k_0=0.999992 +x_0=750000 +y_0=250000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -757,6 +803,7 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | P1 | (8.675726478, 98.424559610) | P2 | (8.684768105, 98.424559610) |
 | MSL | 73.260 | HAE | 47.156 |
+| P1_LDP | (50868.654, 509389.312) | P2_LDP | (50868.633, 510389.317) |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=98.41666667 +k_0=1.000004 +x_0=50000 +y_0=-450000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -773,6 +820,7 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | P1 | (16.262211264, 101.146982358) | P2 | (16.271247834, 101.146982358) |
 | MSL | 151.155 | HAE | 119.869 |
+| P1_LDP | (249677.430, 748679.331) | P2_LDP | (249677.444, 749679.342) |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=101.15000000 +k_0=1.000011 +x_0=250000 +y_0=-1050000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -789,6 +837,7 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | P1 | (6.730497036, 101.351500002) | P2 | (6.739539481, 101.351500002) |
 | MSL | 6.435 | HAE | -4.714 |
+| P1_LDP | (150165.836, 49686.336) | P2_LDP | (150165.833, 50686.334) |
 
 > **LDP Definition:**
 > `+proj=lcc +lat_1=6.73333333 +lat_0=6.73333333 +lon_0=101.35000000 +k_0=0.999998 +x_0=150000 +y_0=50000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -805,6 +854,7 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | P1 | (11.946414773, 99.635469096) | P2 | (11.955454574, 99.635469096) |
 | MSL | 151.700 | HAE | 122.539 |
+| P1_LDP | (60232.636, 521154.119) | P2_LDP | (60232.628, 522154.117) |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=99.63333333 +k_0=0.999998 +x_0=60000 +y_0=-800000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -821,6 +871,7 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | P1 | (7.511596795, 100.069260109) | P2 | (7.520638936, 100.069260109) |
 | MSL | 15.930 | HAE | -1.241 |
+| P1_LDP | (50286.238, 150634.509) | P2_LDP | (50286.232, 151634.506) |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=100.06666667 +k_0=0.999997 +x_0=50000 +y_0=-680000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -837,6 +888,7 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | P1 | (18.199493214, 100.067957516) | P2 | (18.208528047, 100.067957516) |
 | MSL | 435.725 | HAE | 399.666 |
+| P1_LDP | (250136.554, 743086.306) | P2_LDP | (250136.547, 744086.318) |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=100.06666667 +k_0=1.000012 +x_0=250000 +y_0=-1270000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -853,6 +905,7 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | P1 | (16.982235290, 100.544592202) | P2 | (16.991271235, 100.544592202) |
 | MSL | 145.460 | HAE | 111.803 |
+| P1_LDP | (249424.093, 748337.404) | P2_LDP | (249424.121, 749337.402) |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=100.55000000 +k_0=0.999998 +x_0=250000 +y_0=-1130000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -869,6 +922,7 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | P1 | (14.064031008, 100.683257159) | P2 | (14.073069337, 100.683257159) |
 | MSL | 3.270 | HAE | -27.121 |
+| P1_LDP | (59991.773, 149708.393) | P2_LDP | (59991.774, 150708.385) |
 
 > **LDP Definition:**
 > `+proj=lcc +lat_1=14.06666667 +lat_0=14.06666667 +lon_0=100.68333333 +k_0=0.999992 +x_0=60000 +y_0=150000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -885,6 +939,7 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | P1 | (7.972975963, 98.344085401) | P2 | (7.982017908, 98.344085401) |
 | MSL | 21.900 | HAE | -3.237 |
+| P1_LDP | (49347.909, 151667.382) | P2_LDP | (49347.923, 152667.387) |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=98.35000000 +k_0=1.000005 +x_0=50000 +y_0=-730000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -901,6 +956,7 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | P1 | (19.231793496, 100.189296531) | P2 | (19.240827335, 100.189296531) |
 | MSL | 478.470 | HAE | 442.508 |
+| P1_LDP | (250627.036, 747438.902) | P2_LDP | (250627.002, 748438.955) |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=100.18333333 +k_0=1.000053 +x_0=250000 +y_0=-1380000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -917,6 +973,7 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | P1 | (15.918132104, 103.816392169) | P2 | (15.927168965, 103.816392169) |
 | MSL | 138.580 | HAE | 112.240 |
+| P1_LDP | (249970.607, 500592.677) | P2_LDP | (249970.608, 501592.682) |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=103.81666667 +k_0=1.000005 +x_0=250000 +y_0=-1260000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -933,6 +990,7 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | P1 | (9.970920104, 98.705877471) | P2 | (9.979961074, 98.705877471) |
 | MSL | 238.990 | HAE | 211.008 |
+| P1_LDP | (50644.461, 502641.687) | P2_LDP | (50644.444, 503641.690) |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=98.70000000 +k_0=1.000003 +x_0=50000 +y_0=-600000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -949,6 +1007,7 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | P1 | (13.533407751, 99.580848987) | P2 | (13.542446470, 99.580848987) |
 | MSL | 90.990 | HAE | 58.395 |
+| P1_LDP | (49731.076, 146711.218) | P2_LDP | (49731.086, 147711.210) |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=99.58333333 +k_0=0.999992 +x_0=50000 +y_0=-1350000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -965,6 +1024,7 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | P1 | (12.855768294, 101.426611621) | P2 | (12.864807490, 101.426611621) |
 | MSL | 127.010 | HAE | 100.860 |
+| P1_LDP | (149270.377, 50638.153) | P2_LDP | (149270.403, 51638.155) |
 
 > **LDP Definition:**
 > `+proj=lcc +lat_1=12.85000000 +lat_0=12.85000000 +lon_0=101.43333333 +k_0=1.000002 +x_0=150000 +y_0=50000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -981,6 +1041,7 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | P1 | (6.848518402, 99.967013099) | P2 | (6.857560804, 99.967013099) |
 | MSL | 27.750 | HAE | 11.688 |
+| P1_LDP | (50038.291, 157309.105) | P2_LDP | (50038.290, 158309.109) |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=99.96666667 +k_0=1.000004 +x_0=50000 +y_0=-600000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -997,6 +1058,7 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | P1 | (14.912594760, 100.347453783) | P2 | (14.921632438, 100.347453783) |
 | MSL | 10.680 | HAE | -21.570 |
+| P1_LDP | (49726.044, 149310.106) | P2_LDP | (49726.055, 150310.101) |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=100.35000000 +k_0=0.999995 +x_0=50000 +y_0=-1500000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -1013,6 +1075,7 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | P1 | (6.934744311, 100.544698215) | P2 | (6.943786680, 100.544698215) |
 | MSL | 33.260 | HAE | 19.039 |
+| P1_LDP | (249414.102, 736834.924) | P2_LDP | (249414.113, 737834.915) |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=100.55000000 +k_0=0.999991 +x_0=250000 +y_0=-30000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -1029,6 +1092,7 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | P1 | (14.605716939, 99.891917827) | P2 | (14.614754856, 99.891917827) |
 | MSL | 21.860 | HAE | -11.522 |
+| P1_LDP | (249129.190, 765356.985) | P2_LDP | (249129.225, 766356.981) |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=99.90000000 +k_0=0.999996 +x_0=250000 +y_0=-850000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -1045,6 +1109,7 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | P1 | (14.856909064, 104.371111866) | P2 | (14.865946785, 104.371111866) |
 | MSL | 135.980 | HAE | 114.288 |
+| P1_LDP | (250478.403, 743170.013) | P2_LDP | (250478.383, 744170.021) |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=104.36666667 +k_0=1.000008 +x_0=250000 +y_0=-900000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -1061,6 +1126,7 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | P1 | (13.784793258, 102.320803820) | P2 | (13.793831794, 102.320803820) |
 | MSL | 61.195 | HAE | 36.655 |
+| P1_LDP | (250447.365, 754534.013) | P2_LDP | (250447.348, 755534.012) |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=102.31666667 +k_0=0.999999 +x_0=250000 +y_0=-770000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -1077,6 +1143,7 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | P1 | (13.396336980, 99.954249373) | P2 | (13.405375797, 99.954249373) |
 | MSL | 3.565 | HAE | -27.689 |
+| P1_LDP | (25460.247, 76551.029) | P2_LDP | (25460.230, 77551.024) |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=99.95000000 +k_0=0.999995 +x_0=25000 +y_0=-1405000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -1093,6 +1160,7 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | P1 | (17.388093305, 103.826961245) | P2 | (17.397128886, 103.826961245) |
 | MSL | 163.850 | HAE | 136.060 |
+| P1_LDP | (249322.870, 753273.376) | P2_LDP | (249322.903, 754273.384) |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=103.83333333 +k_0=1.000008 +x_0=250000 +y_0=-1170000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -1109,6 +1177,7 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | P1 | (17.258794180, 99.711251305) | P2 | (17.267829878, 99.711251305) |
 | MSL | 72.425 | HAE | 36.048 |
+| P1_LDP | (49424.138, 508946.182) | P2_LDP | (49424.166, 509946.181) |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=99.71666667 +k_0=0.999999 +x_0=50000 +y_0=-1400000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -1125,6 +1194,7 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | P1 | (14.628533295, 101.015395200) | P2 | (14.637571195, 101.015395200) |
 | MSL | 23.425 | HAE | -6.452 |
+| P1_LDP | (49863.020, 147883.094) | P2_LDP | (49863.026, 148883.091) |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=101.01666667 +k_0=0.999997 +x_0=50000 +y_0=-1470000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -1141,6 +1211,7 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | P1 | (13.569506198, 100.213398494) | P2 | (13.578544891, 100.213398494) |
 | MSL | 2.060 | HAE | -28.856 |
+| P1_LDP | (149646.280, 50314.153) | P2_LDP | (149646.294, 51314.148) |
 
 > **LDP Definition:**
 > `+proj=lcc +lat_1=13.56666667 +lat_0=13.56666667 +lon_0=100.21666667 +k_0=0.999995 +x_0=150000 +y_0=50000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -1157,6 +1228,7 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | P1 | (9.197013248, 98.849517354) | P2 | (9.206054621, 98.849517354) |
 | MSL | 576.040 | HAE | 550.655 |
+| P1_LDP | (249946.958, 767036.278) | P2_LDP | (249946.960, 768036.274) |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=98.85000000 +k_0=0.999996 +x_0=250000 +y_0=-250000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -1173,6 +1245,7 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | P1 | (8.852083613, 99.292526366) | P2 | (8.861125155, 99.292526366) |
 | MSL | 43.780 | HAE | 20.714 |
+| P1_LDP | (49177.890, 478882.752) | P2_LDP | (49177.910, 479882.744) |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=99.30000000 +k_0=0.999992 +x_0=50000 +y_0=-500000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -1189,6 +1262,7 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | P1 | (14.886844463, 103.658772967) | P2 | (14.895882161, 103.658772967) |
 | MSL | 149.175 | HAE | 125.152 |
+| P1_LDP | (249150.575, 746485.618) | P2_LDP | (249150.610, 747485.628) |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=103.66666667 +k_0=1.000010 +x_0=250000 +y_0=-900000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -1205,6 +1279,7 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | P1 | (7.540079942, 99.607841881) | P2 | (7.549122071, 99.607841881) |
 | MSL | 14.460 | HAE | -4.331 |
+| P1_LDP | (50865.455, 533786.220) | P2_LDP | (50865.437, 534786.219) |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=99.60000000 +k_0=0.999999 +x_0=50000 +y_0=-300000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -1221,6 +1296,7 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | P1 | (17.118430548, 98.997437539) | P2 | (17.127466371, 98.997437539) |
 | MSL | 301.950 | HAE | 264.447 |
+| P1_LDP | (49727.303, 493432.791) | P2_LDP | (49727.317, 494432.801) |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=99.00000000 +k_0=1.000010 +x_0=50000 +y_0=-1400000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -1237,6 +1313,7 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | P1 | (16.490868236, 98.676426245) | P2 | (16.499904611, 98.676426245) |
 | MSL | 438.045 | HAE | 400.459 |
+| P1_LDP | (499262.511, 524027.170) | P2_LDP | (499262.545, 525027.205) |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=98.68333333 +k_0=1.000035 +x_0=500000 +y_0=-1300000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -1253,6 +1330,7 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | P1 | (12.372413032, 102.537267592) | P2 | (12.381452555, 102.537267592) |
 | MSL | 11.820 | HAE | -9.510 |
+| P1_LDP | (40427.853, 568278.103) | P2_LDP | (40427.838, 569278.100) |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=102.53333333 +k_0=0.999997 +x_0=40000 +y_0=-800000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -1269,6 +1347,7 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | P1 | (17.747416275, 100.518657238) | P2 | (17.756451529, 100.518657238) |
 | MSL | 164.005 | HAE | 129.465 |
+| P1_LDP | (250211.108, 743016.418) | P2_LDP | (250211.097, 744016.413) |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=100.51666667 +k_0=0.999995 +x_0=250000 +y_0=-1220000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -1285,6 +1364,7 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | P1 | (17.423649583, 102.867727842) | P2 | (17.432685133, 102.867727842) |
 | MSL | 175.925 | HAE | 146.036 |
+| P1_LDP | (750112.744, 250772.833) | P2_LDP | (750112.738, 251772.842) |
 
 > **LDP Definition:**
 > `+proj=lcc +lat_1=17.41666667 +lat_0=17.41666667 +lon_0=102.86666667 +k_0=1.000009 +x_0=750000 +y_0=250000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -1301,6 +1381,7 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | P1 | (15.660768750, 105.250042040) | P2 | (15.669805825, 105.250042040) |
 | MSL | 198.425 | HAE | 177.809 |
+| P1_LDP | (50004.507, 152125.721) | P2_LDP | (50004.507, 153125.733) |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=105.25000000 +k_0=1.000012 +x_0=50000 +y_0=-1580000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -1317,6 +1398,7 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | P1 | (14.977439426, 105.053672200) | P2 | (14.986477052, 105.053672200) |
 | MSL | 134.210 | HAE | 114.725 |
+| P1_LDP | (250394.991, 746506.549) | P2_LDP | (250394.975, 747506.557) |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=105.05000000 +k_0=1.000008 +x_0=250000 +y_0=-910000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -1333,6 +1415,7 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | P1 | (15.348817202, 99.479526339) | P2 | (15.357854531, 99.479526339) |
 | MSL | 208.600 | HAE | 173.684 |
+| P1_LDP | (499591.223, 49869.123) | P2_LDP | (499591.241, 50869.133) |
 
 > **LDP Definition:**
 > `+proj=lcc +lat_1=15.35000000 +lat_0=15.35000000 +lon_0=99.48333333 +k_0=1.000010 +x_0=500000 +y_0=50000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -1349,6 +1432,7 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | P1 | (6.194059626, 101.230090256) | P2 | (6.203102262, 101.230090256) |
 | MSL | 166.930 | HAE | 157.412 |
+| P1_LDP | (49641.073, 484935.870) | P2_LDP | (49641.079, 485935.878) |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=101.23333333 +k_0=1.000008 +x_0=50000 +y_0=-200000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -1365,6 +1449,7 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | P1 | (15.895900802, 104.341692983) | P2 | (15.904937681, 104.341692983) |
 | MSL | 139.185 | HAE | 114.624 |
+| P1_LDP | (289110.393, 758146.681) | P2_LDP | (289110.433, 759146.694) |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=104.35000000 +k_0=1.000013 +x_0=290000 +y_0=-1000000 +ellps=WGS84 +units=m +no_defs +type=crs`
