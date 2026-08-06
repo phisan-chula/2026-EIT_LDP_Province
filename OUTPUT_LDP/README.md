@@ -20,6 +20,7 @@ This report provides a comparative analysis of distances calculated across vario
 | HASC_1 | TH.AC | NameTH | Amnat Charoen |
 |:---|:---|:---|:---|
 | P1 | (15.890179716, 104.742219265) | P2 | (15.899216600, 104.742219265) |
+| MSL | 176.535 | HAE | 153.621 |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=104.75000000 +k_0=1.000016 +x_0=50000 +y_0=-1610000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -35,6 +36,7 @@ This report provides a comparative analysis of distances calculated across vario
 | HASC_1 | TH.AT | NameTH | Ang Thong |
 |:---|:---|:---|:---|
 | P1 | (14.621559377, 100.350174888) | P2 | (14.630597282, 100.350174888) |
+| MSL | 6.360 | HAE | -25.550 |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=100.35000000 +k_0=0.999997 +x_0=50000 +y_0=-1470000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -50,6 +52,7 @@ This report provides a comparative analysis of distances calculated across vario
 | HASC_1 | TH.BK | NameTH | Bueng Kan |
 |:---|:---|:---|:---|
 | P1 | (18.145924560, 103.712485370) | P2 | (18.154959444, 103.712485370) |
+| MSL | 173.805 | HAE | 144.132 |
 
 > **LDP Definition:**
 > `+proj=lcc +lat_1=18.15000000 +lat_0=18.15000000 +lon_0=103.71666667 +k_0=1.000022 +x_0=150000 +y_0=50000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -65,6 +68,7 @@ This report provides a comparative analysis of distances calculated across vario
 | HASC_1 | TH.BR | NameTH | Buri Ram |
 |:---|:---|:---|:---|
 | P1 | (14.820262813, 102.958856669) | P2 | (14.829300564, 102.958856669) |
+| MSL | 180.930 | HAE | 155.366 |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=102.96666667 +k_0=1.000012 +x_0=250000 +y_0=-910000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -80,6 +84,7 @@ This report provides a comparative analysis of distances calculated across vario
 | HASC_1 | TH.CB | NameTH | Chon Buri |
 |:---|:---|:---|:---|
 | P1 | (13.194128118, 101.204249270) | P2 | (13.203167079, 101.204249270) |
+| MSL | 80.195 | HAE | 52.683 |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=101.20000000 +k_0=0.999997 +x_0=40000 +y_0=-900000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -95,6 +100,7 @@ This report provides a comparative analysis of distances calculated across vario
 | HASC_1 | TH.CC | NameTH | Chachoengsao |
 |:---|:---|:---|:---|
 | P1 | (13.606007246, 101.430288390) | P2 | (13.615045912, 101.430288390) |
+| MSL | 35.845 | HAE | 8.768 |
 
 > **LDP Definition:**
 > `+proj=lcc +lat_1=13.60000000 +lat_0=13.60000000 +lon_0=101.43333333 +k_0=0.999996 +x_0=500000 +y_0=50000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -110,6 +116,7 @@ This report provides a comparative analysis of distances calculated across vario
 | HASC_1 | TH.CM_N | NameTH | Chiang Mai North |
 |:---|:---|:---|:---|
 | P1 | (19.247888133, 98.971945516) | P2 | (19.256921956, 98.971945516) |
+| MSL | 410.480 | HAE | 371.918 |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=98.96666667 +k_0=1.000054 +x_0=247500 +y_0=-1600000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -125,6 +132,7 @@ This report provides a comparative analysis of distances calculated across vario
 | HASC_1 | TH.CM_S | NameTH | Chiang Mai South |
 |:---|:---|:---|:---|
 | P1 | (18.190609694, 98.410373546) | P2 | (18.199644536, 98.410373546) |
+| MSL | 889.005 | HAE | 850.279 |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=98.41666667 +k_0=1.000041 +x_0=50000 +y_0=-1600000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -140,6 +148,7 @@ This report provides a comparative analysis of distances calculated across vario
 | HASC_1 | TH.CN | NameTH | Chai Nat |
 |:---|:---|:---|:---|
 | P1 | (15.131616955, 100.026115228) | P2 | (15.140654459, 100.026115228) |
+| MSL | 15.990 | HAE | -17.348 |
 
 > **LDP Definition:**
 > `+proj=lcc +lat_1=15.13333333 +lat_0=15.13333333 +lon_0=100.03333333 +k_0=0.999999 +x_0=150000 +y_0=50000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -155,6 +164,7 @@ This report provides a comparative analysis of distances calculated across vario
 | HASC_1 | TH.CP | NameTH | Chumphon |
 |:---|:---|:---|:---|
 | P1 | (10.345169001, 99.062367669) | P2 | (10.354209765, 99.062367669) |
+| MSL | 42.420 | HAE | 14.645 |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=99.06666667 +k_0=1.000003 +x_0=50000 +y_0=-600000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -170,6 +180,7 @@ This report provides a comparative analysis of distances calculated across vario
 | HASC_1 | TH.CR | NameTH | Chiang Rai |
 |:---|:---|:---|:---|
 | P1 | (19.845308816, 99.867526500) | P2 | (19.854342042, 99.867526500) |
+| MSL | 405.895 | HAE | 368.562 |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=99.86666667 +k_0=1.000057 +x_0=250000 +y_0=-1450000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -185,6 +196,7 @@ This report provides a comparative analysis of distances calculated across vario
 | HASC_1 | TH.CT | NameTH | Chanthaburi |
 |:---|:---|:---|:---|
 | P1 | (12.883179477, 102.128965688) | P2 | (12.892218654, 102.128965688) |
+| MSL | 273.210 | HAE | 249.617 |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=102.13333333 +k_0=1.000006 +x_0=50000 +y_0=-900000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -200,6 +212,7 @@ This report provides a comparative analysis of distances calculated across vario
 | HASC_1 | TH.CY_N | NameTH | Chaiyaphum North |
 |:---|:---|:---|:---|
 | P1 | (16.271939947, 101.828357663) | P2 | (16.280976509, 101.828357663) |
+| MSL | 1028.460 | HAE | 998.740 |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=101.83333333 +k_0=1.000017 +x_0=250000 +y_0=-1050000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -215,6 +228,7 @@ This report provides a comparative analysis of distances calculated across vario
 | HASC_1 | TH.CY_S | NameTH | Chaiyaphum South |
 |:---|:---|:---|:---|
 | P1 | (15.715381430, 101.808493772) | P2 | (15.724418460, 101.808493772) |
+| MSL | 201.675 | HAE | 171.739 |
 
 > **LDP Definition:**
 > `+proj=lcc +lat_1=15.71666667 +lat_0=15.71666667 +lon_0=101.81666667 +k_0=1.000028 +x_0=500000 +y_0=50000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -230,6 +244,7 @@ This report provides a comparative analysis of distances calculated across vario
 | HASC_1 | TH.GBKK | NameTH | GreaterBKK |
 |:---|:---|:---|:---|
 | P1 | (13.749789180, 100.603828560) | P2 | (13.758827742, 100.603828560) |
+| MSL | 2.320 | HAE | -27.914 |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=100.60000000 +k_0=0.999989 +x_0=50000 +y_0=-1380000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -245,6 +260,7 @@ This report provides a comparative analysis of distances calculated across vario
 | HASC_1 | TH.KK | NameTH | Khon Kaen |
 |:---|:---|:---|:---|
 | P1 | (16.406994612, 102.580293583) | P2 | (16.416031058, 102.580293583) |
+| MSL | 193.205 | HAE | 163.698 |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=102.58333333 +k_0=1.000010 +x_0=250000 +y_0=-1050000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -260,6 +276,7 @@ This report provides a comparative analysis of distances calculated across vario
 | HASC_1 | TH.KL | NameTH | Kalasin |
 |:---|:---|:---|:---|
 | P1 | (16.626053342, 103.624018075) | P2 | (16.635089599, 103.624018075) |
+| MSL | 219.610 | HAE | 193.011 |
 
 > **LDP Definition:**
 > `+proj=lcc +lat_1=16.61666667 +lat_0=16.61666667 +lon_0=103.61666667 +k_0=1.000010 +x_0=750000 +y_0=250000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -275,6 +292,7 @@ This report provides a comparative analysis of distances calculated across vario
 | HASC_1 | TH.KN_N | NameTH | Kanchanaburi North |
 |:---|:---|:---|:---|
 | P1 | (14.824599153, 98.774490364) | P2 | (14.833636900, 98.774490364) |
+| MSL | 679.030 | HAE | 643.557 |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=98.76666667 +k_0=1.000013 +x_0=250000 +y_0=-890000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -290,6 +308,7 @@ This report provides a comparative analysis of distances calculated across vario
 | HASC_1 | TH.KN_S | NameTH | Kanchanaburi South |
 |:---|:---|:---|:---|
 | P1 | (14.224425136, 99.456863322) | P2 | (14.233463345, 99.456863322) |
+| MSL | 64.915 | HAE | 30.932 |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=99.45000000 +k_0=0.999995 +x_0=250000 +y_0=-800000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -305,6 +324,7 @@ This report provides a comparative analysis of distances calculated across vario
 | HASC_1 | TH.KP | NameTH | Kamphaeng Phet |
 |:---|:---|:---|:---|
 | P1 | (16.331107640, 99.534369281) | P2 | (16.340144152, 99.534369281) |
+| MSL | 88.240 | HAE | 52.515 |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=99.53333333 +k_0=0.999999 +x_0=250000 +y_0=-1050000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -320,6 +340,7 @@ This report provides a comparative analysis of distances calculated across vario
 | HASC_1 | TH.KR | NameTH | Krabi |
 |:---|:---|:---|:---|
 | P1 | (8.183575969, 99.018035832) | P2 | (8.192617822, 99.018035832) |
+| MSL | 104.655 | HAE | 82.255 |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=99.01666667 +k_0=1.000000 +x_0=50000 +y_0=-400000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -335,6 +356,7 @@ This report provides a comparative analysis of distances calculated across vario
 | HASC_1 | TH.LB | NameTH | Lop Buri |
 |:---|:---|:---|:---|
 | P1 | (15.097825267, 100.900403072) | P2 | (15.106862798, 100.900403072) |
+| MSL | 66.805 | HAE | 35.827 |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=100.90000000 +k_0=0.999990 +x_0=250000 +y_0=-930000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -350,6 +372,7 @@ This report provides a comparative analysis of distances calculated across vario
 | HASC_1 | TH.LE_E | NameTH | Loei East |
 |:---|:---|:---|:---|
 | P1 | (17.423729286, 101.820646674) | P2 | (17.432764835, 101.820646674) |
+| MSL | 271.355 | HAE | 240.117 |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=101.81666667 +k_0=1.000042 +x_0=50000 +y_0=-1400000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -365,6 +388,7 @@ This report provides a comparative analysis of distances calculated across vario
 | HASC_1 | TH.LE_W | NameTH | Loei West |
 |:---|:---|:---|:---|
 | P1 | (17.365006263, 101.271116248) | P2 | (17.374041866, 101.271116248) |
+| MSL | 610.540 | HAE | 578.848 |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=101.26666667 +k_0=1.000081 +x_0=60000 +y_0=-1870000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -380,6 +404,7 @@ This report provides a comparative analysis of distances calculated across vario
 | HASC_1 | TH.LG | NameTH | Lampang |
 |:---|:---|:---|:---|
 | P1 | (18.324553972, 99.513487536) | P2 | (18.333588687, 99.513487536) |
+| MSL | 244.450 | HAE | 206.883 |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=99.51666667 +k_0=1.000032 +x_0=250000 +y_0=-1280000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -395,6 +420,7 @@ This report provides a comparative analysis of distances calculated across vario
 | HASC_1 | TH.LN | NameTH | Lamphun |
 |:---|:---|:---|:---|
 | P1 | (18.118082182, 98.955883318) | P2 | (18.127117092, 98.955883318) |
+| MSL | 641.175 | HAE | 603.114 |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=98.95000000 +k_0=1.000052 +x_0=50000 +y_0=-1500000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -410,6 +436,7 @@ This report provides a comparative analysis of distances calculated across vario
 | HASC_1 | TH.MD_N | NameTH | Mukdahan North |
 |:---|:---|:---|:---|
 | P1 | (16.678897083, 104.348574005) | P2 | (16.687933294, 104.348574005) |
+| MSL | 377.825 | HAE | 353.414 |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=104.35000000 +k_0=1.000030 +x_0=50000 +y_0=-1690000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -425,6 +452,7 @@ This report provides a comparative analysis of distances calculated across vario
 | HASC_1 | TH.MD_S | NameTH | Mukdahan South |
 |:---|:---|:---|:---|
 | P1 | (16.467060857, 104.663469415) | P2 | (16.476097252, 104.663469415) |
+| MSL | 171.165 | HAE | 147.621 |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=104.66666667 +k_0=1.000025 +x_0=50000 +y_0=-1680000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -440,6 +468,7 @@ This report provides a comparative analysis of distances calculated across vario
 | HASC_1 | TH.MH_N | NameTH | Mae Hong Son North |
 |:---|:---|:---|:---|
 | P1 | (19.234747948, 98.143093621) | P2 | (19.243781785, 98.143093621) |
+| MSL | 965.065 | HAE | 925.567 |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=98.15000000 +k_0=1.000041 +x_0=500000 +y_0=-1600000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -455,6 +484,7 @@ This report provides a comparative analysis of distances calculated across vario
 | HASC_1 | TH.MH_S | NameTH | Mae Hong Son South |
 |:---|:---|:---|:---|
 | P1 | (18.233949224, 97.883072994) | P2 | (18.242984025, 97.883072994) |
+| MSL | 447.195 | HAE | 407.018 |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=97.88333333 +k_0=1.000038 +x_0=260000 +y_0=-1250000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -470,6 +500,7 @@ This report provides a comparative analysis of distances calculated across vario
 | HASC_1 | TH.MS | NameTH | Maha Sarakham |
 |:---|:---|:---|:---|
 | P1 | (15.997485067, 103.168168310) | P2 | (16.006521861, 103.168168310) |
+| MSL | 185.140 | HAE | 156.860 |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=103.16666667 +k_0=1.000014 +x_0=50000 +y_0=-1270000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -485,6 +516,7 @@ This report provides a comparative analysis of distances calculated across vario
 | HASC_1 | TH.NA | NameTH | Nan |
 |:---|:---|:---|:---|
 | P1 | (18.845899044, 100.834901065) | P2 | (18.854933260, 100.834901065) |
+| MSL | 264.680 | HAE | 230.215 |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=100.83333333 +k_0=1.000042 +x_0=250000 +y_0=-1330000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -500,6 +532,7 @@ This report provides a comparative analysis of distances calculated across vario
 | HASC_1 | TH.NB | NameTH | Nong Bua Lam Phu |
 |:---|:---|:---|:---|
 | P1 | (17.179313576, 102.303898824) | P2 | (17.188349346, 102.303898824) |
+| MSL | 242.790 | HAE | 212.384 |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=102.30000000 +k_0=1.000030 +x_0=50000 +y_0=-1410000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -515,6 +548,7 @@ This report provides a comparative analysis of distances calculated across vario
 | HASC_1 | TH.NF | NameTH | Nakhon Phanom |
 |:---|:---|:---|:---|
 | P1 | (17.387438926, 104.430579488) | P2 | (17.396474508, 104.430579488) |
+| MSL | 173.110 | HAE | 146.641 |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=104.43333333 +k_0=1.000012 +x_0=50000 +y_0=-1400000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -530,6 +564,7 @@ This report provides a comparative analysis of distances calculated across vario
 | HASC_1 | TH.NK | NameTH | Nong Khai |
 |:---|:---|:---|:---|
 | P1 | (17.937918205, 102.826786113) | P2 | (17.946953282, 102.826786113) |
+| MSL | 160.505 | HAE | 129.382 |
 
 > **LDP Definition:**
 > `+proj=lcc +lat_1=17.93333333 +lat_0=17.93333333 +lon_0=102.83333333 +k_0=1.000019 +x_0=500000 +y_0=50000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -545,6 +580,7 @@ This report provides a comparative analysis of distances calculated across vario
 | HASC_1 | TH.NN | NameTH | Nakhon Nayok |
 |:---|:---|:---|:---|
 | P1 | (14.215533198, 101.171949751) | P2 | (14.224571413, 101.171949751) |
+| MSL | 4.790 | HAE | -23.958 |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=101.16666667 +k_0=1.000003 +x_0=50000 +y_0=-1420000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -560,6 +596,7 @@ This report provides a comparative analysis of distances calculated across vario
 | HASC_1 | TH.NP | NameTH | Nakhon Pathom |
 |:---|:---|:---|:---|
 | P1 | (13.925794445, 100.105691122) | P2 | (13.934832877, 100.105691122) |
+| MSL | 3.730 | HAE | -28.126 |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=100.10000000 +k_0=0.999993 +x_0=50000 +y_0=-1390000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -575,6 +612,7 @@ This report provides a comparative analysis of distances calculated across vario
 | HASC_1 | TH.NR_N | NameTH | Nakhon Ratchasima North |
 |:---|:---|:---|:---|
 | P1 | (15.339408188, 102.495429233) | P2 | (15.348445525, 102.495429233) |
+| MSL | 151.540 | HAE | 123.054 |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=102.50000000 +k_0=1.000013 +x_0=250000 +y_0=-950000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -590,6 +628,7 @@ This report provides a comparative analysis of distances calculated across vario
 | HASC_1 | TH.NR_S | NameTH | Nakhon Ratchasima South |
 |:---|:---|:---|:---|
 | P1 | (14.762193146, 101.914083634) | P2 | (14.771230942, 101.914083634) |
+| MSL | 236.530 | HAE | 208.961 |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=101.91666667 +k_0=1.000019 +x_0=250000 +y_0=-890000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -605,6 +644,7 @@ This report provides a comparative analysis of distances calculated across vario
 | HASC_1 | TH.NS | NameTH | Nakhon Sawan |
 |:---|:---|:---|:---|
 | P1 | (15.682480715, 100.152996205) | P2 | (15.691517772, 100.152996205) |
+| MSL | 26.720 | HAE | -6.810 |
 
 > **LDP Definition:**
 > `+proj=lcc +lat_1=15.68333333 +lat_0=15.68333333 +lon_0=100.15000000 +k_0=0.999998 +x_0=280000 +y_0=750000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -620,6 +660,7 @@ This report provides a comparative analysis of distances calculated across vario
 | HASC_1 | TH.NT | NameTH | Nakhon Si Thammarat |
 |:---|:---|:---|:---|
 | P1 | (8.380995254, 99.786812199) | P2 | (8.390037017, 99.786812199) |
+| MSL | 168.380 | HAE | 148.351 |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=99.78333333 +k_0=0.999987 +x_0=250000 +y_0=-190000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -635,6 +676,7 @@ This report provides a comparative analysis of distances calculated across vario
 | HASC_1 | TH.NW | NameTH | Narathiwat |
 |:---|:---|:---|:---|
 | P1 | (6.179233624, 101.719526268) | P2 | (6.188276266, 101.719526268) |
+| MSL | 27.375 | HAE | 19.189 |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=101.71666667 +k_0=0.999999 +x_0=50000 +y_0=-530000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -650,6 +692,7 @@ This report provides a comparative analysis of distances calculated across vario
 | HASC_1 | TH.PA | NameTH | Phra Nakhon Si Ayutthaya |
 |:---|:---|:---|:---|
 | P1 | (14.344115033, 100.528087574) | P2 | (14.353153151, 100.528087574) |
+| MSL | 3.290 | HAE | -27.827 |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=100.53333333 +k_0=0.999989 +x_0=50000 +y_0=-1440000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -665,6 +708,7 @@ This report provides a comparative analysis of distances calculated across vario
 | HASC_1 | TH.PB | NameTH | Prachin Buri |
 |:---|:---|:---|:---|
 | P1 | (14.050430952, 101.649363133) | P2 | (14.059469291, 101.649363133) |
+| MSL | 20.830 | HAE | -6.198 |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=101.65000000 +k_0=0.999988 +x_0=250000 +y_0=-800000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -680,6 +724,7 @@ This report provides a comparative analysis of distances calculated across vario
 | HASC_1 | TH.PC | NameTH | Phichit |
 |:---|:---|:---|:---|
 | P1 | (16.258180466, 100.345420779) | P2 | (16.267217039, 100.345420779) |
+| MSL | 32.930 | HAE | -0.890 |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=100.35000000 +k_0=0.999992 +x_0=50000 +y_0=-1650000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -695,6 +740,7 @@ This report provides a comparative analysis of distances calculated across vario
 | HASC_1 | TH.PE | NameTH | Phetchaburi |
 |:---|:---|:---|:---|
 | P1 | (12.946544060, 99.619367399) | P2 | (12.955583194, 99.619367399) |
+| MSL | 127.155 | HAE | 95.736 |
 
 > **LDP Definition:**
 > `+proj=lcc +lat_1=12.95000000 +lat_0=12.95000000 +lon_0=99.61666667 +k_0=0.999992 +x_0=750000 +y_0=250000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -710,6 +756,7 @@ This report provides a comparative analysis of distances calculated across vario
 | HASC_1 | TH.PG | NameTH | Phangnga |
 |:---|:---|:---|:---|
 | P1 | (8.675726478, 98.424559610) | P2 | (8.684768105, 98.424559610) |
+| MSL | 73.260 | HAE | 47.156 |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=98.41666667 +k_0=1.000004 +x_0=50000 +y_0=-450000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -725,6 +772,7 @@ This report provides a comparative analysis of distances calculated across vario
 | HASC_1 | TH.PH | NameTH | Phetchabun |
 |:---|:---|:---|:---|
 | P1 | (16.262211264, 101.146982358) | P2 | (16.271247834, 101.146982358) |
+| MSL | 151.155 | HAE | 119.869 |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=101.15000000 +k_0=1.000011 +x_0=250000 +y_0=-1050000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -740,6 +788,7 @@ This report provides a comparative analysis of distances calculated across vario
 | HASC_1 | TH.PI | NameTH | Pattani |
 |:---|:---|:---|:---|
 | P1 | (6.730497036, 101.351500002) | P2 | (6.739539481, 101.351500002) |
+| MSL | 6.435 | HAE | -4.714 |
 
 > **LDP Definition:**
 > `+proj=lcc +lat_1=6.73333333 +lat_0=6.73333333 +lon_0=101.35000000 +k_0=0.999998 +x_0=150000 +y_0=50000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -755,6 +804,7 @@ This report provides a comparative analysis of distances calculated across vario
 | HASC_1 | TH.PK | NameTH | Prachuap Khiri Khan |
 |:---|:---|:---|:---|
 | P1 | (11.946414773, 99.635469096) | P2 | (11.955454574, 99.635469096) |
+| MSL | 151.700 | HAE | 122.539 |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=99.63333333 +k_0=0.999998 +x_0=60000 +y_0=-800000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -770,6 +820,7 @@ This report provides a comparative analysis of distances calculated across vario
 | HASC_1 | TH.PL | NameTH | Phatthalung |
 |:---|:---|:---|:---|
 | P1 | (7.511596795, 100.069260109) | P2 | (7.520638936, 100.069260109) |
+| MSL | 15.930 | HAE | -1.241 |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=100.06666667 +k_0=0.999997 +x_0=50000 +y_0=-680000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -785,6 +836,7 @@ This report provides a comparative analysis of distances calculated across vario
 | HASC_1 | TH.PR | NameTH | Phrae |
 |:---|:---|:---|:---|
 | P1 | (18.199493214, 100.067957516) | P2 | (18.208528047, 100.067957516) |
+| MSL | 435.725 | HAE | 399.666 |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=100.06666667 +k_0=1.000012 +x_0=250000 +y_0=-1270000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -800,6 +852,7 @@ This report provides a comparative analysis of distances calculated across vario
 | HASC_1 | TH.PS | NameTH | Phitsanulok |
 |:---|:---|:---|:---|
 | P1 | (16.982235290, 100.544592202) | P2 | (16.991271235, 100.544592202) |
+| MSL | 145.460 | HAE | 111.803 |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=100.55000000 +k_0=0.999998 +x_0=250000 +y_0=-1130000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -815,6 +868,7 @@ This report provides a comparative analysis of distances calculated across vario
 | HASC_1 | TH.PT | NameTH | Pathum Thani |
 |:---|:---|:---|:---|
 | P1 | (14.064031008, 100.683257159) | P2 | (14.073069337, 100.683257159) |
+| MSL | 3.270 | HAE | -27.121 |
 
 > **LDP Definition:**
 > `+proj=lcc +lat_1=14.06666667 +lat_0=14.06666667 +lon_0=100.68333333 +k_0=0.999992 +x_0=60000 +y_0=150000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -830,6 +884,7 @@ This report provides a comparative analysis of distances calculated across vario
 | HASC_1 | TH.PU | NameTH | Phuket |
 |:---|:---|:---|:---|
 | P1 | (7.972975963, 98.344085401) | P2 | (7.982017908, 98.344085401) |
+| MSL | 21.900 | HAE | -3.237 |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=98.35000000 +k_0=1.000005 +x_0=50000 +y_0=-730000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -845,6 +900,7 @@ This report provides a comparative analysis of distances calculated across vario
 | HASC_1 | TH.PY | NameTH | Phayao |
 |:---|:---|:---|:---|
 | P1 | (19.231793496, 100.189296531) | P2 | (19.240827335, 100.189296531) |
+| MSL | 478.470 | HAE | 442.508 |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=100.18333333 +k_0=1.000053 +x_0=250000 +y_0=-1380000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -860,6 +916,7 @@ This report provides a comparative analysis of distances calculated across vario
 | HASC_1 | TH.RE | NameTH | Roi Et |
 |:---|:---|:---|:---|
 | P1 | (15.918132104, 103.816392169) | P2 | (15.927168965, 103.816392169) |
+| MSL | 138.580 | HAE | 112.240 |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=103.81666667 +k_0=1.000005 +x_0=250000 +y_0=-1260000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -875,6 +932,7 @@ This report provides a comparative analysis of distances calculated across vario
 | HASC_1 | TH.RN | NameTH | Ranong |
 |:---|:---|:---|:---|
 | P1 | (9.970920104, 98.705877471) | P2 | (9.979961074, 98.705877471) |
+| MSL | 238.990 | HAE | 211.008 |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=98.70000000 +k_0=1.000003 +x_0=50000 +y_0=-600000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -890,6 +948,7 @@ This report provides a comparative analysis of distances calculated across vario
 | HASC_1 | TH.RT | NameTH | Ratchaburi |
 |:---|:---|:---|:---|
 | P1 | (13.533407751, 99.580848987) | P2 | (13.542446470, 99.580848987) |
+| MSL | 90.990 | HAE | 58.395 |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=99.58333333 +k_0=0.999992 +x_0=50000 +y_0=-1350000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -905,6 +964,7 @@ This report provides a comparative analysis of distances calculated across vario
 | HASC_1 | TH.RY | NameTH | Rayong |
 |:---|:---|:---|:---|
 | P1 | (12.855768294, 101.426611621) | P2 | (12.864807490, 101.426611621) |
+| MSL | 127.010 | HAE | 100.860 |
 
 > **LDP Definition:**
 > `+proj=lcc +lat_1=12.85000000 +lat_0=12.85000000 +lon_0=101.43333333 +k_0=1.000002 +x_0=150000 +y_0=50000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -920,6 +980,7 @@ This report provides a comparative analysis of distances calculated across vario
 | HASC_1 | TH.SA | NameTH | Satun |
 |:---|:---|:---|:---|
 | P1 | (6.848518402, 99.967013099) | P2 | (6.857560804, 99.967013099) |
+| MSL | 27.750 | HAE | 11.688 |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=99.96666667 +k_0=1.000004 +x_0=50000 +y_0=-600000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -935,6 +996,7 @@ This report provides a comparative analysis of distances calculated across vario
 | HASC_1 | TH.SB | NameTH | Sing Buri |
 |:---|:---|:---|:---|
 | P1 | (14.912594760, 100.347453783) | P2 | (14.921632438, 100.347453783) |
+| MSL | 10.680 | HAE | -21.570 |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=100.35000000 +k_0=0.999995 +x_0=50000 +y_0=-1500000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -950,6 +1012,7 @@ This report provides a comparative analysis of distances calculated across vario
 | HASC_1 | TH.SG | NameTH | Songkhla |
 |:---|:---|:---|:---|
 | P1 | (6.934744311, 100.544698215) | P2 | (6.943786680, 100.544698215) |
+| MSL | 33.260 | HAE | 19.039 |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=100.55000000 +k_0=0.999991 +x_0=250000 +y_0=-30000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -965,6 +1028,7 @@ This report provides a comparative analysis of distances calculated across vario
 | HASC_1 | TH.SH | NameTH | Suphan Buri |
 |:---|:---|:---|:---|
 | P1 | (14.605716939, 99.891917827) | P2 | (14.614754856, 99.891917827) |
+| MSL | 21.860 | HAE | -11.522 |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=99.90000000 +k_0=0.999996 +x_0=250000 +y_0=-850000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -980,6 +1044,7 @@ This report provides a comparative analysis of distances calculated across vario
 | HASC_1 | TH.SI | NameTH | Si Sa Ket |
 |:---|:---|:---|:---|
 | P1 | (14.856909064, 104.371111866) | P2 | (14.865946785, 104.371111866) |
+| MSL | 135.980 | HAE | 114.288 |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=104.36666667 +k_0=1.000008 +x_0=250000 +y_0=-900000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -995,6 +1060,7 @@ This report provides a comparative analysis of distances calculated across vario
 | HASC_1 | TH.SK | NameTH | Sa Kaeo |
 |:---|:---|:---|:---|
 | P1 | (13.784793258, 102.320803820) | P2 | (13.793831794, 102.320803820) |
+| MSL | 61.195 | HAE | 36.655 |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=102.31666667 +k_0=0.999999 +x_0=250000 +y_0=-770000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -1010,6 +1076,7 @@ This report provides a comparative analysis of distances calculated across vario
 | HASC_1 | TH.SM | NameTH | Samut Songkhram |
 |:---|:---|:---|:---|
 | P1 | (13.396336980, 99.954249373) | P2 | (13.405375797, 99.954249373) |
+| MSL | 3.565 | HAE | -27.689 |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=99.95000000 +k_0=0.999995 +x_0=25000 +y_0=-1405000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -1025,6 +1092,7 @@ This report provides a comparative analysis of distances calculated across vario
 | HASC_1 | TH.SN | NameTH | Sakon Nakhon |
 |:---|:---|:---|:---|
 | P1 | (17.388093305, 103.826961245) | P2 | (17.397128886, 103.826961245) |
+| MSL | 163.850 | HAE | 136.060 |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=103.83333333 +k_0=1.000008 +x_0=250000 +y_0=-1170000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -1040,6 +1108,7 @@ This report provides a comparative analysis of distances calculated across vario
 | HASC_1 | TH.SO | NameTH | Sukhothai |
 |:---|:---|:---|:---|
 | P1 | (17.258794180, 99.711251305) | P2 | (17.267829878, 99.711251305) |
+| MSL | 72.425 | HAE | 36.048 |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=99.71666667 +k_0=0.999999 +x_0=50000 +y_0=-1400000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -1055,6 +1124,7 @@ This report provides a comparative analysis of distances calculated across vario
 | HASC_1 | TH.SR | NameTH | Saraburi |
 |:---|:---|:---|:---|
 | P1 | (14.628533295, 101.015395200) | P2 | (14.637571195, 101.015395200) |
+| MSL | 23.425 | HAE | -6.452 |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=101.01666667 +k_0=0.999997 +x_0=50000 +y_0=-1470000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -1070,6 +1140,7 @@ This report provides a comparative analysis of distances calculated across vario
 | HASC_1 | TH.SS | NameTH | Samut Sakhon |
 |:---|:---|:---|:---|
 | P1 | (13.569506198, 100.213398494) | P2 | (13.578544891, 100.213398494) |
+| MSL | 2.060 | HAE | -28.856 |
 
 > **LDP Definition:**
 > `+proj=lcc +lat_1=13.56666667 +lat_0=13.56666667 +lon_0=100.21666667 +k_0=0.999995 +x_0=150000 +y_0=50000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -1085,6 +1156,7 @@ This report provides a comparative analysis of distances calculated across vario
 | HASC_1 | TH.ST_N | NameTH | Surat Thani North |
 |:---|:---|:---|:---|
 | P1 | (9.197013248, 98.849517354) | P2 | (9.206054621, 98.849517354) |
+| MSL | 576.040 | HAE | 550.655 |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=98.85000000 +k_0=0.999996 +x_0=250000 +y_0=-250000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -1100,6 +1172,7 @@ This report provides a comparative analysis of distances calculated across vario
 | HASC_1 | TH.ST_S | NameTH | Surat Thani South |
 |:---|:---|:---|:---|
 | P1 | (8.852083613, 99.292526366) | P2 | (8.861125155, 99.292526366) |
+| MSL | 43.780 | HAE | 20.714 |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=99.30000000 +k_0=0.999992 +x_0=50000 +y_0=-500000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -1115,6 +1188,7 @@ This report provides a comparative analysis of distances calculated across vario
 | HASC_1 | TH.SU | NameTH | Surin |
 |:---|:---|:---|:---|
 | P1 | (14.886844463, 103.658772967) | P2 | (14.895882161, 103.658772967) |
+| MSL | 149.175 | HAE | 125.152 |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=103.66666667 +k_0=1.000010 +x_0=250000 +y_0=-900000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -1130,6 +1204,7 @@ This report provides a comparative analysis of distances calculated across vario
 | HASC_1 | TH.TG | NameTH | Trang |
 |:---|:---|:---|:---|
 | P1 | (7.540079942, 99.607841881) | P2 | (7.549122071, 99.607841881) |
+| MSL | 14.460 | HAE | -4.331 |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=99.60000000 +k_0=0.999999 +x_0=50000 +y_0=-300000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -1145,6 +1220,7 @@ This report provides a comparative analysis of distances calculated across vario
 | HASC_1 | TH.TK_N | NameTH | Tak North |
 |:---|:---|:---|:---|
 | P1 | (17.118430548, 98.997437539) | P2 | (17.127466371, 98.997437539) |
+| MSL | 301.950 | HAE | 264.447 |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=99.00000000 +k_0=1.000010 +x_0=50000 +y_0=-1400000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -1160,6 +1236,7 @@ This report provides a comparative analysis of distances calculated across vario
 | HASC_1 | TH.TK_S | NameTH | Tak South |
 |:---|:---|:---|:---|
 | P1 | (16.490868236, 98.676426245) | P2 | (16.499904611, 98.676426245) |
+| MSL | 438.045 | HAE | 400.459 |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=98.68333333 +k_0=1.000035 +x_0=500000 +y_0=-1300000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -1175,6 +1252,7 @@ This report provides a comparative analysis of distances calculated across vario
 | HASC_1 | TH.TT | NameTH | Trat |
 |:---|:---|:---|:---|
 | P1 | (12.372413032, 102.537267592) | P2 | (12.381452555, 102.537267592) |
+| MSL | 11.820 | HAE | -9.510 |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=102.53333333 +k_0=0.999997 +x_0=40000 +y_0=-800000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -1190,6 +1268,7 @@ This report provides a comparative analysis of distances calculated across vario
 | HASC_1 | TH.UD | NameTH | Uttaradit |
 |:---|:---|:---|:---|
 | P1 | (17.747416275, 100.518657238) | P2 | (17.756451529, 100.518657238) |
+| MSL | 164.005 | HAE | 129.465 |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=100.51666667 +k_0=0.999995 +x_0=250000 +y_0=-1220000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -1205,6 +1284,7 @@ This report provides a comparative analysis of distances calculated across vario
 | HASC_1 | TH.UN | NameTH | Udon Thani |
 |:---|:---|:---|:---|
 | P1 | (17.423649583, 102.867727842) | P2 | (17.432685133, 102.867727842) |
+| MSL | 175.925 | HAE | 146.036 |
 
 > **LDP Definition:**
 > `+proj=lcc +lat_1=17.41666667 +lat_0=17.41666667 +lon_0=102.86666667 +k_0=1.000009 +x_0=750000 +y_0=250000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -1220,6 +1300,7 @@ This report provides a comparative analysis of distances calculated across vario
 | HASC_1 | TH.UR_N | NameTH | Ubon Ratchathani North |
 |:---|:---|:---|:---|
 | P1 | (15.660768750, 105.250042040) | P2 | (15.669805825, 105.250042040) |
+| MSL | 198.425 | HAE | 177.809 |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=105.25000000 +k_0=1.000012 +x_0=50000 +y_0=-1580000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -1235,6 +1316,7 @@ This report provides a comparative analysis of distances calculated across vario
 | HASC_1 | TH.UR_S | NameTH | Ubon Ratchathani South |
 |:---|:---|:---|:---|
 | P1 | (14.977439426, 105.053672200) | P2 | (14.986477052, 105.053672200) |
+| MSL | 134.210 | HAE | 114.725 |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=105.05000000 +k_0=1.000008 +x_0=250000 +y_0=-910000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -1250,6 +1332,7 @@ This report provides a comparative analysis of distances calculated across vario
 | HASC_1 | TH.UT | NameTH | Uthai Thani |
 |:---|:---|:---|:---|
 | P1 | (15.348817202, 99.479526339) | P2 | (15.357854531, 99.479526339) |
+| MSL | 208.600 | HAE | 173.684 |
 
 > **LDP Definition:**
 > `+proj=lcc +lat_1=15.35000000 +lat_0=15.35000000 +lon_0=99.48333333 +k_0=1.000010 +x_0=500000 +y_0=50000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -1265,6 +1348,7 @@ This report provides a comparative analysis of distances calculated across vario
 | HASC_1 | TH.YL | NameTH | Yala |
 |:---|:---|:---|:---|
 | P1 | (6.194059626, 101.230090256) | P2 | (6.203102262, 101.230090256) |
+| MSL | 166.930 | HAE | 157.412 |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=101.23333333 +k_0=1.000008 +x_0=50000 +y_0=-200000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -1280,6 +1364,7 @@ This report provides a comparative analysis of distances calculated across vario
 | HASC_1 | TH.YS | NameTH | Yasothon |
 |:---|:---|:---|:---|
 | P1 | (15.895900802, 104.341692983) | P2 | (15.904937681, 104.341692983) |
+| MSL | 139.185 | HAE | 114.624 |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=104.35000000 +k_0=1.000013 +x_0=290000 +y_0=-1000000 +ellps=WGS84 +units=m +no_defs +type=crs`
