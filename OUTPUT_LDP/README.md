@@ -147,7 +147,7 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | MSL | 889.005 | HAE | 850.279 |
 | P1_LDP | (49334.219, 412161.404) | P2_LDP | (49334.254, 413161.445) |
-| P1_LDP_CSF | -97.3 ppm | P2_LDP_CSF | -88.1 ppm |
+| P1_LDP_CSF | -97.3 ppm ❗ | P2_LDP_CSF | -88.1 ppm ❗ |
 | P1_UTM_CSF | -490.1 ppm | P2_UTM_CSF | -481.0 ppm |
 
 > **LDP Definition:**
@@ -219,7 +219,7 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | MSL | 273.210 | HAE | 249.617 |
 | P1_LDP | (49525.954, 524795.506) | P2_LDP | (49525.971, 525795.512) |
-| P1_LDP_CSF | -28.5 ppm | P2_LDP_CSF | -38.0 ppm |
+| P1_LDP_CSF | -28.5 ppm ❗ | P2_LDP_CSF | -38.0 ppm ❗ |
 | P1_UTM_CSF | +766.8 ppm | P2_UTM_CSF | +757.3 ppm |
 
 > **LDP Definition:**
@@ -231,39 +231,21 @@ This report provides a comparative analysis of distances calculated across vario
 
 ---
 
-### 📍 Province: Chaiyaphum North (TH.CY_N)
+### 📍 Province: Chaiyaphum (TH.CY)
 
-| P1 | (16.271939947, 101.828357663) | P2 | (16.280976509, 101.828357663) |
+| P1 | (16.030105225, 101.819726444) | P2 | (16.039141992, 101.819726444) |
 |:---|:---|:---|:---|
-| MSL | 1028.460 | HAE | 998.740 |
-| P1_LDP | (249468.150, 749766.735) | P2_LDP | (249468.174, 750766.752) |
-| P1_LDP_CSF | -136.3 ppm | P2_LDP_CSF | -143.8 ppm |
-| P1_UTM_CSF | +576.9 ppm | P2_UTM_CSF | +569.3 ppm |
+| MSL | 241.460 | HAE | 211.560 |
+| P1_LDP | (250327.457, 703004.786) | P2_LDP | (250327.443, 704004.803) |
+| P1_LDP_CSF | -15.7 ppm | P2_LDP_CSF | -16.8 ppm |
+| P1_UTM_CSF | +693.4 ppm | P2_UTM_CSF | +692.2 ppm |
 
 > **LDP Definition:**
-> `+proj=tmerc +lat_0=0.0 +lon_0=101.83333333 +k_0=1.000017 +x_0=250000 +y_0=-1050000 +ellps=WGS84 +units=m +no_defs +type=crs`
+> `+proj=tmerc +lat_0=0.0 +lon_0=101.81666667 +k_0=1.000017 +x_0=250000 +y_0=-1070000 +ellps=WGS84 +units=m +no_defs +type=crs`
 
 | ΔL1 | ΔL2 | ΔL3 | ΔL4 | ΔL5 | ΔL6 |
 |:---:|:---:|:---:|:---:|:---:|:---:|
-| -0.157 | *0.000 | +0.573 | -0.157 | -0.000 | -0.140 |
-
----
-
-### 📍 Province: Chaiyaphum South (TH.CY_S)
-
-| P1 | (15.715381430, 101.808493772) | P2 | (15.724418460, 101.808493772) |
-|:---|:---|:---|:---|
-| MSL | 201.675 | HAE | 171.739 |
-| P1_LDP | (499123.967, 49857.794) | P2_LDP | (499124.005, 50857.822) |
-| P1_LDP_CSF | +0.7 ppm | P2_LDP_CSF | +1.3 ppm |
-| P1_UTM_CSF | +693.4 ppm | P2_UTM_CSF | +693.9 ppm |
-
-> **LDP Definition:**
-> `+proj=lcc +lat_1=15.71666667 +lat_0=15.71666667 +lon_0=101.81666667 +k_0=1.000028 +x_0=500000 +y_0=50000 +ellps=WGS84 +units=m +no_defs +type=crs`
-
-| ΔL1 | ΔL2 | ΔL3 | ΔL4 | ΔL5 | ΔL6 |
-|:---:|:---:|:---:|:---:|:---:|:---:|
-| -0.027 | *0.000 | +0.694 | -0.027 | -0.000 | +0.001 |
+| -0.033 | *0.000 | +0.693 | -0.033 | -0.000 | -0.016 |
 
 ---
 
@@ -309,7 +291,7 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | MSL | 219.610 | HAE | 193.011 |
 | P1_LDP | (750784.364, 251038.803) | P2_LDP | (750784.328, 252038.813) |
-| P1_LDP_CSF | -21.9 ppm | P2_LDP_CSF | -18.8 ppm |
+| P1_LDP_CSF | -21.9 ppm ❗ | P2_LDP_CSF | -18.8 ppm |
 | P1_UTM_CSF | -165.5 ppm | P2_UTM_CSF | -162.5 ppm |
 
 > **LDP Definition:**
@@ -327,7 +309,7 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | MSL | 679.030 | HAE | 643.557 |
 | P1_LDP | (250842.135, 749603.192) | P2_LDP | (250842.100, 750603.205) |
-| P1_LDP_CSF | -83.0 ppm | P2_LDP_CSF | -93.4 ppm |
+| P1_LDP_CSF | -83.0 ppm ❗ | P2_LDP_CSF | -93.4 ppm ❗ |
 | P1_UTM_CSF | -488.7 ppm | P2_UTM_CSF | -499.1 ppm |
 
 > **LDP Definition:**
@@ -411,39 +393,21 @@ This report provides a comparative analysis of distances calculated across vario
 
 ---
 
-### 📍 Province: Loei East (TH.LE_E)
+### 📍 Province: Loei (TH.LE)
 
-| P1 | (17.423729286, 101.820646674) | P2 | (17.432764835, 101.820646674) |
+| P1 | (17.403823220, 101.634365582) | P2 | (17.412858788, 101.634365582) |
 |:---|:---|:---|:---|
-| MSL | 271.355 | HAE | 240.117 |
-| P1_LDP | (50422.868, 527282.892) | P2_LDP | (50422.847, 528282.934) |
-| P1_LDP_CSF | +4.2 ppm | P2_LDP_CSF | +4.3 ppm |
-| P1_UTM_CSF | +672.6 ppm | P2_UTM_CSF | +672.6 ppm |
+| MSL | 298.160 | HAE | 266.933 |
+| P1_LDP | (250109.686, 755062.391) | P2_LDP | (250109.680, 756062.424) |
+| P1_LDP_CSF | -9.0 ppm | P2_LDP_CSF | -8.9 ppm |
+| P1_UTM_CSF | +526.6 ppm | P2_UTM_CSF | +526.7 ppm |
 
 > **LDP Definition:**
-> `+proj=tmerc +lat_0=0.0 +lon_0=101.81666667 +k_0=1.000042 +x_0=50000 +y_0=-1400000 +ellps=WGS84 +units=m +no_defs +type=crs`
+> `+proj=tmerc +lat_0=0.0 +lon_0=101.63333333 +k_0=1.000033 +x_0=250000 +y_0=-1170000 +ellps=WGS84 +units=m +no_defs +type=crs`
 
 | ΔL1 | ΔL2 | ΔL3 | ΔL4 | ΔL5 | ΔL6 |
 |:---:|:---:|:---:|:---:|:---:|:---:|
-| -0.038 | *0.000 | +0.673 | -0.038 | -0.000 | +0.004 |
-
----
-
-### 📍 Province: Loei West (TH.LE_W)
-
-| P1 | (17.365006263, 101.271116248) | P2 | (17.374041866, 101.271116248) |
-|:---|:---|:---|:---|
-| MSL | 610.540 | HAE | 578.848 |
-| P1_LDP | (60472.929, 50858.440) | P2_LDP | (60472.905, 51858.521) |
-| P1_LDP_CSF | -9.7 ppm | P2_LDP_CSF | -10.3 ppm |
-| P1_UTM_CSF | +229.4 ppm | P2_UTM_CSF | +228.7 ppm |
-
-> **LDP Definition:**
-> `+proj=tmerc +lat_0=0.0 +lon_0=101.26666667 +k_0=1.000081 +x_0=60000 +y_0=-1870000 +ellps=WGS84 +units=m +no_defs +type=crs`
-
-| ΔL1 | ΔL2 | ΔL3 | ΔL4 | ΔL5 | ΔL6 |
-|:---:|:---:|:---:|:---:|:---:|:---:|
-| -0.091 | *0.000 | +0.229 | -0.091 | -0.000 | -0.010 |
+| -0.042 | *0.000 | +0.527 | -0.042 | -0.000 | -0.009 |
 
 ---
 
@@ -471,7 +435,7 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | MSL | 641.175 | HAE | 603.114 |
 | P1_LDP | (50622.689, 504155.617) | P2_LDP | (50622.657, 505155.669) |
-| P1_LDP_CSF | -58.0 ppm | P2_LDP_CSF | -27.6 ppm |
+| P1_LDP_CSF | -58.0 ppm ❗ | P2_LDP_CSF | -27.6 ppm ❗ |
 | P1_UTM_CSF | -509.7 ppm | P2_UTM_CSF | -479.3 ppm |
 
 > **LDP Definition:**
@@ -489,7 +453,7 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | MSL | 377.825 | HAE | 353.414 |
 | P1_LDP | (49847.891, 154826.837) | P2_LDP | (49847.898, 155826.867) |
-| P1_LDP_CSF | -17.2 ppm | P2_LDP_CSF | -33.9 ppm |
+| P1_LDP_CSF | -17.2 ppm | P2_LDP_CSF | -33.9 ppm ❗ |
 | P1_UTM_CSF | -387.5 ppm | P2_UTM_CSF | -404.3 ppm |
 
 > **LDP Definition:**
@@ -525,7 +489,7 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | MSL | 965.065 | HAE | 925.567 |
 | P1_LDP | (499273.809, 527740.434) | P2_LDP | (499273.849, 528740.475) |
-| P1_LDP_CSF | -97.4 ppm | P2_LDP_CSF | -111.6 ppm |
+| P1_LDP_CSF | -97.4 ppm ❗ | P2_LDP_CSF | -111.6 ppm ❗ |
 | P1_UTM_CSF | -438.1 ppm | P2_UTM_CSF | -452.3 ppm |
 
 > **LDP Definition:**
@@ -543,7 +507,7 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | MSL | 447.195 | HAE | 407.018 |
 | P1_LDP | (259972.465, 766952.481) | P2_LDP | (259972.466, 767952.519) |
-| P1_LDP_CSF | -7.4 ppm | P2_LDP_CSF | -44.6 ppm |
+| P1_LDP_CSF | -7.4 ppm | P2_LDP_CSF | -44.6 ppm ❗ |
 | P1_UTM_CSF | -273.0 ppm | P2_UTM_CSF | -310.1 ppm |
 
 > **LDP Definition:**
@@ -741,7 +705,7 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | MSL | 168.380 | HAE | 148.351 |
 | P1_LDP | (250383.152, 736776.529) | P2_LDP | (250383.144, 737776.516) |
-| P1_LDP_CSF | -45.4 ppm | P2_LDP_CSF | -27.3 ppm |
+| P1_LDP_CSF | -45.4 ppm ❗ | P2_LDP_CSF | -27.3 ppm ❗ |
 | P1_UTM_CSF | -339.5 ppm | P2_UTM_CSF | -321.4 ppm |
 
 > **LDP Definition:**
@@ -831,7 +795,7 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | MSL | 127.155 | HAE | 95.736 |
 | P1_LDP | (750293.048, 249617.674) | P2_LDP | (750293.038, 250617.666) |
-| P1_LDP_CSF | -28.1 ppm | P2_LDP_CSF | -18.0 ppm |
+| P1_LDP_CSF | -28.1 ppm ❗ | P2_LDP_CSF | -18.0 ppm |
 | P1_UTM_CSF | -364.3 ppm | P2_UTM_CSF | -354.2 ppm |
 
 > **LDP Definition:**
@@ -903,7 +867,7 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | MSL | 151.700 | HAE | 122.539 |
 | P1_LDP | (60232.636, 521154.119) | P2_LDP | (60232.628, 522154.117) |
-| P1_LDP_CSF | -21.5 ppm | P2_LDP_CSF | -21.1 ppm |
+| P1_LDP_CSF | -21.5 ppm ❗ | P2_LDP_CSF | -21.1 ppm ❗ |
 | P1_UTM_CSF | -360.2 ppm | P2_UTM_CSF | -359.9 ppm |
 
 > **LDP Definition:**
@@ -939,7 +903,7 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | MSL | 435.725 | HAE | 399.666 |
 | P1_LDP | (250136.554, 743086.306) | P2_LDP | (250136.547, 744086.318) |
-| P1_LDP_CSF | -49.3 ppm | P2_LDP_CSF | -52.4 ppm |
+| P1_LDP_CSF | -49.3 ppm ❗ | P2_LDP_CSF | -52.4 ppm ❗ |
 | P1_UTM_CSF | -303.6 ppm | P2_UTM_CSF | -306.7 ppm |
 
 > **LDP Definition:**
@@ -1047,7 +1011,7 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | MSL | 238.990 | HAE | 211.008 |
 | P1_LDP | (50644.461, 502641.687) | P2_LDP | (50644.444, 503641.690) |
-| P1_LDP_CSF | -26.7 ppm | P2_LDP_CSF | -33.7 ppm |
+| P1_LDP_CSF | -26.7 ppm ❗ | P2_LDP_CSF | -33.7 ppm ❗ |
 | P1_UTM_CSF | -416.8 ppm | P2_UTM_CSF | -423.8 ppm |
 
 > **LDP Definition:**
@@ -1299,7 +1263,7 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | MSL | 576.040 | HAE | 550.655 |
 | P1_LDP | (249946.958, 767036.278) | P2_LDP | (249946.960, 768036.274) |
-| P1_LDP_CSF | -111.7 ppm | P2_LDP_CSF | -69.5 ppm |
+| P1_LDP_CSF | -111.7 ppm ❗ | P2_LDP_CSF | -69.5 ppm ❗ |
 | P1_UTM_CSF | -504.3 ppm | P2_UTM_CSF | -462.1 ppm |
 
 > **LDP Definition:**
@@ -1371,7 +1335,7 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | MSL | 301.950 | HAE | 264.447 |
 | P1_LDP | (49727.303, 493432.791) | P2_LDP | (49727.317, 494432.801) |
-| P1_LDP_CSF | -30.4 ppm | P2_LDP_CSF | -32.7 ppm |
+| P1_LDP_CSF | -30.4 ppm ❗ | P2_LDP_CSF | -32.7 ppm ❗ |
 | P1_UTM_CSF | -440.4 ppm | P2_UTM_CSF | -442.7 ppm |
 
 > **LDP Definition:**
@@ -1389,7 +1353,7 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | MSL | 438.045 | HAE | 400.459 |
 | P1_LDP | (499262.511, 524027.170) | P2_LDP | (499262.545, 525027.205) |
-| P1_LDP_CSF | -25.0 ppm | P2_LDP_CSF | -30.9 ppm |
+| P1_LDP_CSF | -25.0 ppm ❗ | P2_LDP_CSF | -30.9 ppm ❗ |
 | P1_UTM_CSF | -445.2 ppm | P2_UTM_CSF | -451.1 ppm |
 
 > **LDP Definition:**
@@ -1425,7 +1389,7 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | MSL | 164.005 | HAE | 129.465 |
 | P1_LDP | (250211.108, 743016.418) | P2_LDP | (250211.097, 744016.413) |
-| P1_LDP_CSF | -21.5 ppm | P2_LDP_CSF | -29.2 ppm |
+| P1_LDP_CSF | -21.5 ppm ❗ | P2_LDP_CSF | -29.2 ppm ❗ |
 | P1_UTM_CSF | -95.9 ppm | P2_UTM_CSF | -103.7 ppm |
 
 > **LDP Definition:**
@@ -1515,7 +1479,7 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | MSL | 166.930 | HAE | 157.412 |
 | P1_LDP | (49641.073, 484935.870) | P2_LDP | (49641.079, 485935.878) |
-| P1_LDP_CSF | -4.5 ppm | P2_LDP_CSF | -29.0 ppm |
+| P1_LDP_CSF | -4.5 ppm | P2_LDP_CSF | -29.0 ppm ❗ |
 | P1_UTM_CSF | +341.3 ppm | P2_UTM_CSF | +316.8 ppm |
 
 > **LDP Definition:**

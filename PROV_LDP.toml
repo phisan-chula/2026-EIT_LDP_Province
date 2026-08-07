@@ -136,7 +136,7 @@ GPKG = ["OUTPUT_SAMPL/TH_LB/TH_LB_SAMPL.gpkg", "samples"]
 LDP = ["TM", "101:38"]
 FALSE_EN = [250000, -1170000]
 PP_MSL = 240
-POPU_PLOT = [ 550, 100, 20]  # max_msl, min_msl, msl_interval
+POPU_PLOT = [550, 100, 20]  # max_msl, min_msl, msl_interval
 GPKG = ["OUTPUT_SAMPL/TH_LE/TH_LE_SAMPL.gpkg", "samples"]
 
 ["TH.LG"]

@@ -5,6 +5,7 @@ Description: Quality Control module to validate custom LDP parameters vs Ground 
 """
 
 import math
+import json
 import warnings
 import numpy as np
 import pandas as pd
@@ -14,6 +15,47 @@ import pyproj
 import rasterio
 import pygeodesy as pgd
 from pathlib import Path
+
+
+def extract_ldp_definitions(sampl_dir, out_dir):
+    """
+    Scans pipeline logs for LDP JSONL definitions and extracts 
+    the Decimal PROJ strings into .PJ4 files.
+    """
+    print("Scanning pipeline logs for LDP PROJ definitions...")
+    sampl_path = Path(sampl_dir)
+    log_files = list(sampl_path.glob("*/*_pipeline.log"))
+    
+    if not log_files:
+        print(f"  -> No pipeline logs found in {sampl_dir}")
+        return
+
+    extracted_count = 0
+    for log_file in log_files:
+        hasc_safe = log_file.parent.name 
+        
+        with open(log_file, 'r', encoding='utf-8') as f:
+            for line in f:
+                if '{"meta": "LDP_Definition"' in line:
+                    try:
+                        data = json.loads(line.strip())
+                        proj_decimal = data.get("PROJ_String_Decimal")
+                        
+                        if proj_decimal:
+                            prov_dir = Path(out_dir) / hasc_safe
+                            prov_dir.mkdir(parents=True, exist_ok=True)
+                            pj4_path = prov_dir / f"{hasc_safe}_LDP_CRS.PJ4"
+                            
+                            with open(pj4_path, 'w', encoding='utf-8') as pj4_f:
+                                pj4_f.write(proj_decimal)
+                            
+                            extracted_count += 1
+                            break  # Found the definition, move to the next log file
+                            
+                    except json.JSONDecodeError:
+                        print(f"  -> Error parsing JSON in {log_file}")
+                        
+    print(f"Extracted {extracted_count} LDP definitions to {out_dir}\n")
 
 
 class LDPValidator:
@@ -48,7 +90,7 @@ class LDPValidator:
             raise ValueError(f"DEM sampling failed: {e}")
 
     def _calc_utm_parameters(self, lon1, lat1, lon2, lat2):
-        """Calculate UTM grid distance and average Point Scale Factor (PSF)."""
+        """Calculate UTM grid distance, average PSF, and individual PSFs."""
         utm_crs_info = pyproj.database.query_utm_crs_info(
             datum_name="WGS 84", 
             area_of_interest=pyproj.aoi.AreaOfInterest(lon1, lat1, lon1, lat1)
@@ -65,15 +107,18 @@ class LDPValidator:
         psf2 = utm_proj_obj.get_factors(lon2, lat2).meridional_scale
         psf_avg = (psf1 + psf2) / 2.0
         
-        return L3_UTM, psf_avg
+        return L3_UTM, psf_avg, psf1, psf2
 
-    def _calc_ldp_distance(self, hasc_safe, lon1, lat1, lon2, lat2):
-        """Transform coordinates to LDP, calculate grid distance, and return PROJ string."""
+    def _calc_ldp_parameters(self, hasc_safe, lon1, lat1, lon2, lat2):
+        """Calculate LDP grid distance, point scale factors, definition, and coordinates."""
         pj4_path = self.out_dir / hasc_safe / f"{hasc_safe}_LDP_CRS.PJ4"
         
         if not pj4_path.exists():
             print(f"  -> WARNING: {pj4_path} not found. L6 will be NaN.")
-            return np.nan, "Not found"
+            return (
+                np.nan, np.nan, np.nan, np.nan,
+                "Not found", (np.nan, np.nan), (np.nan, np.nan)
+            )
             
         with open(pj4_path, 'r') as f:
             ldp_proj_str = f.read().strip()
@@ -83,8 +128,19 @@ class LDPValidator:
         
         ldp1_e, ldp1_n = transformer_ldp.transform(lon1, lat1)
         ldp2_e, ldp2_n = transformer_ldp.transform(lon2, lat2)
-        
-        return math.hypot(ldp2_e - ldp1_e, ldp2_n - ldp1_n), ldp_proj_str
+        ldp_distance = math.hypot(ldp2_e - ldp1_e, ldp2_n - ldp1_n)
+
+        # IMPORTANT: LDP point scale factors must come from the LDP projection,
+        # not from UTM.  These are the PSFs used to validate LDP CSF.
+        ldp_proj_obj = pyproj.Proj(ldp_crs)
+        ldp_psf1 = ldp_proj_obj.get_factors(lon1, lat1).meridional_scale
+        ldp_psf2 = ldp_proj_obj.get_factors(lon2, lat2).meridional_scale
+        ldp_psf_avg = (ldp_psf1 + ldp_psf2) / 2.0
+
+        return (
+            ldp_distance, ldp_psf_avg, ldp_psf1, ldp_psf2,
+            ldp_proj_str, (ldp1_e, ldp1_n), (ldp2_e, ldp2_n)
+        )
 
     def process_province(self, row, src):
         """Process a single province boundary to compute all test distances."""
@@ -112,26 +168,47 @@ class LDPValidator:
             print(f"  -> Skipping {hasc_safe}: {e}")
             return None
             
+        N1 = self.geoid.height(lat1, lon1)
+        N2 = self.geoid.height(lat2, lon2)
+        h1 = H1 + N1
+        h2 = H2 + N2
+        
         H_avg = (H1 + H2) / 2.0
-        N_avg = (self.geoid.height(lat1, lon1) + self.geoid.height(lat2, lon2)) / 2.0
+        N_avg = (N1 + N2) / 2.0
         h_avg = H_avg + N_avg
         
         # 4. Height Scale Factor & Ground Distance
+        RG1 = self.ellps.rocGauss(lat1)
+        RG2 = self.ellps.rocGauss(lat2)
+        HSF1 = RG1 / (RG1 + h1)
+        HSF2 = RG2 / (RG2 + h2)
+        
         avg_lat = (lat1 + lat2) / 2.0
         RG = self.ellps.rocGauss(avg_lat)
         HSF = RG / (RG + h_avg)
         L2 = L1 / HSF
         
         # 5. UTM Distance & Point Scale Factor
-        L3, PSF_avg = self._calc_utm_parameters(lon1, lat1, lon2, lat2)
+        L3, PSF_avg, PSF1, PSF2 = self._calc_utm_parameters(lon1, lat1, lon2, lat2)
         
-        # 6. Combined Scale Factor (CSF)
+        # 6. UTM Combined Scale Factor (for comparison only)
         L4 = L3 / PSF_avg
-        CSF_avg = PSF_avg * HSF
-        L5 = L3 / CSF_avg
-        
-        # 7. LDP Grid Distance and Definition
-        L6, ldp_def = self._calc_ldp_distance(hasc_safe, lon1, lat1, lon2, lat2)
+        UTM_CSF_avg = PSF_avg * HSF
+        UTM_CSF1 = PSF1 * HSF1
+        UTM_CSF2 = PSF2 * HSF2
+        L5 = L3 / UTM_CSF_avg
+
+        # 7. LDP Grid Distance, Definition, Coordinates, and LDP scale factors
+        (
+            L6, LDP_PSF_avg, LDP_PSF1, LDP_PSF2,
+            ldp_def, p1_ldp, p2_ldp
+        ) = self._calc_ldp_parameters(hasc_safe, lon1, lat1, lon2, lat2)
+
+        # LDP CSF is the quantity that should normally be near the LDP design
+        # tolerance (e.g. +/-20 ppm).  Do NOT use the UTM PSF here.
+        LDP_CSF1 = LDP_PSF1 * HSF1 if np.isfinite(LDP_PSF1) else np.nan
+        LDP_CSF2 = LDP_PSF2 * HSF2 if np.isfinite(LDP_PSF2) else np.nan
+        LDP_CSF_avg = LDP_PSF_avg * HSF if np.isfinite(LDP_PSF_avg) else np.nan
         
         return {
             'HASC_1': hasc,
@@ -143,8 +220,16 @@ class LDPValidator:
             'N_Undulation': N_avg,
             'h_Ellipsoidal': h_avg,
             'HSF': HSF,
-            'PSF_utm': PSF_avg,
-            'CSF_utm': CSF_avg,
+            'UTM_PSF': PSF_avg,
+            'UTM_CSF': UTM_CSF_avg,
+            'UTM_CSF1': UTM_CSF1,
+            'UTM_CSF2': UTM_CSF2,
+            'LDP_PSF': LDP_PSF_avg,
+            'LDP_PSF1': LDP_PSF1,
+            'LDP_PSF2': LDP_PSF2,
+            'LDP_CSF': LDP_CSF_avg,
+            'LDP_CSF1': LDP_CSF1,
+            'LDP_CSF2': LDP_CSF2,
             'L1_Ellps': L1,
             'L2_Grnd': L2,
             'L3_UTM': L3,
@@ -152,6 +237,8 @@ class LDPValidator:
             'L5_UTM2Grnd': L5,
             'L6_LDP': L6,
             'LDP_Def': ldp_def,
+            'P1_LDP': p1_ldp,
+            'P2_LDP': p2_ldp,
             'diff_L1': L1 - L2,
             'diff_L2': 0.000,
             'diff_L3': L3 - L2,
@@ -189,15 +276,40 @@ class LDPValidator:
                 p2_str = f"({res['lat2']:.9f}, {res['lon2']:.9f})"
                 msl_val = f"{res['H_Orthometric']:.3f}"
                 hae_val = f"{res['h_Ellipsoidal']:.3f}"
+                
+                p1_ldp = res.get('P1_LDP', (np.nan, np.nan))
+                p2_ldp = res.get('P2_LDP', (np.nan, np.nan))
+                
+                if pd.isna(p1_ldp[0]):
+                    p1_ldp_str = "(NaN, NaN)"
+                    p2_ldp_str = "(NaN, NaN)"
+                else:
+                    p1_ldp_str = f"({p1_ldp[0]:.3f}, {p1_ldp[1]:.3f})"
+                    p2_ldp_str = f"({p2_ldp[0]:.3f}, {p2_ldp[1]:.3f})"
+                
                 diff_l6_str = "NaN" if pd.isna(res['diff_L6']) else f"{res['diff_L6']:+.3f}"
+                
+                # Report LDP CSF here.  Previous code accidentally reported
+                # UTM CSF, which is typically around -400 ppm in Thailand.
+                csf1_ppm = (res['LDP_CSF1'] - 1.0) * 1_000_000
+                csf2_ppm = (res['LDP_CSF2'] - 1.0) * 1_000_000
+                
+                # Determine if flags are needed for LDP CSF
+                flag1 = " ❗" if abs(csf1_ppm) > 20 else ""
+                flag2 = " ❗" if abs(csf2_ppm) > 20 else ""
+                
+                utm_csf1_ppm = (res['UTM_CSF1'] - 1.0) * 1_000_000
+                utm_csf2_ppm = (res['UTM_CSF2'] - 1.0) * 1_000_000
                 
                 f.write("---\n\n") 
                 f.write(f"### 📍 Province: {res['NAME_1']} ({res['HASC_1']})\n\n")
                 
-                f.write(f"| HASC_1 | {res['HASC_1']} | NameTH | {res['NAME_1']} |\n")
-                f.write("|:---|:---|:---|:---|\n")
                 f.write(f"| P1 | {p1_str} | P2 | {p2_str} |\n")
-                f.write(f"| MSL | {msl_val} | HAE | {hae_val} |\n\n")
+                f.write("|:---|:---|:---|:---|\n")
+                f.write(f"| MSL | {msl_val} | HAE | {hae_val} |\n")
+                f.write(f"| P1_LDP | {p1_ldp_str} | P2_LDP | {p2_ldp_str} |\n")
+                f.write(f"| P1_LDP_CSF | {csf1_ppm:+.1f} ppm{flag1} | P2_LDP_CSF | {csf2_ppm:+.1f} ppm{flag2} |\n")
+                f.write(f"| P1_UTM_CSF | {utm_csf1_ppm:+.1f} ppm | P2_UTM_CSF | {utm_csf2_ppm:+.1f} ppm |\n\n")
                 
                 f.write(f"> **LDP Definition:**\n> `{res['LDP_Def']}`\n\n")
                 
@@ -228,6 +340,10 @@ def main():
     GADM_PATH = 'OUTPUT_PROV/gadm41_THA.gpkg'
     DEM_PATH = 'DATA/FABDEM_Thailand.vrt'
     OUT_DIR = 'OUTPUT_LDP'
+    SAMPL_DIR = 'OUTPUT_SAMPL'
+    
+    # 0. Extract PROJ Strings from logs before running the validator
+    extract_ldp_definitions(SAMPL_DIR, OUT_DIR)
     
     # 1. Initialization
     df_line_descr = generate_line_descriptions(OUT_DIR)
