@@ -21,6 +21,8 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | MSL | 176.535 | HAE | 153.621 |
 | P1_LDP | (49166.727, 147518.862) | P2_LDP | (49166.764, 148518.878) |
+| P1_LDP_CSF | -8.0 ppm | P2_LDP_CSF | -8.3 ppm |
+| P1_UTM_CSF | -414.6 ppm | P2_UTM_CSF | -414.9 ppm |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=104.75000000 +k_0=1.000016 +x_0=50000 +y_0=-1610000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -37,6 +39,8 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | MSL | 6.360 | HAE | -25.550 |
 | P1_LDP | (50018.842, 147111.466) | P2_LDP | (50018.841, 148111.463) |
+| P1_LDP_CSF | +0.9 ppm | P2_LDP_CSF | +1.1 ppm |
+| P1_UTM_CSF | -134.5 ppm | P2_UTM_CSF | -134.4 ppm |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=100.35000000 +k_0=0.999997 +x_0=50000 +y_0=-1470000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -53,6 +57,8 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | MSL | 173.805 | HAE | 144.132 |
 | P1_LDP | (149557.535, 49548.917) | P2_LDP | (149557.558, 50548.939) |
+| P1_LDP_CSF | -1.2 ppm | P2_LDP_CSF | -0.1 ppm |
+| P1_UTM_CSF | -193.9 ppm | P2_UTM_CSF | -192.8 ppm |
 
 > **LDP Definition:**
 > `+proj=lcc +lat_1=18.15000000 +lat_0=18.15000000 +lon_0=103.71666667 +k_0=1.000022 +x_0=150000 +y_0=50000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -69,6 +75,8 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | MSL | 180.930 | HAE | 155.366 |
 | P1_LDP | (249159.323, 729121.744) | P2_LDP | (249159.358, 730121.756) |
+| P1_LDP_CSF | -12.8 ppm | P2_LDP_CSF | -12.1 ppm |
+| P1_UTM_CSF | +172.0 ppm | P2_UTM_CSF | +172.7 ppm |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=102.96666667 +k_0=1.000012 +x_0=250000 +y_0=-910000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -85,6 +93,8 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | MSL | 80.195 | HAE | 52.683 |
 | P1_LDP | (40460.619, 559183.082) | P2_LDP | (40460.602, 560183.079) |
+| P1_LDP_CSF | -12.7 ppm | P2_LDP_CSF | -9.9 ppm |
+| P1_UTM_CSF | +296.4 ppm | P2_UTM_CSF | +299.1 ppm |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=101.20000000 +k_0=0.999997 +x_0=40000 +y_0=-900000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -101,6 +111,8 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | MSL | 35.845 | HAE | 8.768 |
 | P1_LDP | (499670.492, 50664.615) | P2_LDP | (499670.504, 51664.611) |
+| P1_LDP_CSF | -6.3 ppm | P2_LDP_CSF | -4.4 ppm |
+| P1_UTM_CSF | +453.1 ppm | P2_UTM_CSF | +455.0 ppm |
 
 > **LDP Definition:**
 > `+proj=lcc +lat_1=13.60000000 +lat_0=13.60000000 +lon_0=101.43333333 +k_0=0.999996 +x_0=500000 +y_0=50000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -117,6 +129,8 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | MSL | 410.480 | HAE | 371.918 |
 | P1_LDP | (248055.022, 529222.719) | P2_LDP | (248054.992, 530222.773) |
+| P1_LDP_CSF | -5.0 ppm | P2_LDP_CSF | -3.9 ppm |
+| P1_UTM_CSF | -458.9 ppm | P2_UTM_CSF | -457.8 ppm |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=98.96666667 +k_0=1.000054 +x_0=247500 +y_0=-1600000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -133,6 +147,8 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | MSL | 889.005 | HAE | 850.279 |
 | P1_LDP | (49334.219, 412161.404) | P2_LDP | (49334.254, 413161.445) |
+| P1_LDP_CSF | -97.3 ppm | P2_LDP_CSF | -88.1 ppm |
+| P1_UTM_CSF | -490.1 ppm | P2_UTM_CSF | -481.0 ppm |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=98.41666667 +k_0=1.000041 +x_0=50000 +y_0=-1600000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -149,6 +165,8 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | MSL | 15.990 | HAE | -17.348 |
 | P1_LDP | (149224.167, 49810.096) | P2_LDP | (149224.200, 50810.095) |
+| P1_LDP_CSF | +1.6 ppm | P2_LDP_CSF | +1.9 ppm |
+| P1_UTM_CSF | -247.1 ppm | P2_UTM_CSF | -246.8 ppm |
 
 > **LDP Definition:**
 > `+proj=lcc +lat_1=15.13333333 +lat_0=15.13333333 +lon_0=100.03333333 +k_0=0.999999 +x_0=150000 +y_0=50000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -165,6 +183,8 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | MSL | 42.420 | HAE | 14.645 |
 | P1_LDP | (49529.165, 544037.040) | P2_LDP | (49529.178, 545037.043) |
+| P1_LDP_CSF | -0.2 ppm | P2_LDP_CSF | +1.6 ppm |
+| P1_UTM_CSF | -402.6 ppm | P2_UTM_CSF | -400.8 ppm |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=99.06666667 +k_0=1.000003 +x_0=50000 +y_0=-600000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -181,6 +201,8 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | MSL | 405.895 | HAE | 368.562 |
 | P1_LDP | (250090.071, 745366.555) | P2_LDP | (250090.066, 746366.612) |
+| P1_LDP_CSF | -1.8 ppm | P2_LDP_CSF | -0.0 ppm |
+| P1_UTM_CSF | -356.8 ppm | P2_UTM_CSF | -355.0 ppm |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=99.86666667 +k_0=1.000057 +x_0=250000 +y_0=-1450000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -197,6 +219,8 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | MSL | 273.210 | HAE | 249.617 |
 | P1_LDP | (49525.954, 524795.506) | P2_LDP | (49525.971, 525795.512) |
+| P1_LDP_CSF | -28.5 ppm | P2_LDP_CSF | -38.0 ppm |
+| P1_UTM_CSF | +766.8 ppm | P2_UTM_CSF | +757.3 ppm |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=102.13333333 +k_0=1.000006 +x_0=50000 +y_0=-900000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -213,6 +237,8 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | MSL | 1028.460 | HAE | 998.740 |
 | P1_LDP | (249468.150, 749766.735) | P2_LDP | (249468.174, 750766.752) |
+| P1_LDP_CSF | -136.3 ppm | P2_LDP_CSF | -143.8 ppm |
+| P1_UTM_CSF | +576.9 ppm | P2_UTM_CSF | +569.3 ppm |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=101.83333333 +k_0=1.000017 +x_0=250000 +y_0=-1050000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -229,6 +255,8 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | MSL | 201.675 | HAE | 171.739 |
 | P1_LDP | (499123.967, 49857.794) | P2_LDP | (499124.005, 50857.822) |
+| P1_LDP_CSF | +0.7 ppm | P2_LDP_CSF | +1.3 ppm |
+| P1_UTM_CSF | +693.4 ppm | P2_UTM_CSF | +693.9 ppm |
 
 > **LDP Definition:**
 > `+proj=lcc +lat_1=15.71666667 +lat_0=15.71666667 +lon_0=101.81666667 +k_0=1.000028 +x_0=500000 +y_0=50000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -245,6 +273,8 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | MSL | 2.320 | HAE | -27.914 |
 | P1_LDP | (50414.054, 140646.057) | P2_LDP | (50414.038, 141646.046) |
+| P1_LDP_CSF | -6.6 ppm | P2_LDP_CSF | -6.6 ppm |
+| P1_UTM_CSF | -23.6 ppm | P2_UTM_CSF | -23.7 ppm |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=100.60000000 +k_0=0.999989 +x_0=50000 +y_0=-1380000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -261,6 +291,8 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | MSL | 193.205 | HAE | 163.698 |
 | P1_LDP | (249675.306, 764699.731) | P2_LDP | (249675.321, 765699.741) |
+| P1_LDP_CSF | -15.6 ppm | P2_LDP_CSF | -15.9 ppm |
+| P1_UTM_CSF | +400.3 ppm | P2_UTM_CSF | +399.9 ppm |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=102.58333333 +k_0=1.000010 +x_0=250000 +y_0=-1050000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -277,6 +309,8 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | MSL | 219.610 | HAE | 193.011 |
 | P1_LDP | (750784.364, 251038.803) | P2_LDP | (750784.328, 252038.813) |
+| P1_LDP_CSF | -21.9 ppm | P2_LDP_CSF | -18.8 ppm |
+| P1_UTM_CSF | -165.5 ppm | P2_UTM_CSF | -162.5 ppm |
 
 > **LDP Definition:**
 > `+proj=lcc +lat_1=16.61666667 +lat_0=16.61666667 +lon_0=103.61666667 +k_0=1.000010 +x_0=750000 +y_0=250000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -293,6 +327,8 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | MSL | 679.030 | HAE | 643.557 |
 | P1_LDP | (250842.135, 749603.192) | P2_LDP | (250842.100, 750603.205) |
+| P1_LDP_CSF | -83.0 ppm | P2_LDP_CSF | -93.4 ppm |
+| P1_UTM_CSF | -488.7 ppm | P2_UTM_CSF | -499.1 ppm |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=98.76666667 +k_0=1.000013 +x_0=250000 +y_0=-890000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -309,6 +345,8 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | MSL | 64.915 | HAE | 30.932 |
 | P1_LDP | (250740.743, 773168.259) | P2_LDP | (250740.714, 774168.254) |
+| P1_LDP_CSF | -9.7 ppm | P2_LDP_CSF | -10.1 ppm |
+| P1_UTM_CSF | -374.6 ppm | P2_UTM_CSF | -375.0 ppm |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=99.45000000 +k_0=0.999995 +x_0=250000 +y_0=-800000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -325,6 +363,8 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | MSL | 88.240 | HAE | 52.515 |
 | P1_LDP | (250110.698, 756281.932) | P2_LDP | (250110.693, 757281.931) |
+| P1_LDP_CSF | -8.5 ppm | P2_LDP_CSF | -10.0 ppm |
+| P1_UTM_CSF | -367.2 ppm | P2_UTM_CSF | -368.8 ppm |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=99.53333333 +k_0=0.999999 +x_0=250000 +y_0=-1050000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -341,6 +381,8 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | MSL | 104.655 | HAE | 82.255 |
 | P1_LDP | (50150.873, 504954.531) | P2_LDP | (50150.869, 505954.531) |
+| P1_LDP_CSF | -13.5 ppm | P2_LDP_CSF | -12.3 ppm |
+| P1_UTM_CSF | -413.5 ppm | P2_UTM_CSF | -412.3 ppm |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=99.01666667 +k_0=1.000000 +x_0=50000 +y_0=-400000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -357,6 +399,8 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | MSL | 66.805 | HAE | 35.827 |
 | P1_LDP | (250043.330, 739797.176) | P2_LDP | (250043.329, 740797.166) |
+| P1_LDP_CSF | -15.8 ppm | P2_LDP_CSF | -15.4 ppm |
+| P1_UTM_CSF | +110.1 ppm | P2_UTM_CSF | +110.5 ppm |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=100.90000000 +k_0=0.999990 +x_0=250000 +y_0=-930000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -373,6 +417,8 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | MSL | 271.355 | HAE | 240.117 |
 | P1_LDP | (50422.868, 527282.892) | P2_LDP | (50422.847, 528282.934) |
+| P1_LDP_CSF | +4.2 ppm | P2_LDP_CSF | +4.3 ppm |
+| P1_UTM_CSF | +672.6 ppm | P2_UTM_CSF | +672.6 ppm |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=101.81666667 +k_0=1.000042 +x_0=50000 +y_0=-1400000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -389,6 +435,8 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | MSL | 610.540 | HAE | 578.848 |
 | P1_LDP | (60472.929, 50858.440) | P2_LDP | (60472.905, 51858.521) |
+| P1_LDP_CSF | -9.7 ppm | P2_LDP_CSF | -10.3 ppm |
+| P1_UTM_CSF | +229.4 ppm | P2_UTM_CSF | +228.7 ppm |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=101.26666667 +k_0=1.000081 +x_0=60000 +y_0=-1870000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -405,6 +453,8 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | MSL | 244.450 | HAE | 206.883 |
 | P1_LDP | (249663.924, 746969.162) | P2_LDP | (249663.942, 747969.194) |
+| P1_LDP_CSF | +0.0 ppm | P2_LDP_CSF | -1.1 ppm |
+| P1_UTM_CSF | -395.5 ppm | P2_UTM_CSF | -396.7 ppm |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=99.51666667 +k_0=1.000032 +x_0=250000 +y_0=-1280000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -421,6 +471,8 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | MSL | 641.175 | HAE | 603.114 |
 | P1_LDP | (50622.689, 504155.617) | P2_LDP | (50622.657, 505155.669) |
+| P1_LDP_CSF | -58.0 ppm | P2_LDP_CSF | -27.6 ppm |
+| P1_UTM_CSF | -509.7 ppm | P2_UTM_CSF | -479.3 ppm |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=98.95000000 +k_0=1.000052 +x_0=50000 +y_0=-1500000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -437,6 +489,8 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | MSL | 377.825 | HAE | 353.414 |
 | P1_LDP | (49847.891, 154826.837) | P2_LDP | (49847.898, 155826.867) |
+| P1_LDP_CSF | -17.2 ppm | P2_LDP_CSF | -33.9 ppm |
+| P1_UTM_CSF | -387.5 ppm | P2_UTM_CSF | -404.3 ppm |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=104.35000000 +k_0=1.000030 +x_0=50000 +y_0=-1690000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -453,6 +507,8 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | MSL | 171.165 | HAE | 147.621 |
 | P1_LDP | (49658.581, 141374.242) | P2_LDP | (49658.597, 142374.267) |
+| P1_LDP_CSF | +0.5 ppm | P2_LDP_CSF | +3.1 ppm |
+| P1_UTM_CSF | -408.6 ppm | P2_UTM_CSF | -405.9 ppm |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=104.66666667 +k_0=1.000025 +x_0=50000 +y_0=-1680000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -469,6 +525,8 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | MSL | 965.065 | HAE | 925.567 |
 | P1_LDP | (499273.809, 527740.434) | P2_LDP | (499273.849, 528740.475) |
+| P1_LDP_CSF | -97.4 ppm | P2_LDP_CSF | -111.6 ppm |
+| P1_UTM_CSF | -438.1 ppm | P2_UTM_CSF | -452.3 ppm |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=98.15000000 +k_0=1.000041 +x_0=500000 +y_0=-1600000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -485,6 +543,8 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | MSL | 447.195 | HAE | 407.018 |
 | P1_LDP | (259972.465, 766952.481) | P2_LDP | (259972.466, 767952.519) |
+| P1_LDP_CSF | -7.4 ppm | P2_LDP_CSF | -44.6 ppm |
+| P1_UTM_CSF | -273.0 ppm | P2_UTM_CSF | -310.1 ppm |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=97.88333333 +k_0=1.000038 +x_0=260000 +y_0=-1250000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -501,6 +561,8 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | MSL | 185.140 | HAE | 156.860 |
 | P1_LDP | (50160.731, 499389.706) | P2_LDP | (50160.724, 500389.720) |
+| P1_LDP_CSF | -9.9 ppm | P2_LDP_CSF | -11.5 ppm |
+| P1_UTM_CSF | +51.3 ppm | P2_UTM_CSF | +49.7 ppm |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=103.16666667 +k_0=1.000014 +x_0=50000 +y_0=-1270000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -517,6 +579,8 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | MSL | 264.680 | HAE | 230.215 |
 | P1_LDP | (250165.228, 754698.061) | P2_LDP | (250165.219, 755698.103) |
+| P1_LDP_CSF | +6.5 ppm | P2_LDP_CSF | +5.2 ppm |
+| P1_UTM_CSF | +26.5 ppm | P2_UTM_CSF | +25.2 ppm |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=100.83333333 +k_0=1.000042 +x_0=250000 +y_0=-1330000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -533,6 +597,8 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | MSL | 242.790 | HAE | 212.384 |
 | P1_LDP | (50414.785, 490208.843) | P2_LDP | (50414.765, 491208.873) |
+| P1_LDP_CSF | -4.0 ppm | P2_LDP_CSF | -2.8 ppm |
+| P1_UTM_CSF | +583.1 ppm | P2_UTM_CSF | +584.3 ppm |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=102.30000000 +k_0=1.000030 +x_0=50000 +y_0=-1410000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -549,6 +615,8 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | MSL | 173.110 | HAE | 146.641 |
 | P1_LDP | (49707.361, 523208.637) | P2_LDP | (49707.375, 524208.649) |
+| P1_LDP_CSF | -11.4 ppm | P2_LDP_CSF | -10.7 ppm |
+| P1_UTM_CSF | -378.1 ppm | P2_UTM_CSF | -377.5 ppm |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=104.43333333 +k_0=1.000012 +x_0=50000 +y_0=-1400000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -565,6 +633,8 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | MSL | 160.505 | HAE | 129.382 |
 | P1_LDP | (499306.362, 50507.474) | P2_LDP | (499306.397, 51507.493) |
+| P1_LDP_CSF | -2.3 ppm | P2_LDP_CSF | -0.4 ppm |
+| P1_UTM_CSF | +233.8 ppm | P2_UTM_CSF | +235.7 ppm |
 
 > **LDP Definition:**
 > `+proj=lcc +lat_1=17.93333333 +lat_0=17.93333333 +lon_0=102.83333333 +k_0=1.000019 +x_0=500000 +y_0=50000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -581,6 +651,8 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | MSL | 4.790 | HAE | -23.958 |
 | P1_LDP | (50570.218, 152197.021) | P2_LDP | (50570.195, 153197.024) |
+| P1_LDP_CSF | +6.8 ppm | P2_LDP_CSF | +6.8 ppm |
+| P1_UTM_CSF | +283.3 ppm | P2_UTM_CSF | +283.2 ppm |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=101.16666667 +k_0=1.000003 +x_0=50000 +y_0=-1420000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -597,6 +669,8 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | MSL | 3.730 | HAE | -28.126 |
 | P1_LDP | (50615.027, 150124.846) | P2_LDP | (50615.003, 151124.839) |
+| P1_LDP_CSF | -2.7 ppm | P2_LDP_CSF | -2.5 ppm |
+| P1_UTM_CSF | -219.2 ppm | P2_UTM_CSF | -219.0 ppm |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=100.10000000 +k_0=0.999993 +x_0=50000 +y_0=-1390000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -613,6 +687,8 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | MSL | 151.540 | HAE | 123.054 |
 | P1_LDP | (249509.189, 746567.286) | P2_LDP | (249509.211, 747567.299) |
+| P1_LDP_CSF | -6.4 ppm | P2_LDP_CSF | -6.3 ppm |
+| P1_UTM_CSF | +475.0 ppm | P2_UTM_CSF | +475.0 ppm |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=102.50000000 +k_0=1.000013 +x_0=250000 +y_0=-950000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -629,6 +705,8 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | MSL | 236.530 | HAE | 208.961 |
 | P1_LDP | (249721.883, 742707.867) | P2_LDP | (249721.895, 743707.886) |
+| P1_LDP_CSF | -14.1 ppm | P2_LDP_CSF | -13.6 ppm |
+| P1_UTM_CSF | +784.5 ppm | P2_UTM_CSF | +785.0 ppm |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=101.91666667 +k_0=1.000019 +x_0=250000 +y_0=-890000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -645,6 +723,8 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | MSL | 26.720 | HAE | -6.810 |
 | P1_LDP | (280321.198, 749905.656) | P2_LDP | (280321.184, 750905.654) |
+| P1_LDP_CSF | -1.1 ppm | P2_LDP_CSF | -0.7 ppm |
+| P1_UTM_CSF | -210.3 ppm | P2_UTM_CSF | -209.9 ppm |
 
 > **LDP Definition:**
 > `+proj=lcc +lat_1=15.68333333 +lat_0=15.68333333 +lon_0=100.15000000 +k_0=0.999998 +x_0=280000 +y_0=750000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -661,6 +741,8 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | MSL | 168.380 | HAE | 148.351 |
 | P1_LDP | (250383.152, 736776.529) | P2_LDP | (250383.144, 737776.516) |
+| P1_LDP_CSF | -45.4 ppm | P2_LDP_CSF | -27.3 ppm |
+| P1_UTM_CSF | -339.5 ppm | P2_UTM_CSF | -321.4 ppm |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=99.78333333 +k_0=0.999987 +x_0=250000 +y_0=-190000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -677,6 +759,8 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | MSL | 27.375 | HAE | 19.189 |
 | P1_LDP | (50316.491, 153290.141) | P2_LDP | (50316.486, 154290.140) |
+| P1_LDP_CSF | -4.0 ppm | P2_LDP_CSF | -4.0 ppm |
+| P1_UTM_CSF | +718.4 ppm | P2_UTM_CSF | +718.3 ppm |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=101.71666667 +k_0=0.999999 +x_0=50000 +y_0=-530000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -693,6 +777,8 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | MSL | 3.290 | HAE | -27.827 |
 | P1_LDP | (49434.140, 146401.387) | P2_LDP | (49434.162, 147401.376) |
+| P1_LDP_CSF | -6.6 ppm | P2_LDP_CSF | -6.7 ppm |
+| P1_UTM_CSF | -59.7 ppm | P2_UTM_CSF | -59.8 ppm |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=100.53333333 +k_0=0.999989 +x_0=50000 +y_0=-1440000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -709,6 +795,8 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | MSL | 20.830 | HAE | -6.198 |
 | P1_LDP | (249931.213, 753906.654) | P2_LDP | (249931.215, 754906.642) |
+| P1_LDP_CSF | -10.6 ppm | P2_LDP_CSF | -11.4 ppm |
+| P1_UTM_CSF | +614.2 ppm | P2_UTM_CSF | +613.3 ppm |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=101.65000000 +k_0=0.999988 +x_0=250000 +y_0=-800000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -725,6 +813,8 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | MSL | 32.930 | HAE | -0.890 |
 | P1_LDP | (49510.504, 148199.109) | P2_LDP | (49510.527, 149199.101) |
+| P1_LDP_CSF | -7.8 ppm | P2_LDP_CSF | -7.9 ppm |
+| P1_UTM_CSF | -144.2 ppm | P2_UTM_CSF | -144.3 ppm |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=100.35000000 +k_0=0.999992 +x_0=50000 +y_0=-1650000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -741,6 +831,8 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | MSL | 127.155 | HAE | 95.736 |
 | P1_LDP | (750293.048, 249617.674) | P2_LDP | (750293.038, 250617.666) |
+| P1_LDP_CSF | -28.1 ppm | P2_LDP_CSF | -18.0 ppm |
+| P1_UTM_CSF | -364.3 ppm | P2_UTM_CSF | -354.2 ppm |
 
 > **LDP Definition:**
 > `+proj=lcc +lat_1=12.95000000 +lat_0=12.95000000 +lon_0=99.61666667 +k_0=0.999992 +x_0=750000 +y_0=250000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -757,6 +849,8 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | MSL | 73.260 | HAE | 47.156 |
 | P1_LDP | (50868.654, 509389.312) | P2_LDP | (50868.633, 510389.317) |
+| P1_LDP_CSF | +4.3 ppm | P2_LDP_CSF | -11.1 ppm |
+| P1_UTM_CSF | -350.1 ppm | P2_UTM_CSF | -365.5 ppm |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=98.41666667 +k_0=1.000004 +x_0=50000 +y_0=-450000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -773,6 +867,8 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | MSL | 151.155 | HAE | 119.869 |
 | P1_LDP | (249677.430, 748679.331) | P2_LDP | (249677.444, 749679.342) |
+| P1_LDP_CSF | -14.3 ppm | P2_LDP_CSF | -1.4 ppm |
+| P1_UTM_CSF | +225.8 ppm | P2_UTM_CSF | +238.6 ppm |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=101.15000000 +k_0=1.000011 +x_0=250000 +y_0=-1050000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -789,6 +885,8 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | MSL | 6.435 | HAE | -4.714 |
 | P1_LDP | (150165.836, 49686.336) | P2_LDP | (150165.833, 50686.334) |
+| P1_LDP_CSF | -1.2 ppm | P2_LDP_CSF | -1.3 ppm |
+| P1_UTM_CSF | +437.2 ppm | P2_UTM_CSF | +437.0 ppm |
 
 > **LDP Definition:**
 > `+proj=lcc +lat_1=6.73333333 +lat_0=6.73333333 +lon_0=101.35000000 +k_0=0.999998 +x_0=150000 +y_0=50000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -805,6 +903,8 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | MSL | 151.700 | HAE | 122.539 |
 | P1_LDP | (60232.636, 521154.119) | P2_LDP | (60232.628, 522154.117) |
+| P1_LDP_CSF | -21.5 ppm | P2_LDP_CSF | -21.1 ppm |
+| P1_UTM_CSF | -360.2 ppm | P2_UTM_CSF | -359.9 ppm |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=99.63333333 +k_0=0.999998 +x_0=60000 +y_0=-800000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -821,6 +921,8 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | MSL | 15.930 | HAE | -1.241 |
 | P1_LDP | (50286.238, 150634.509) | P2_LDP | (50286.232, 151634.506) |
+| P1_LDP_CSF | -3.1 ppm | P2_LDP_CSF | -2.5 ppm |
+| P1_UTM_CSF | -227.9 ppm | P2_UTM_CSF | -227.2 ppm |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=100.06666667 +k_0=0.999997 +x_0=50000 +y_0=-680000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -837,6 +939,8 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | MSL | 435.725 | HAE | 399.666 |
 | P1_LDP | (250136.554, 743086.306) | P2_LDP | (250136.547, 744086.318) |
+| P1_LDP_CSF | -49.3 ppm | P2_LDP_CSF | -52.4 ppm |
+| P1_UTM_CSF | -303.6 ppm | P2_UTM_CSF | -306.7 ppm |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=100.06666667 +k_0=1.000012 +x_0=250000 +y_0=-1270000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -853,6 +957,8 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | MSL | 145.460 | HAE | 111.803 |
 | P1_LDP | (249424.093, 748337.404) | P2_LDP | (249424.121, 749337.402) |
+| P1_LDP_CSF | -19.8 ppm | P2_LDP_CSF | -19.4 ppm |
+| P1_UTM_CSF | -83.4 ppm | P2_UTM_CSF | -83.0 ppm |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=100.55000000 +k_0=0.999998 +x_0=250000 +y_0=-1130000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -869,6 +975,8 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | MSL | 3.270 | HAE | -27.121 |
 | P1_LDP | (59991.773, 149708.393) | P2_LDP | (59991.774, 150708.385) |
+| P1_LDP_CSF | -3.8 ppm | P2_LDP_CSF | -3.7 ppm |
+| P1_UTM_CSF | +12.8 ppm | P2_UTM_CSF | +12.9 ppm |
 
 > **LDP Definition:**
 > `+proj=lcc +lat_1=14.06666667 +lat_0=14.06666667 +lon_0=100.68333333 +k_0=0.999992 +x_0=60000 +y_0=150000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -885,6 +993,8 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | MSL | 21.900 | HAE | -3.237 |
 | P1_LDP | (49347.909, 151667.382) | P2_LDP | (49347.923, 152667.387) |
+| P1_LDP_CSF | +5.2 ppm | P2_LDP_CSF | +5.8 ppm |
+| P1_UTM_CSF | -335.1 ppm | P2_UTM_CSF | -334.6 ppm |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=98.35000000 +k_0=1.000005 +x_0=50000 +y_0=-730000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -901,6 +1011,8 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | MSL | 478.470 | HAE | 442.508 |
 | P1_LDP | (250627.036, 747438.902) | P2_LDP | (250627.002, 748438.955) |
+| P1_LDP_CSF | -19.8 ppm | P2_LDP_CSF | -13.3 ppm |
+| P1_UTM_CSF | -279.7 ppm | P2_UTM_CSF | -273.1 ppm |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=100.18333333 +k_0=1.000053 +x_0=250000 +y_0=-1380000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -917,6 +1029,8 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | MSL | 138.580 | HAE | 112.240 |
 | P1_LDP | (249970.607, 500592.677) | P2_LDP | (249970.608, 501592.682) |
+| P1_LDP_CSF | -12.3 ppm | P2_LDP_CSF | -13.0 ppm |
+| P1_UTM_CSF | -218.8 ppm | P2_UTM_CSF | -219.5 ppm |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=103.81666667 +k_0=1.000005 +x_0=250000 +y_0=-1260000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -933,6 +1047,8 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | MSL | 238.990 | HAE | 211.008 |
 | P1_LDP | (50644.461, 502641.687) | P2_LDP | (50644.444, 503641.690) |
+| P1_LDP_CSF | -26.7 ppm | P2_LDP_CSF | -33.7 ppm |
+| P1_UTM_CSF | -416.8 ppm | P2_UTM_CSF | -423.8 ppm |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=98.70000000 +k_0=1.000003 +x_0=50000 +y_0=-600000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -949,6 +1065,8 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | MSL | 90.990 | HAE | 58.395 |
 | P1_LDP | (49731.076, 146711.218) | P2_LDP | (49731.086, 147711.210) |
+| P1_LDP_CSF | -17.0 ppm | P2_LDP_CSF | -17.4 ppm |
+| P1_UTM_CSF | -360.1 ppm | P2_UTM_CSF | -360.5 ppm |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=99.58333333 +k_0=0.999992 +x_0=50000 +y_0=-1350000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -965,6 +1083,8 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | MSL | 127.010 | HAE | 100.860 |
 | P1_LDP | (149270.377, 50638.153) | P2_LDP | (149270.403, 51638.155) |
+| P1_LDP_CSF | -13.9 ppm | P2_LDP_CSF | -13.8 ppm |
+| P1_UTM_CSF | +442.3 ppm | P2_UTM_CSF | +442.3 ppm |
 
 > **LDP Definition:**
 > `+proj=lcc +lat_1=12.85000000 +lat_0=12.85000000 +lon_0=101.43333333 +k_0=1.000002 +x_0=150000 +y_0=50000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -981,6 +1101,8 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | MSL | 27.750 | HAE | 11.688 |
 | P1_LDP | (50038.291, 157309.105) | P2_LDP | (50038.290, 158309.109) |
+| P1_LDP_CSF | +1.5 ppm | P2_LDP_CSF | +2.8 ppm |
+| P1_UTM_CSF | -261.2 ppm | P2_UTM_CSF | -259.9 ppm |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=99.96666667 +k_0=1.000004 +x_0=50000 +y_0=-600000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -997,6 +1119,8 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | MSL | 10.680 | HAE | -21.570 |
 | P1_LDP | (49726.044, 149310.106) | P2_LDP | (49726.055, 150310.101) |
+| P1_LDP_CSF | -1.5 ppm | P2_LDP_CSF | -1.7 ppm |
+| P1_UTM_CSF | -136.7 ppm | P2_UTM_CSF | -136.9 ppm |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=100.35000000 +k_0=0.999995 +x_0=50000 +y_0=-1500000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -1013,6 +1137,8 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | MSL | 33.260 | HAE | 19.039 |
 | P1_LDP | (249414.102, 736834.924) | P2_LDP | (249414.113, 737834.915) |
+| P1_LDP_CSF | -12.8 ppm | P2_LDP_CSF | -11.1 ppm |
+| P1_UTM_CSF | -43.4 ppm | P2_UTM_CSF | -41.7 ppm |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=100.55000000 +k_0=0.999991 +x_0=250000 +y_0=-30000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -1029,6 +1155,8 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | MSL | 21.860 | HAE | -11.522 |
 | P1_LDP | (249129.190, 765356.985) | P2_LDP | (249129.225, 766356.981) |
+| P1_LDP_CSF | -2.1 ppm | P2_LDP_CSF | -2.2 ppm |
+| P1_UTM_CSF | -284.0 ppm | P2_UTM_CSF | -284.1 ppm |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=99.90000000 +k_0=0.999996 +x_0=250000 +y_0=-850000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -1045,6 +1173,8 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | MSL | 135.980 | HAE | 114.288 |
 | P1_LDP | (250478.403, 743170.013) | P2_LDP | (250478.383, 744170.021) |
+| P1_LDP_CSF | -9.9 ppm | P2_LDP_CSF | -10.0 ppm |
+| P1_UTM_CSF | -361.3 ppm | P2_UTM_CSF | -361.4 ppm |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=104.36666667 +k_0=1.000008 +x_0=250000 +y_0=-900000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -1061,6 +1191,8 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | MSL | 61.195 | HAE | 36.655 |
 | P1_LDP | (250447.365, 754534.013) | P2_LDP | (250447.348, 755534.012) |
+| P1_LDP_CSF | -6.8 ppm | P2_LDP_CSF | -6.7 ppm |
+| P1_UTM_CSF | +632.4 ppm | P2_UTM_CSF | +632.4 ppm |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=102.31666667 +k_0=0.999999 +x_0=250000 +y_0=-770000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -1077,6 +1209,8 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | MSL | 3.565 | HAE | -27.689 |
 | P1_LDP | (25460.247, 76551.029) | P2_LDP | (25460.230, 77551.024) |
+| P1_LDP_CSF | -0.7 ppm | P2_LDP_CSF | -0.6 ppm |
+| P1_UTM_CSF | -263.7 ppm | P2_UTM_CSF | -263.5 ppm |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=99.95000000 +k_0=0.999995 +x_0=25000 +y_0=-1405000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -1093,6 +1227,8 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | MSL | 163.850 | HAE | 136.060 |
 | P1_LDP | (249322.870, 753273.376) | P2_LDP | (249322.903, 754273.384) |
+| P1_LDP_CSF | -13.7 ppm | P2_LDP_CSF | -13.0 ppm |
+| P1_UTM_CSF | -229.8 ppm | P2_UTM_CSF | -229.1 ppm |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=103.83333333 +k_0=1.000008 +x_0=250000 +y_0=-1170000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -1109,6 +1245,8 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | MSL | 72.425 | HAE | 36.048 |
 | P1_LDP | (49424.138, 508946.182) | P2_LDP | (49424.166, 509946.181) |
+| P1_LDP_CSF | -6.8 ppm | P2_LDP_CSF | -6.6 ppm |
+| P1_UTM_CSF | -335.1 ppm | P2_UTM_CSF | -334.9 ppm |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=99.71666667 +k_0=0.999999 +x_0=50000 +y_0=-1400000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -1125,6 +1263,8 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | MSL | 23.425 | HAE | -6.452 |
 | P1_LDP | (49863.020, 147883.094) | P2_LDP | (49863.026, 148883.091) |
+| P1_LDP_CSF | -2.1 ppm | P2_LDP_CSF | -1.9 ppm |
+| P1_UTM_CSF | +183.8 ppm | P2_UTM_CSF | +183.9 ppm |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=101.01666667 +k_0=0.999997 +x_0=50000 +y_0=-1470000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -1141,6 +1281,8 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | MSL | 2.060 | HAE | -28.856 |
 | P1_LDP | (149646.280, 50314.153) | P2_LDP | (149646.294, 51314.148) |
+| P1_LDP_CSF | -0.5 ppm | P2_LDP_CSF | -0.4 ppm |
+| P1_UTM_CSF | -182.3 ppm | P2_UTM_CSF | -182.3 ppm |
 
 > **LDP Definition:**
 > `+proj=lcc +lat_1=13.56666667 +lat_0=13.56666667 +lon_0=100.21666667 +k_0=0.999995 +x_0=150000 +y_0=50000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -1157,6 +1299,8 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | MSL | 576.040 | HAE | 550.655 |
 | P1_LDP | (249946.958, 767036.278) | P2_LDP | (249946.960, 768036.274) |
+| P1_LDP_CSF | -111.7 ppm | P2_LDP_CSF | -69.5 ppm |
+| P1_UTM_CSF | -504.3 ppm | P2_UTM_CSF | -462.1 ppm |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=98.85000000 +k_0=0.999996 +x_0=250000 +y_0=-250000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -1173,6 +1317,8 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | MSL | 43.780 | HAE | 20.714 |
 | P1_LDP | (49177.890, 478882.752) | P2_LDP | (49177.910, 479882.744) |
+| P1_LDP_CSF | -10.4 ppm | P2_LDP_CSF | -12.1 ppm |
+| P1_UTM_CSF | -389.6 ppm | P2_UTM_CSF | -391.3 ppm |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=99.30000000 +k_0=0.999992 +x_0=50000 +y_0=-500000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -1189,6 +1335,8 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | MSL | 149.175 | HAE | 125.152 |
 | P1_LDP | (249150.575, 746485.618) | P2_LDP | (249150.610, 747485.628) |
+| P1_LDP_CSF | -9.5 ppm | P2_LDP_CSF | -9.9 ppm |
+| P1_UTM_CSF | -162.0 ppm | P2_UTM_CSF | -162.4 ppm |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=103.66666667 +k_0=1.000010 +x_0=250000 +y_0=-900000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -1205,6 +1353,8 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | MSL | 14.460 | HAE | -4.331 |
 | P1_LDP | (50865.455, 533786.220) | P2_LDP | (50865.437, 534786.219) |
+| P1_LDP_CSF | +0.5 ppm | P2_LDP_CSF | -1.1 ppm |
+| P1_UTM_CSF | -342.9 ppm | P2_UTM_CSF | -344.4 ppm |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=99.60000000 +k_0=0.999999 +x_0=50000 +y_0=-300000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -1221,6 +1371,8 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | MSL | 301.950 | HAE | 264.447 |
 | P1_LDP | (49727.303, 493432.791) | P2_LDP | (49727.317, 494432.801) |
+| P1_LDP_CSF | -30.4 ppm | P2_LDP_CSF | -32.7 ppm |
+| P1_UTM_CSF | -440.4 ppm | P2_UTM_CSF | -442.7 ppm |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=99.00000000 +k_0=1.000010 +x_0=50000 +y_0=-1400000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -1237,6 +1389,8 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | MSL | 438.045 | HAE | 400.459 |
 | P1_LDP | (499262.511, 524027.170) | P2_LDP | (499262.545, 525027.205) |
+| P1_LDP_CSF | -25.0 ppm | P2_LDP_CSF | -30.9 ppm |
+| P1_UTM_CSF | -445.2 ppm | P2_UTM_CSF | -451.1 ppm |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=98.68333333 +k_0=1.000035 +x_0=500000 +y_0=-1300000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -1253,6 +1407,8 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | MSL | 11.820 | HAE | -9.510 |
 | P1_LDP | (40427.853, 568278.103) | P2_LDP | (40427.838, 569278.100) |
+| P1_LDP_CSF | -1.9 ppm | P2_LDP_CSF | -1.1 ppm |
+| P1_UTM_CSF | +488.4 ppm | P2_UTM_CSF | +489.1 ppm |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=102.53333333 +k_0=0.999997 +x_0=40000 +y_0=-800000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -1269,6 +1425,8 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | MSL | 164.005 | HAE | 129.465 |
 | P1_LDP | (250211.108, 743016.418) | P2_LDP | (250211.097, 744016.413) |
+| P1_LDP_CSF | -21.5 ppm | P2_LDP_CSF | -29.2 ppm |
+| P1_UTM_CSF | -95.9 ppm | P2_UTM_CSF | -103.7 ppm |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=100.51666667 +k_0=0.999995 +x_0=250000 +y_0=-1220000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -1285,6 +1443,8 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | MSL | 175.925 | HAE | 146.036 |
 | P1_LDP | (750112.744, 250772.833) | P2_LDP | (750112.738, 251772.842) |
+| P1_LDP_CSF | -14.4 ppm | P2_LDP_CSF | -13.4 ppm |
+| P1_UTM_CSF | +210.9 ppm | P2_UTM_CSF | +211.8 ppm |
 
 > **LDP Definition:**
 > `+proj=lcc +lat_1=17.41666667 +lat_0=17.41666667 +lon_0=102.86666667 +k_0=1.000009 +x_0=750000 +y_0=250000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -1301,6 +1461,8 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | MSL | 198.425 | HAE | 177.809 |
 | P1_LDP | (50004.507, 152125.721) | P2_LDP | (50004.507, 153125.733) |
+| P1_LDP_CSF | -14.2 ppm | P2_LDP_CSF | -17.8 ppm |
+| P1_UTM_CSF | -417.3 ppm | P2_UTM_CSF | -420.9 ppm |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=105.25000000 +k_0=1.000012 +x_0=50000 +y_0=-1580000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -1317,6 +1479,8 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | MSL | 134.210 | HAE | 114.725 |
 | P1_LDP | (250394.991, 746506.549) | P2_LDP | (250394.975, 747506.557) |
+| P1_LDP_CSF | -9.9 ppm | P2_LDP_CSF | -10.2 ppm |
+| P1_UTM_CSF | -417.5 ppm | P2_UTM_CSF | -417.8 ppm |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=105.05000000 +k_0=1.000008 +x_0=250000 +y_0=-910000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -1333,6 +1497,8 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | MSL | 208.600 | HAE | 173.684 |
 | P1_LDP | (499591.223, 49869.123) | P2_LDP | (499591.241, 50869.133) |
+| P1_LDP_CSF | -16.4 ppm | P2_LDP_CSF | -18.2 ppm |
+| P1_UTM_CSF | -393.6 ppm | P2_UTM_CSF | -395.5 ppm |
 
 > **LDP Definition:**
 > `+proj=lcc +lat_1=15.35000000 +lat_0=15.35000000 +lon_0=99.48333333 +k_0=1.000010 +x_0=500000 +y_0=50000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -1349,6 +1515,8 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | MSL | 166.930 | HAE | 157.412 |
 | P1_LDP | (49641.073, 484935.870) | P2_LDP | (49641.079, 485935.878) |
+| P1_LDP_CSF | -4.5 ppm | P2_LDP_CSF | -29.0 ppm |
+| P1_UTM_CSF | +341.3 ppm | P2_UTM_CSF | +316.8 ppm |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=101.23333333 +k_0=1.000008 +x_0=50000 +y_0=-200000 +ellps=WGS84 +units=m +no_defs +type=crs`
@@ -1365,6 +1533,8 @@ This report provides a comparative analysis of distances calculated across vario
 |:---|:---|:---|:---|
 | MSL | 139.185 | HAE | 114.624 |
 | P1_LDP | (289110.393, 758146.681) | P2_LDP | (289110.433, 759146.694) |
+| P1_LDP_CSF | -5.2 ppm | P2_LDP_CSF | -4.8 ppm |
+| P1_UTM_CSF | -356.8 ppm | P2_UTM_CSF | -356.4 ppm |
 
 > **LDP Definition:**
 > `+proj=tmerc +lat_0=0.0 +lon_0=104.35000000 +k_0=1.000013 +x_0=290000 +y_0=-1000000 +ellps=WGS84 +units=m +no_defs +type=crs`
