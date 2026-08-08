@@ -136,12 +136,13 @@ def export_summary_files(df: pd.DataFrame, csv_path: Path, readme_path: Path) ->
 
 <table width="100%">
   <tr>
-    <td align="center" width="50%"><img src="Publication/APCP_logo.jpg" alt="SMST Logo" width="120"/></td>
+    <td align="center" width="50%"><img src="Publication/SMST_logo.jpg" alt="SMST Logo" width="120"/></td>
     <td align="center" width="50%"><img src="Publication/APCP_logo.jpg" alt="APAC Logo" width="120"/></td>
   </tr>
 </table>
 
-# 🇹🇭 Thailand Low Distortion Map Coordinate System (TH-LDP)
+# Thailand Low Distortion Map Coordinate System (TH-LDP)
+
 
 ### **Release Candidate 1 (RC-1, Aug 2026)**
 
