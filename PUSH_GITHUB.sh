@@ -1,3 +1,4 @@
+set -x
 git add -- \
   '*.py' \
   '*.toml' \

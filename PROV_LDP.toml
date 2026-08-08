@@ -64,8 +64,8 @@ GPKG = ["OUTPUT_SAMPL/TH_CP/TH_CP_SAMPL.gpkg", "samples"]
 ["TH.CR"]
 LDP = ["TM", "99:52"]
 FALSE_EN = [250000, -1450000]
-PP_MSL = 400
-POPU_PLOT = [ 650, 340, 20]  # max_msl, min_msl, msl_interval
+PP_MSL = 360
+POPU_PLOT = [ 650, 300, 20]  # max_msl, min_msl, msl_interval
 GPKG = ["OUTPUT_SAMPL/TH_CR/TH_CR_SAMPL.gpkg", "samples"]
 
 ["TH.CT"]
@@ -116,7 +116,7 @@ GPKG = ["OUTPUT_SAMPL/TH_KN_S/TH_KN_S_SAMPL.gpkg", "samples"]
 ["TH.KP"]
 LDP = ["TM", "99:32"]
 FALSE_EN = [250000, -1050000]
-PP_MSL = 30
+PP_MSL = 0
 POPU_PLOT = [ 250, -100, 20]  # max_msl, min_msl, msl_interval
 GPKG = ["OUTPUT_SAMPL/TH_KP/TH_KP_SAMPL.gpkg", "samples"]
 

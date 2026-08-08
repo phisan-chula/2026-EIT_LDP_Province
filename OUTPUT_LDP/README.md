@@ -200,16 +200,16 @@ This report provides a comparative analysis of distances calculated across vario
 | P1 | (19.845308816, 99.867526500) | P2 | (19.854342042, 99.867526500) |
 |:---|:---|:---|:---|
 | MSL | 405.895 | HAE | 368.562 |
-| P1_LDP | (250090.071, 745366.555) | P2_LDP | (250090.066, 746366.612) |
-| P1_LDP_CSF | -1.8 ppm | P2_LDP_CSF | -0.0 ppm |
+| P1_LDP | (250090.071, 745353.383) | P2_LDP | (250090.066, 746353.434) |
+| P1_LDP_CSF | -7.8 ppm | P2_LDP_CSF | -6.0 ppm |
 | P1_UTM_CSF | -356.8 ppm | P2_UTM_CSF | -355.0 ppm |
 
 > **LDP Definition:**
-> `+proj=tmerc +lat_0=0.0 +lon_0=99.86666667 +k_0=1.000057 +x_0=250000 +y_0=-1450000 +ellps=WGS84 +units=m +no_defs +type=crs`
+> `+proj=tmerc +lat_0=0.0 +lon_0=99.86666667 +k_0=1.000051 +x_0=250000 +y_0=-1450000 +ellps=WGS84 +units=m +no_defs +type=crs`
 
 | ΔL1 | ΔL2 | ΔL3 | ΔL4 | ΔL5 | ΔL6 |
 |:---:|:---:|:---:|:---:|:---:|:---:|
-| -0.058 | *0.000 | -0.356 | -0.058 | -0.000 | -0.001 |
+| -0.058 | *0.000 | -0.356 | -0.058 | -0.000 | -0.007 |
 
 ---
 
@@ -344,16 +344,16 @@ This report provides a comparative analysis of distances calculated across vario
 | P1 | (16.331107640, 99.534369281) | P2 | (16.340144152, 99.534369281) |
 |:---|:---|:---|:---|
 | MSL | 88.240 | HAE | 52.515 |
-| P1_LDP | (250110.698, 756281.932) | P2_LDP | (250110.693, 757281.931) |
-| P1_LDP_CSF | -8.5 ppm | P2_LDP_CSF | -10.0 ppm |
+| P1_LDP | (250110.697, 756272.900) | P2_LDP | (250110.692, 757272.894) |
+| P1_LDP_CSF | -13.5 ppm | P2_LDP_CSF | -15.0 ppm |
 | P1_UTM_CSF | -367.2 ppm | P2_UTM_CSF | -368.8 ppm |
 
 > **LDP Definition:**
-> `+proj=tmerc +lat_0=0.0 +lon_0=99.53333333 +k_0=0.999999 +x_0=250000 +y_0=-1050000 +ellps=WGS84 +units=m +no_defs +type=crs`
+> `+proj=tmerc +lat_0=0.0 +lon_0=99.53333333 +k_0=0.999994 +x_0=250000 +y_0=-1050000 +ellps=WGS84 +units=m +no_defs +type=crs`
 
 | ΔL1 | ΔL2 | ΔL3 | ΔL4 | ΔL5 | ΔL6 |
 |:---:|:---:|:---:|:---:|:---:|:---:|
-| -0.008 | *0.000 | -0.368 | -0.008 | -0.000 | -0.009 |
+| -0.008 | *0.000 | -0.368 | -0.008 | -0.000 | -0.014 |
 
 ---
 

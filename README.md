@@ -66,6 +66,7 @@
 | TH-77   | TH.PK    | Prachuap Khiri Khan      |        6555 |      94 |     188 | TM    | 99:38   | 🟢 96.13          |
 | TH-90   | TH.SG    | Songkhla                 |        7669 |     116 |     182 | TM    | 100:33  | 🟢 96.09          |
 | TH-17   | TH.SB    | Sing Buri                |         868 |      32 |      43 | TM    | 100:21  | 🟢 95.76          |
+| TH-62   | TH.KP    | Kamphaeng Phet           |        8996 |     113 |     116 | TM    | 99:32   | 🟢 95.65          |
 | TH-86   | TH.CP    | Chumphon                 |        6095 |      97 |     158 | TM    | 99:04   | 🟢 95.28          |
 | TH-66   | TH.PC    | Phichit                  |        4495 |      83 |      81 | TM    | 100:21  | 🟢 95.27          |
 | TH-63   | TH.TK_N  | Tak North                |        6415 |     101 |     150 | TM    | 99:00   | 🟢 95.21          |
@@ -73,7 +74,6 @@
 | TH-40   | TH.KK    | Khon Kaen                |       11050 |     153 |     161 | TM    | 102:35  | 🟢 95.11          |
 | TH-31   | TH.BR    | Buri Ram                 |       10410 |     115 |     184 | TM    | 102:58  | 🟢 94.85          |
 | TH-32   | TH.SU    | Surin                    |        9079 |     107 |     127 | TM    | 103:40  | 🟢 94.8           |
-| TH-62   | TH.KP    | Kamphaeng Phet           |        8996 |     113 |     116 | TM    | 99:32   | 🟢 94.31          |
 | TH-16   | TH.LB    | Lop Buri                 |        6477 |     106 |     102 | TM    | 100:54  | 🟢 94.22          |
 | TH-44   | TH.MS    | Maha Sarakham            |        5827 |      70 |     137 | TM    | 103:10  | 🟢 94.15          |
 | TH-41   | TH.UN    | Udon Thani               |       11588 |     174 |     142 | LCC   | 17:25   | 🟢 93.73          |
@@ -99,7 +99,7 @@
 | TH-42   | TH.LE    | Loei                     |       11033 |     139 |     162 | TM    | 101:38  | 🟢 85.89          |
 | TH-36   | TH.CY    | Chaiyaphum               |       13177 |     121 |     157 | TM    | 101:49  | 🟢 85.47          |
 | TH-71   | TH.KN_N  | Kanchanaburi North       |       11922 |     125 |     169 | TM    | 98:46   | 🟢 85.08          |
-| TH-57   | TH.CR    | Chiang Rai               |       12299 |     137 |     162 | TM    | 99:52   | 🟡 79.81          |
+| TH-57   | TH.CR    | Chiang Rai               |       12299 |     137 |     162 | TM    | 99:52   | 🟢 82.39          |
 | TH-52   | TH.LG    | Lampang                  |       13181 |     131 |     245 | TM    | 99:31   | 🟡 78.36          |
 | TH-53   | TH.UD    | Uttaradit                |        8188 |     136 |     135 | TM    | 100:31  | 🟡 76.52          |
 | TH-65   | TH.PS    | Phitsanulok              |       11077 |     133 |     159 | TM    | 100:33  | 🟡 73.51          |
