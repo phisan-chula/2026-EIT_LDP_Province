@@ -90,15 +90,30 @@ def export_sqlite(df: pd.DataFrame, output_path: Path) -> None:
         logging.error(f"Failed to save SQLite database: {e}")
 
 def highlight_low_coverage(val: Any) -> str:
-    """Formatter to highlight coverage below 75% with a red exclamation emoji."""
+    """Formats coverage percentage with colored emojis based on thresholds:
+    - 0-70%: 🔴 Red
+    - 70-80%: 🟡 Yellow
+    - 80-100%: 🟢 Green
+    """
     if pd.isna(val):
         return str(val)
-    if isinstance(val, (int, float)) and val < 75.0:
-        return f'❗ {val}'
-    return str(val)
+    
+    try:
+        num_val = float(val)
+    except (ValueError, TypeError):
+        return str(val)
+        
+    if 0 <= num_val < 70:
+        return f'🔴 {num_val}'
+    elif 70 <= num_val < 80:
+        return f'🟡 {num_val}'
+    elif 80 <= num_val <= 100:
+        return f'🟢 {num_val}'
+        
+    return str(num_val)
 
 def export_summary_files(df: pd.DataFrame, csv_path: Path, readme_path: Path) -> None:
-    """Exports sorted raw CSV and a GitHub-flavored Markdown README."""
+    """Exports sorted raw CSV and a GitHub-flavored Markdown README with banner."""
     available_cols = [col for col in TARGET_COLUMNS if col in df.columns]
     df_out = df[available_cols].copy()
 
@@ -117,10 +132,34 @@ def export_summary_files(df: pd.DataFrame, csv_path: Path, readme_path: Path) ->
         # Apply the emoji warning for the Markdown table only
         df_out["POP_Coverage(%)"] = df_out["POP_Coverage(%)"].apply(highlight_low_coverage)
 
+    readme_banner = """<div align="center">
+
+<table width="100%">
+  <tr>
+    <td align="center" width="50%"><img src="Publication/APCP_logo.jpg" alt="SMST Logo" width="120"/></td>
+    <td align="center" width="50%"><img src="Publication/APCP_logo.jpg" alt="APAC Logo" width="120"/></td>
+  </tr>
+</table>
+
+# 🇹🇭 Thailand Low Distortion Map Coordinate System (TH-LDP)
+
+### **Release Candidate 1 (RC-1, Aug 2026)**
+
+*A collaborative initiative by **SMST** & **APAC***
+
+</div>
+
+---
+
+## Province LDP & Population Coverage Summary
+
+*(Table is sorted by population coverage. Performance indicators: 🟢 80-100%, 🟡 70-80%, 🔴 <70%)*
+
+"""
+
     try:
         with readme_path.open('w', encoding='utf-8') as f:
-            f.write("# Province LDP & Population Coverage Summary\n\n")
-            f.write("*(Table is sorted by population coverage ascending. Values below 75% are highlighted with ❗.)*\n\n")
+            f.write(readme_banner)
             f.write(df_out.to_markdown(index=False, tablefmt="github"))
         logging.info(f"Generated README: {readme_path}")
     except Exception as e:

@@ -35,6 +35,8 @@ from pyproj.aoi import AreaOfInterest
 from pyproj.database import query_utm_crs_info
 from shapely.geometry import Point, box
 from rasterio.mask import mask
+from rasterio.io import MemoryFile
+from rasterio.warp import calculate_default_transform, reproject, Resampling
 
 
 DEFAULT_OUTPUT_DIR = Path("./OUTPUT_SAMPL")
@@ -217,37 +219,59 @@ class RasterExtractor:
         squares_geom = points_gdf.geometry.apply(
             lambda geom: box(geom.x - half_grid, geom.y - half_grid, geom.x + half_grid, geom.y + half_grid)
         )
-        squares_gdf = gpd.GeoDataFrame(geometry=squares_geom, crs=points_gdf.crs)
 
         with rasterio.open(raster_path) as src:
             if src.crs is None:
                 raise ValueError(f"Raster has no CRS: {raster_path}")
                 
-            # Reproject the meter-based squares to the raster's CRS
-            squares_proj = squares_gdf.to_crs(src.crs)
+            dst_crs = points_gdf.crs
+            transform, width, height = calculate_default_transform(
+                src.crs, dst_crs, src.width, src.height, *src.bounds
+            )
             
-            sampled_sums = []
-            nodata = src.nodata
-            
-            for square in squares_proj.geometry:
-                try:
-                    out_image, _ = mask(src, [square], crop=True, all_touched=False)
-                    if nodata is not None:
-                        valid_data = out_image[out_image != nodata]
-                    else:
-                        valid_data = out_image
-                        
-                    valid_data = valid_data[~np.isnan(valid_data)]
+            kwargs = src.meta.copy()
+            kwargs.update({
+                'crs': dst_crs,
+                'transform': transform,
+                'width': width,
+                'height': height
+            })
+
+            with MemoryFile() as memfile:
+                with memfile.open(**kwargs) as dst:
+                    for i in range(1, src.count + 1):
+                        reproject(
+                            source=rasterio.band(src, i),
+                            destination=rasterio.band(dst, i),
+                            src_transform=src.transform,
+                            src_crs=src.crs,
+                            dst_transform=transform,
+                            dst_crs=dst_crs,
+                            resampling=Resampling.nearest
+                        )
                     
-                    if valid_data.size > 0:
-                        sampled_sums.append(np.sum(valid_data))
-                    else:
-                        sampled_sums.append(nodata_fill)
-                except ValueError:
-                    sampled_sums.append(nodata_fill)
+                    sampled_sums = []
+                    nodata = dst.nodata
+                    
+                    for square in squares_geom:
+                        try:
+                            out_image, _ = mask(dst, [square], crop=True, all_touched=False)
+                            if nodata is not None:
+                                valid_data = out_image[out_image != nodata]
+                            else:
+                                valid_data = out_image
+                                
+                            valid_data = valid_data[~np.isnan(valid_data)]
+                            
+                            if valid_data.size > 0:
+                                sampled_sums.append(np.sum(valid_data))
+                            else:
+                                sampled_sums.append(nodata_fill)
+                        except ValueError:
+                            sampled_sums.append(nodata_fill)
             
             points_gdf[column_name] = sampled_sums
-            
+        #import pdb ;pdb.set_trace()
         return points_gdf
 
 

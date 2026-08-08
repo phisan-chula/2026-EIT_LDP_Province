@@ -88,9 +88,6 @@ class LDP_Design:
         if not self.ARGS.bypass:
             self.dfPP = self.RemoveOutliers(self.dfPP)
             
-        # Downsample to a ~1.1km grid for plotting efficiency and smooth shading
-        self.dfPP = self.Spatial_Thinning(self.dfPP, decimals=2)
-        
         # Handle LDP = 'AUTO' to automatically set TM projection via centroid
         if self.DATA['LDP'] == 'AUTO':
             cen_lng = self.dfPP.lng.mean()
@@ -133,7 +130,7 @@ class LDP_Design:
         decimals=2 -> ~1.1 km spacing (EPSG:4326)
         decimals=3 -> ~111 m spacing
         """
-        print(f" -> THINNING: Snapping points to {decimals} decimal grid...")
+        print(f" -> THINNING: Snapping points to {decimals} decimal grid for visualization...")
         
         df_temp = df.copy()
         # Round the geometry X and Y to the specified precision
@@ -146,7 +143,7 @@ class LDP_Design:
         # Clean up temporary columns
         df_thinned = df_thinned.drop(columns=['grid_x', 'grid_y'])
         
-        print(f" -> THINNING: Points reduced from {len(df)} to {len(df_thinned)}.")
+        print(f" -> THINNING: Plot points reduced from {len(df)} to {len(df_thinned)}.")
         return df_thinned
 
     def RemoveOutliers(self, df):
@@ -158,7 +155,7 @@ class LDP_Design:
         dropped_nodata = df_nodata['MSL'].tolist() if not df_nodata.empty else []
         dropped_stat = []
         
-        # 2. Statistical Filter (LOF or IQR)
+        # 2. Statistical Filter (LOF or 5% Quantile)
         if len(df_clean) > 5:  # Need minimum points for statistics
             try:
                 from sklearn.neighbors import LocalOutlierFactor
@@ -176,18 +173,20 @@ class LDP_Design:
                 dropped_stat = df_outliers['MSL'].tolist() if not df_outliers.empty else []
                 
             except (ImportError, Exception):
-                print(" -> WARNING: LOF filtering unavailable or failed. Using IQR for MSL outlier detection.")
-                Q1 = df_clean['MSL'].quantile(0.25)
-                Q3 = df_clean['MSL'].quantile(0.75)
-                IQR = Q3 - Q1
-                outlier_mask = (df_clean['MSL'] < (Q1 - 1.5 * IQR)) | (df_clean['MSL'] > (Q3 + 1.5 * IQR))
+                print(" -> WARNING: LOF filtering unavailable or failed. Using 5% head/tail cutoff for MSL outlier detection.")
+                #### QUANTILE , PSN ####
+                # Calculate the 5th and 95th percentiles
+                lower_bound = df_clean['MSL'].quantile(0.05)
+                upper_bound = df_clean['MSL'].quantile(0.95)
                 
+                # Mask values outside this 5% to 95% range
+                outlier_mask = (df_clean['MSL'] < lower_bound) | (df_clean['MSL'] > upper_bound)
+
                 df_inliers = df_clean[~outlier_mask].copy()
                 df_outliers = df_clean[outlier_mask].copy()
                 dropped_stat = df_outliers['MSL'].tolist() if not df_outliers.empty else []
         else:
             df_inliers = df_clean
-
         all_dropped = dropped_nodata + dropped_stat
         
         if all_dropped:
@@ -341,16 +340,20 @@ class LDP_Design:
                                  crs='EPSG:4326' )
 
     def Plot_Definition(self): 
-        gdf_pt = self.dfPP.copy()
+        # 1. Grab the full dataset for export
+        gdf_all = self.dfPP.copy()
 
+        # 2. Save ALL points to the output GPKG
         DEF_GPKG = Path( self.RESULT / f'{self.STEM}.gpkg' )
         print( f'Writing definition GPKG : {DEF_GPKG} ...' ) 
         if DEF_GPKG.exists(): DEF_GPKG.unlink()   # delete file
         self.dfCMSP.to_file( DEF_GPKG, driver='GPKG', layer='CM_SP' )
-        gdf_pt.to_file( DEF_GPKG, driver='GPKG', layer='Point' )
+        gdf_all.to_file( DEF_GPKG, driver='GPKG', layer='Point' )
 
-        # Recalculate plotting coordinates directly from the exact PROJ string
-        # produced by CreateLDP(), including its x_0 and y_0 values.
+        # 3. Apply thinning strictly for visual plotting efficiency
+        gdf_pt = self.Spatial_Thinning(gdf_all, decimals=2)
+
+        # 4. Recalculate plotting coordinates on the THINNED dataset
         ldp_proj = pyproj.Proj(self.LDP_PROJ_STRING)
         gdf_pt['LDP_E'], gdf_pt['LDP_N'] = ldp_proj(
             pd.to_numeric(gdf_pt['lng'], errors='raise').to_numpy(),

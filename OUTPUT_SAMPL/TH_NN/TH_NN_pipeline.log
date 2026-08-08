@@ -1,6 +1,6 @@
 ======================================================================
 Processing province: TH.NN
-Started: 2026-08-07T14:39:57+07:00
+Started: 2026-08-08T10:44:20+07:00
 ======================================================================
 --> [TH.NN] Step 1: 1_fabdem_province.py
 [1/5] Read GADM and select HASC_1=TH.NN
@@ -24,11 +24,11 @@ HASC_1       NAME_1  population_sum                                             
 --> [TH.NN] Step 3: 3_generate_sample.py
 [1/4] Select GADM province HASC_1=TH.NN
  -> [READ] Loading Vector Dataset: OUTPUT_PROV/gadm41_THA.gpkg (Layer: 'ADM_ADM_1')
-[2/4] Generate 1000.0m grid points
+[2/4] Generate 500.0m grid points
  -> Auto-detected EPSG:32647 for province.
- -> Generated 4,224 bounding box points.
+ -> Generated 16,254 bounding box points.
  -> Clipping points to province boundary...
- -> Computing 7-digit Geohashes...
+ -> Computing 8-digit Geohashes...
 [3/4] Extracting Raster Values (FABDEM MSL & POP2025)...
  -> [READ] Opening Raster File: OUTPUT_FABDEM/TH_NN/TH_NN_fabdem.tif
  -> [READ] Opening Raster File for Area Sum: OUTPUT_POP2025/TH_NN/TH_NN_population_2025_100m.tif
@@ -40,7 +40,7 @@ HASC_1       NAME_1  population_sum                                             
 
 Completed successfully.
 HASC_1  Grid (m)       CRS  Samples           Output POP2025 DOPA_Pop    Diff
- TH.NN    1000.0 EPSG:4326     2149 TH_NN_SAMPL.gpkg 234,056  259,683 -25,627
+ TH.NN     500.0 EPSG:4326     8570 TH_NN_SAMPL.gpkg 237,596  259,683 -22,087
 --> [TH.NN] Step 4: 4_analyse_ldp.py
 LDP                                            [TM, 101:10]
 FALSE_EN                                  [50000, -1420000]
@@ -48,28 +48,28 @@ PP_MSL                                                   50
 GPKG         [OUTPUT_SAMPL/TH_NN/TH_NN_SAMPL.gpkg, samples]
 OFFSET_PP      [0.0, default hPP from average topo or pnts]
 dtype: object
- -> OUTLIER FILTER: Dropped 43 points.
- -> Dropped MSL values: [75, 107, 100, 95, 102, 487, 2, 2, 4, 13, 761, 625, 537, 482, 620, 338, 447, 568, 538, 544, 678, 516, 803, 857, 827, 42, 54, 66, 117, 281, 81, 882, 888, 633, 116, 103, 568, 486, 567, 37, 126, 944, 781]
- -> THINNING: Snapping points to 2 decimal grid...
- -> THINNING: Points reduced from 2106 to 1754.
+ -> OUTLIER FILTER: Dropped 174 points.
+ -> Dropped MSL values: [-9999, -9999, 2, 2, 3, 4, 64, 200, 222, 102, 79, 87, 80, 83, 234, 77, 47, 57, 47, 66, 54, 69, 126, 108, 95, 63, 53, 75, 82, 86, 106, 53, 66, 79, 113, 117, 223, 167, 139, 163, 281, 40, 88, 624, 590, 645, 568, 567, 882, 730, 761, 89, 808, 741, 652, 691, 688, 788, 1044, 3, 3, 88, 116, 71, 761, 772, 498, 474, 473, 482, 494, 502, 424, 75, 107, 142, 157, 63, 55, 53, 75, 190, 95, 252, 100, 237, 76, 194, 94, 138, 203, 227, 85, 76, 51, 78, 74, 159, 66, 78, 96, 51, 96, 107, 229, 259, 75, 83, 43, 60, 60, 620, 534, 496, 424, 474, 433, 332, 265, 43, 82, 97, 51, 482, 467, 465, 795, 463, 473, 778, 784, 800, 762, 439, 446, 454, 960, 74, 43, 688, 763, 775, 777, 787, 692, 657, 654, 791, 775, 771, 766, 828, 788, 772, 827, 633, 676, 674, 695, 715, 813, 821, 843, 743, 851, 864, 733, 778, 735, 841, 962, 908, 738, 859]
  -> Using user-defined PP_MSL: 50.000m
 ==================================== LDP TM ====================================
 @ Centroid @     <lng=101°10′>    <lat=14°13′>
 Offset Projection Plane = +0.0 m. <default hPP from average topo or pnts>
-Designed Project Plane : hPP=+21.26 m. / MSL=+50.00 m. tied to k0 = 1.000003
-Points CSF min/mean/max [ppm] : -186.1 / -14.9 / +16.4
-Points MSL min/mean/max [m.]  : +1.0 / +161.2 / +1289.0
+Designed Project Plane : hPP=+21.25 m. / MSL=+50.00 m. tied to k0 = 1.000003
+Points CSF min/mean/max [ppm] : -186.1 / -14.9 / +18.5
+Points MSL min/mean/max [m.]  : -14.0 / +161.6 / +1289.0
 |      |      LDP_E |       LDP_N |
 |:-----|-----------:|------------:|
-| min  | 22,942.123 | 124,746.283 |
-| max  | 86,271.550 | 184,431.312 |
-| diff | 63,329.428 |  59,685.029 |
+| min  | 22,942.123 | 124,269.196 |
+| max  | 85,781.161 | 184,431.312 |
+| diff | 62,839.039 |  60,162.116 |
 {"meta": "LDP_Definition", "PROJ_String_Decimal": "+proj=tmerc +lat_0=0.0 +lon_0=101.16666667 +k_0=1.000003 +x_0=50000 +y_0=-1420000 +ellps=WGS84 +units=m +no_defs +type=crs", "PROJ_String_DMS": "+proj=tmerc +lat_0=0.0 +lon_0=101°10′ +k_0=1.000003 +x_0=50000 +y_0=-1420000 +ellps=WGS84 +units=m +no_defs +type=crs"}
 Writing definition GPKG : OUTPUT_LDP/TH_NN/TH_NN_LDP.gpkg ...
+ -> THINNING: Snapping points to 2 decimal grid for visualization...
+ -> THINNING: Plot points reduced from 8396 to 1853.
 Writing definition plot : OUTPUT_LDP/TH_NN/TH_NN_LDP.svg...
-{"meta": "Coverage_Analysis", "Province": "TH.NN", "Total_Pts": 2149, "Valid_Pts": 1327, "Pt_Coverage(%)": 61.75, "Total_POP": 234055.71029999998, "Valid_POP": 191927.67489999998, "POP_Coverage(%)": 82.0, "CSF_Min_ppm": -19.7, "CSF_Mean_ppm": 7.8, "CSF_Max_ppm": 16.4}
+{"meta": "Coverage_Analysis", "Province": "TH.NN", "Total_Pts": 8570, "Valid_Pts": 6344, "Pt_Coverage(%)": 74.03, "Total_POP": 237595.6202, "Valid_POP": 236016.8145, "POP_Coverage(%)": 99.34, "CSF_Min_ppm": -19.9, "CSF_Mean_ppm": 7.9, "CSF_Max_ppm": 18.5}
 --> [TH.NN] Step 5: 5_plot_PP_PctPopu.py
-[TH.NN] Starting ProcessPoolExecutor with 16 offsets to compute (Mean MSL: 161.16 m)...
+[TH.NN] Starting ProcessPoolExecutor with 16 offsets to compute (Mean MSL: 161.62 m)...
 [TH.NN] OFFSET_PP [-200.00] computed successfully.
 [TH.NN] OFFSET_PP [-180.00] computed successfully.
 [TH.NN] OFFSET_PP [-160.00] computed successfully.
@@ -90,22 +90,22 @@ Writing definition plot : OUTPUT_LDP/TH_NN/TH_NN_LDP.svg...
 ==================================== LDP Population Coverage Analysis: TH.NN ====================================
 |   MSL_PP |   HAE_PP | Province   |   Total_Pts |   Valid_Pts |   Pt_Coverage(%) |   Total_POP |   Valid_POP |   POP_Coverage(%) |   CSF_Min_ppm |   CSF_Mean_ppm |   CSF_Max_ppm |
 |---------:|---------:|:-----------|------------:|------------:|-----------------:|------------:|------------:|------------------:|--------------:|---------------:|--------------:|
-|   -38.84 |   -67.57 | TH.NN      |        2149 |        1286 |            59.84 |     234,056 |     190,918 |             81.57 |         -19.9 |           -5.5 |          +2.4 |
-|   -18.84 |   -47.57 | TH.NN      |        2149 |        1298 |            60.40 |     234,056 |     191,379 |             81.77 |         -20.0 |           -1.7 |          +6.4 |
-|    +1.16 |   -27.57 | TH.NN      |        2149 |        1310 |            60.96 |     234,056 |     191,770 |             81.93 |         -19.9 |           +1.2 |          +9.4 |
-|   +21.16 |    -7.57 | TH.NN      |        2149 |        1318 |            61.33 |     234,056 |     191,911 |             81.99 |         -19.7 |           +4.0 |         +12.4 |
-|   +41.16 |   +12.43 | TH.NN      |        2149 |        1325 |            61.66 |     234,056 |     191,921 |             82.00 |         -19.7 |           +6.9 |         +15.4 |
-|   +61.16 |   +32.43 | TH.NN      |        2149 |        1331 |            61.94 |     234,056 |     191,966 |             82.02 |         -18.9 |           +9.8 |         +18.4 |
-|   +81.16 |   +52.43 | TH.NN      |        2149 |        1293 |            60.17 |     234,056 |     187,715 |             80.20 |         -20.0 |          +12.1 |         +20.0 |
-|  +101.16 |   +72.43 | TH.NN      |        2149 |        1153 |            53.65 |     234,056 |     162,741 |             69.53 |         -19.7 |          +14.1 |         +19.9 |
-|  +121.16 |   +92.43 | TH.NN      |        2149 |         733 |            34.11 |     234,056 |     108,655 |             46.42 |         -19.3 |          +15.8 |         +20.0 |
-|  +141.16 |  +112.43 | TH.NN      |        2149 |         179 |             8.33 |     234,056 |      14,403 |              6.15 |         -19.8 |           +7.0 |         +20.0 |
-|  +161.16 |  +132.43 | TH.NN      |        2149 |         129 |             6.00 |     234,056 |       4,363 |              1.86 |         -18.7 |           +3.7 |         +19.9 |
-|  +181.16 |  +152.43 | TH.NN      |        2149 |         124 |             5.77 |     234,056 |       3,386 |              1.45 |         -20.0 |           +3.4 |         +19.9 |
-|  +201.16 |  +172.43 | TH.NN      |        2149 |         120 |             5.58 |     234,056 |       1,957 |              0.84 |         -19.9 |           +1.6 |         +19.9 |
-|  +221.16 |  +192.43 | TH.NN      |        2149 |         131 |             6.10 |     234,056 |       1,022 |              0.44 |         -19.9 |           -2.9 |         +20.0 |
-|  +241.16 |  +212.43 | TH.NN      |        2149 |         140 |             6.51 |     234,056 |         648 |              0.28 |         -19.8 |           -3.4 |         +20.0 |
-|  +261.16 |  +232.43 | TH.NN      |        2149 |         147 |             6.84 |     234,056 |         257 |              0.11 |         -19.9 |           -3.8 |         +19.4 |
+|   -38.38 |   -67.12 | TH.NN      |        8570 |        6138 |            71.62 |     237,596 |     235,476 |             99.11 |         -19.9 |           -5.4 |          +4.5 |
+|   -18.38 |   -47.12 | TH.NN      |        8570 |        6206 |            72.42 |     237,596 |     235,853 |             99.27 |         -20.0 |           -1.6 |          +8.5 |
+|    +1.62 |   -27.12 | TH.NN      |        8570 |        6248 |            72.91 |     237,596 |     235,957 |             99.31 |         -20.0 |           +1.3 |         +11.5 |
+|   +21.62 |    -7.12 | TH.NN      |        8570 |        6286 |            73.35 |     237,596 |     235,991 |             99.32 |         -19.9 |           +4.1 |         +14.5 |
+|   +41.62 |   +12.88 | TH.NN      |        8570 |        6332 |            73.89 |     237,596 |     236,011 |             99.33 |         -20.0 |           +6.9 |         +17.5 |
+|   +61.62 |   +32.88 | TH.NN      |        8570 |        6368 |            74.31 |     237,596 |     236,023 |             99.34 |         -19.7 |           +9.8 |         +18.5 |
+|   +81.62 |   +52.88 | TH.NN      |        8570 |        6175 |            72.05 |     237,596 |     230,260 |             96.91 |         -20.0 |          +12.3 |         +20.0 |
+|  +101.62 |   +72.88 | TH.NN      |        8570 |        5455 |            63.65 |     237,596 |     200,772 |             84.50 |         -20.0 |          +14.2 |         +20.0 |
+|  +121.62 |   +92.88 | TH.NN      |        8570 |        3490 |            40.72 |     237,596 |     136,403 |             57.41 |         -20.0 |          +16.0 |         +20.0 |
+|  +141.62 |  +112.88 | TH.NN      |        8570 |         824 |             9.61 |     237,596 |      15,412 |              6.49 |         -19.8 |           +7.4 |         +20.0 |
+|  +161.62 |  +132.88 | TH.NN      |        8570 |         571 |             6.66 |     237,596 |       3,030 |              1.28 |         -19.9 |           +3.4 |         +20.0 |
+|  +181.62 |  +152.88 | TH.NN      |        8570 |         523 |             6.10 |     237,596 |       1,560 |              0.66 |         -20.0 |           +2.4 |         +19.9 |
+|  +201.62 |  +172.88 | TH.NN      |        8570 |         507 |             5.92 |     237,596 |         707 |              0.30 |         -20.0 |           +1.4 |         +19.9 |
+|  +221.62 |  +192.88 | TH.NN      |        8570 |         619 |             7.22 |     237,596 |         457 |              0.19 |         -20.0 |           -2.6 |         +20.0 |
+|  +241.62 |  +212.88 | TH.NN      |        8570 |         656 |             7.65 |     237,596 |         205 |              0.09 |         -19.9 |           -4.0 |         +20.0 |
+|  +261.62 |  +232.88 | TH.NN      |        8570 |         684 |             7.98 |     237,596 |         102 |              0.04 |         -19.9 |           -3.7 |         +19.9 |
 ==========================================================================================================================
 
  -> Plot saved successfully to: OUTPUT_LDP/TH_NN/TH_NN_Plot_PP_Popu.svg
@@ -115,5 +115,5 @@ Processing province: TH_NN
 [+] TH_NN: One-Page Report generated successfully.
 ======================================================================
 Completed province: TH.NN
-Finished: 2026-08-07T14:42:38+07:00
+Finished: 2026-08-08T10:51:09+07:00
 ======================================================================
